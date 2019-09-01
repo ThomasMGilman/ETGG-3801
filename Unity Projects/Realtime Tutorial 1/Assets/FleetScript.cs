@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class FleetScript : MonoBehaviour
 {
-    public float fleet_h        = 3;
-    public float fleet_w        = 3;
-    public float fleetSpaceing   = 1f;
-    public float moveSpeed = .1f;
-    public float direction = 1;
-    public float fwrdDistance = 1;
-    public bool movefwrd = false;
+    public float Zdirection         = 1f;   //Zdirection for Invaders
+    public float moveSpeed          = 1f;
+    public float fwrdDistance       = 1f;
+
+    public float fleet_h            = 3f;
+    public float fleet_w            = 3f;
+    public float fleetSpaceing      = 1f;
 
     public GameObject invader_prefab;
 
@@ -40,7 +40,7 @@ public class FleetScript : MonoBehaviour
 
     private void changeDir()
     {
-        direction *= -1;
-        movefwrd = true;
+        BroadcastMessage("resetMovingFwrd");
+        print("changing dir");
     }
 }
