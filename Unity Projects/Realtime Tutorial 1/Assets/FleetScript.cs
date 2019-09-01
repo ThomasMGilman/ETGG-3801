@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FleetScript : MonoBehaviour
+{
+    public float fleet_h        = 3;
+    public float fleet_w        = 3;
+    public float fleetSpaceing   = 1f;
+    public float moveSpeed = .1f;
+    public float direction = 1;
+    public float fwrdDistance = 1;
+    public bool movefwrd = false;
+
+    public GameObject invader_prefab;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Bounds invaderBounds = invader_prefab.GetComponent<MeshRenderer>().bounds;
+        for(int i = 0; i < fleet_h; i++)
+        {
+            for(int k = 0; k < fleet_w; k++)
+            {
+                Vector3 pos = new Vector3((i * (invaderBounds.size.z * 2 + fleetSpaceing))/3,
+                    0.0f,
+                    (k * (invaderBounds.size.x * 2 + fleetSpaceing))/3);
+                GameObject newInvader = Instantiate(invader_prefab, pos + transform.position, invader_prefab.transform.rotation);
+                newInvader.transform.localScale = invader_prefab.transform.localScale;
+                newInvader.transform.parent = this.transform;
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void changeDir()
+    {
+        direction *= -1;
+        movefwrd = true;
+    }
+}

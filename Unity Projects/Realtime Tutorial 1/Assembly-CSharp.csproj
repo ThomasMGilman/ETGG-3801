@@ -62,6 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BulletScript.cs" />
+    <Compile Include="Assets\FleetScript.cs" />
+    <Compile Include="Assets\InvaderScript.cs" />
     <Compile Include="Assets\ShipScript.cs" />
     <None Include="Assets\Textures\hp_bar_source.txt" />
     <Reference Include="Unity.Timeline.Editor">

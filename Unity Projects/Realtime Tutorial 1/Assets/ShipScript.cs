@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShipScript : MonoBehaviour
 {
     public float moveSpeed = 50.0f;
+    public GameObject bullet_prefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,15 +15,22 @@ public class ShipScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dz = Input.GetAxis("Horizontal");
-        Vector3 pos = transform.position;           //ships position matrix
-        pos.z += dz * (moveSpeed * Time.deltaTime); //update left/right position on z plane
-
-        if(Input.GetButtonDown("Jump"))             //ships firing code
+        if (Input.GetButtonDown("Jump"))             //ships firing code
         {
-            print("pewpew");
+            //print("pewpew");
+            Transform spawn_transform = transform.GetChild(1);
+            GameObject new_bul = Instantiate(bullet_prefab, spawn_transform.position, Quaternion.identity);
         }
-        
+    }
+
+    private void FixedUpdate()
+    {
+        float dz = Input.GetAxis("Horizontal");
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+
+        Vector3 pos = transform.position;           //ships position matrix
+        pos.z += dz * (moveSpeed * Time.deltaTime); //update left/right pos on z plane
         transform.position = pos;
     }
 }
