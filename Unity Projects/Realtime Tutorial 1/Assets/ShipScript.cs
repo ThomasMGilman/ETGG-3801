@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipScript : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
     public GameObject bullet_prefab;
+
+    [HideInInspector]
+    public int score;
+    [HideInInspector]
+    public float health;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = 0;
+        health = 1f;
     }
 
     // Update is called once per frame
@@ -40,5 +48,20 @@ public class ShipScript : MonoBehaviour
         {
             print("Ship Colliding");
         }
+    }
+
+    private void getPoints(int s)
+    {
+        score += s;
+        Text scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        scoreText.text = "Score: " + score;
+    }
+
+    private void removeHealth(float dmg)
+    {
+        health -= dmg;
+        GameObject HealthBar = GameObject.Find("Health");
+        HealthBar.transform.localScale.Set(
+            health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
     }
 }

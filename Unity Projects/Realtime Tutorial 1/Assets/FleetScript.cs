@@ -12,6 +12,8 @@ public class FleetScript : MonoBehaviour
     public float fleet_w            = 3f;
     public float fleetSpaceing      = 1f;
 
+    public float fireRate           = .25f;
+
     public GameObject invader_prefab;
 
     // Start is called before the first frame update
@@ -26,6 +28,7 @@ public class FleetScript : MonoBehaviour
                     0.0f,
                     (k * (invaderBounds.size.x * 2 + fleetSpaceing))/3);
                 GameObject newInvader = Instantiate(invader_prefab, pos + transform.position, invader_prefab.transform.rotation);
+                //newInvader.transform.rotation.Set(-90f, 90f, -180f, 0f);
                 newInvader.transform.localScale = invader_prefab.transform.localScale;
                 newInvader.transform.parent = this.transform;
             }
@@ -38,9 +41,14 @@ public class FleetScript : MonoBehaviour
         
     }
 
+    private void checkInFront()
+    {
+        BroadcastMessage("CheckInFront");
+    }
+
+
     private void changeDir()
     {
         BroadcastMessage("resetMovingFwrd");
-        print("changing dir");
     }
 }
