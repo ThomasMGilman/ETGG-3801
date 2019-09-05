@@ -28,6 +28,7 @@ public class ShipScript : MonoBehaviour
             //print("pewpew");
             Transform spawn_transform = transform.GetChild(1);
             GameObject new_bul = Instantiate(bullet_prefab, spawn_transform.position, Quaternion.identity);
+            new_bul.transform.parent = this.transform;
         }
     }
 
@@ -60,8 +61,9 @@ public class ShipScript : MonoBehaviour
     private void removeHealth(float dmg)
     {
         health -= dmg;
-        GameObject HealthBar = GameObject.Find("Health");
+        RawImage HealthBar = GameObject.Find("Health").GetComponent<RawImage>();
         HealthBar.transform.localScale.Set(
-            health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
+           health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
+        print("TAKING DMG, health now: " + health);
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class InvaderScript : FleetScript  
 {
+    public GameObject bullet_prefab;
+
     public int score;
     public float dmg;
     private float timeSinceReset;
@@ -16,8 +18,9 @@ public class InvaderScript : FleetScript
     private bool InFront = false;
     
     private Vector3 pos;
+    private Vector3 rayDir;
+    private Bounds BulletBounds;
     
-    public GameObject bullet_prefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,10 @@ public class InvaderScript : FleetScript
         dmg = .1f;
         timeSinceLastFire = 0f;
         pos = transform.position;                       //position matrix
+        rayDir = new Vector3(1f, 0f, 0f);
         checkInFront();
+
+        BulletBounds = bullet_prefab.GetComponent<MeshRenderer>().bounds;
     }
 
     // Update is called once per frame
@@ -33,7 +39,6 @@ public class InvaderScript : FleetScript
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         pos = transform.position;                       //position matrix
-        //print("moving!! pos: "+pos);
         
         if(movefwrd)                                                    //start moving fwrd fixed distance
         {
@@ -58,16 +63,12 @@ public class InvaderScript : FleetScript
             }
         }
         transform.position = pos;
-
-        if(InFront)
+        float fireTimer = Time.time - timeSinceLastFire;
+        if (InFront && fireTimer >= fireRate)
         {
-            if(timeSinceLastFire - Time.time >= fireRate)
-            {
-                Transform spawn_transform = transform.GetChild(1);
-                GameObject new_bul = Instantiate(bullet_prefab, spawn_transform.position, Quaternion.identity);
-                timeSinceLastFire = Time.time;
-                print("zapzap");
-            }
+            GameObject new_bul = Instantiate(bullet_prefab, BulletBounds.size+pos+rayDir, Quaternion.identity);
+            new_bul.transform.parent = this.transform;
+            timeSinceLastFire = Time.time;
         }
     }
     /*
@@ -99,16 +100,10 @@ public class InvaderScript : FleetScript
         //raycast for Invaders to know wether or not to fire
         RaycastHit hit;
         int layer_mask = 1 << 8;
-        Vector3 rayDir = new Vector3(1f,0f,0f);
-        print("Invader Fwrd: " + gameObject.transform.forward + " rayDir: " + rayDir);
         if (!Physics.Raycast(pos, rayDir, out hit, 10.0f, layer_mask))
-        {
-            print("Im on the front lines bois!!");
-        }
-        else
-        {
             InFront = true;
-        }
+        else
+            InFront = false;
     }
 
     private void OnTriggerEnter(Collider other)

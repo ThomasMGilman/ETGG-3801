@@ -12,7 +12,7 @@ public class FleetScript : MonoBehaviour
     public float fleet_w            = 3f;
     public float fleetSpaceing      = 1f;
 
-    public float fireRate           = .25f;
+    public float fireRate           = 1f;
 
     public GameObject invader_prefab;
 

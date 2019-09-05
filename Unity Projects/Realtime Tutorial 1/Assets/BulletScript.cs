@@ -5,14 +5,14 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public float moveSpeed = 25.0f;
-    public int direction;
+    private int Bullet_dir;
     // Start is called before the first frame update
     void Start()
     {
         if (transform.parent.name == "Ship")
-            direction = 1;
+            Bullet_dir = 1;
         else
-            direction = -1;
+            Bullet_dir = -1;
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class BulletScript : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
 
         Vector3 pos = transform.position;           //ships position matrix
-        pos.x -= direction * (moveSpeed * Time.deltaTime); //update left/right position on z plane
+        pos.x -= Bullet_dir * (moveSpeed * Time.deltaTime); //update left/right position on z plane
         transform.position = pos;
     }
 
@@ -30,19 +30,19 @@ public class BulletScript : MonoBehaviour
         if (other.gameObject.tag == "Invader")
         {
             //Change Score
-            GameObject gui_text = GameObject.Find("Ship");
+            GameObject Ship = GameObject.Find("Ship");
             GameObject Fleet = GameObject.Find("Fleet");
             Fleet.SendMessage("checkInFront");
-            gui_text.SendMessage("getPoints", other.gameObject.GetComponent<InvaderScript>().score);
+            Ship.SendMessage("getPoints", other.gameObject.GetComponent<InvaderScript>().score);
         }
-        else if (other.gameObject.tag == "Ship")
+        else if (other.gameObject.tag == "Player")
         {
             GameObject Ship = GameObject.Find("Ship");
-            Ship.SendMessage("removeHealth", gameObject.GetComponent<InvaderScript>().dmg);
+            Ship.SendMessage("removeHealth", transform.parent.gameObject.GetComponent< InvaderScript >().dmg);
         }
         else if (transform.parent.tag == "Invader")
         {
-            SendMessage("ResetFire");
+            transform.parent.SendMessage("resetFire");
         }
         //Destroy Bullet
         Destroy(this.gameObject);
