@@ -16,6 +16,7 @@ public class InvaderScript : FleetScript
     private bool movefwrd = false;
     private bool mvingFwrd = false;
     private bool InFront = false;
+    private bool imHit = false;
     
     private Vector3 pos;
     private Vector3 rayDir;
@@ -37,38 +38,60 @@ public class InvaderScript : FleetScript
     // Update is called once per frame
     void Update()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        pos = transform.position;                       //position matrix
-        
-        if(movefwrd)                                                    //start moving fwrd fixed distance
+        if(imHit)
         {
-            if(!mvingFwrd)                                                  //get position before moving fwrd and offset from wall a bit
+            ParticleSystem ps = this.GetComponent<ParticleSystem>();
+            if(!ps.isPlaying)
             {
-                lastX = pos.x;
-                mvingFwrd = true;
-                pos.z -= Zdirection * (moveSpeed * Time.deltaTime);
+                ps.Play();
+                timeSinceLastFire = Time.time;
             }
-            pos.x += 1 * (moveSpeed * Time.deltaTime);
-            float newDis = pos.x - lastX;
-            if (pos.x - lastX >= fwrdDistance)                              //reached distance to move fwrd, change Zdirection
-                transform.parent.SendMessage("changeDir");
+            else if(ps.isPlaying && Time.time - timeSinceLastFire >= ps.duration)
+            {
+                ps.Stop();
+                GameObject minMapIcon = this.transform.GetChild(0).gameObject;
+                //print("child count: " + this.transform.GetChild(0));
+                Destroy(minMapIcon);
+                Destroy(this);
+                transform.parent.SendMessage("recCheckInFront");
+            }
         }
         else
         {
-            pos.z += Zdirection * (moveSpeed * Time.deltaTime);          //update left/right
-            if (movefwrd)
+            Rigidbody rb = GetComponent<Rigidbody>();
+            pos = transform.position;                       //position matrix
+
+            if (movefwrd)                                                    //start moving fwrd fixed distance
             {
+                if (!mvingFwrd)                                                  //get position before moving fwrd and offset from wall a bit
+                {
+                    lastX = pos.x;
+                    mvingFwrd = true;
+                    pos.z -= Zdirection * (moveSpeed * Time.deltaTime);
+                }
                 pos.x += 1 * (moveSpeed * Time.deltaTime);
-                movefwrd = false;
+                float newDis = pos.x - lastX;
+                if (pos.x - lastX >= fwrdDistance)                              //reached distance to move fwrd, change Zdirection
+                    transform.parent.SendMessage("changeDir");
             }
-        }
-        transform.position = pos;
-        float fireTimer = Time.time - timeSinceLastFire;
-        if (InFront && fireTimer >= fireRate)
-        {
-            GameObject new_bul = Instantiate(bullet_prefab, BulletBounds.size+pos+rayDir, Quaternion.identity);
-            new_bul.transform.parent = this.transform;
-            timeSinceLastFire = Time.time;
+            else
+            {
+                pos.z += Zdirection * (moveSpeed * Time.deltaTime);          //update left/right
+                if (movefwrd)
+                {
+                    pos.x += 1 * (moveSpeed * Time.deltaTime);
+                    movefwrd = false;
+                }
+            }
+            transform.position = pos;
+            float fireTimer = Time.time - timeSinceLastFire;
+            if (InFront && fireTimer >= fireRate)
+            {
+                GameObject new_bul = Instantiate(bullet_prefab, BulletBounds.size + pos + rayDir, Quaternion.identity);
+                new_bul.SendMessage("setOwner", false);
+                new_bul.SendMessage("setdmg", this.dmg);
+                timeSinceLastFire = Time.time;
+            }
         }
     }
     /*
@@ -108,10 +131,12 @@ public class InvaderScript : FleetScript
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "BackBumperBehindShip")
-            return;
         if (other.gameObject.tag == "Bullet")
-            Destroy(this.gameObject);
+        {
+            imHit = true;                                       //Invader is now dead, play effect
+            this.GetComponent<BoxCollider>().enabled = false;   //no more collisions with this object
+            this.GetComponent<MeshRenderer>().enabled = false;  //no mmore rendering of object
+        }
         if (other.gameObject.tag == "Bumper")
         {
             transform.parent.SendMessage("changeDir");

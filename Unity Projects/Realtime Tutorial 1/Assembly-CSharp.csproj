@@ -69,31 +69,31 @@
     <Compile Include="Assets\ShipScript.cs" />
     <None Include="Assets\Textures\hp_bar_source.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/SchoolAndProjects/Programs/ETGG 3801_02 Realtime Interactive/Unity Projects/Realtime Tutorial 1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

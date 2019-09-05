@@ -41,9 +41,9 @@ public class FleetScript : MonoBehaviour
         
     }
 
-    private void checkInFront()
+    private void recCheckInFront()
     {
-        BroadcastMessage("CheckInFront");
+        BroadcastMessage("checkInFront");
     }
 
 

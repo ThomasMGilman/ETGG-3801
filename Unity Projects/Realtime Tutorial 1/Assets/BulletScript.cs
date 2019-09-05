@@ -4,16 +4,29 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public float moveSpeed = 25.0f;
+    public float moveSpeed = 1.0f;
+    private float dmg = 0f;
     private int Bullet_dir;
+    
     // Start is called before the first frame update
     void Start()
     {
-        if (transform.parent.name == "Ship")
+        this.GetComponent<AudioSource>().Play();
+    }
+
+    void setOwner(bool ship)
+    {
+        if (ship)
             Bullet_dir = 1;
         else
             Bullet_dir = -1;
     }
+
+    void setdmg(float d)
+    {
+        this.dmg = d;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -30,19 +43,12 @@ public class BulletScript : MonoBehaviour
         if (other.gameObject.tag == "Invader")
         {
             //Change Score
-            GameObject Ship = GameObject.Find("Ship");
-            GameObject Fleet = GameObject.Find("Fleet");
-            Fleet.SendMessage("checkInFront");
-            Ship.SendMessage("getPoints", other.gameObject.GetComponent<InvaderScript>().score);
+            GameObject.Find("Ship").SendMessage("getPoints", other.gameObject.GetComponent<InvaderScript>().score);
         }
         else if (other.gameObject.tag == "Player")
         {
             GameObject Ship = GameObject.Find("Ship");
-            Ship.SendMessage("removeHealth", transform.parent.gameObject.GetComponent< InvaderScript >().dmg);
-        }
-        else if (transform.parent.tag == "Invader")
-        {
-            transform.parent.SendMessage("resetFire");
+            Ship.SendMessage("removeHealth", dmg);
         }
         //Destroy Bullet
         Destroy(this.gameObject);
