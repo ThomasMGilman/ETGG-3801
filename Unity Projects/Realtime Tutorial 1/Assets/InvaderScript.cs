@@ -108,6 +108,8 @@ public class InvaderScript : FleetScript
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.name == "BackBumperBehindShip")
+            return;
         if (other.gameObject.tag == "Bullet")
             Destroy(this.gameObject);
         if (other.gameObject.tag == "Bumper")

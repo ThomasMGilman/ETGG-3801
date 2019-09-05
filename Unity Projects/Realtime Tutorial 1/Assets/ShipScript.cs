@@ -60,10 +60,17 @@ public class ShipScript : MonoBehaviour
 
     private void removeHealth(float dmg)
     {
-        health -= dmg;
-        RawImage HealthBar = GameObject.Find("Health").GetComponent<RawImage>();
-        HealthBar.transform.localScale.Set(
-           health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
-        print("TAKING DMG, health now: " + health);
+        float newHealth = health - dmg;
+        if (newHealth <= 0.0)
+            return;     //GameOver
+        else
+        {
+            health = newHealth;
+            RawImage HealthBar = GameObject.Find("Health").GetComponent<RawImage>();
+            HealthBar.rectTransform.localScale = new Vector3(
+               health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
+            print("TAKING DMG, health now: " + health + " HealthbarScale: " + HealthBar.transform.localScale);
+        }
+        
     }
 }
