@@ -27,7 +27,7 @@ public class InvaderScript : FleetScript
     {
         score = 100;
         dmg = .1f;
-        timeSinceLastFire = 0f;
+        timeSinceLastFire = Random.Range(0, fireRate);  //randomize invader fire timing
         pos = transform.position;                       //position matrix
         rayDir = new Vector3(1f, 0f, 0f);
         checkInFront();
