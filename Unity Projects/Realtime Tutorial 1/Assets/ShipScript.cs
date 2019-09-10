@@ -14,7 +14,6 @@ public class ShipScript : MonoBehaviour
     public float health;
 
     private bool loseHealth;
-    private float dmgTaken;
 
     // Start is called before the first frame update
     void Start()
@@ -33,12 +32,6 @@ public class ShipScript : MonoBehaviour
             GameObject new_bul = Instantiate(bullet_prefab, spawn_transform.position, Quaternion.identity);
             new_bul.SendMessage("setOwner", true);
         }
-        if(dmgTaken > 0)
-        {
-
-        }
-        if (health - dmgTaken <= 0) print("I'm dead");
-            //gameOver
     }
 
     private void FixedUpdate()
@@ -70,15 +63,12 @@ public class ShipScript : MonoBehaviour
     private void removeHealth(float dmg)
     {
         float newHealth = health - dmg;
+        health = newHealth;
+        RawImage HealthBar = GameObject.Find("Health").GetComponent<RawImage>();
+        HealthBar.rectTransform.localScale = new Vector3(
+           health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
+
         if (newHealth <= 0.0)
             return;     //GameOver
-        else
-        {
-            health = newHealth;
-            RawImage HealthBar = GameObject.Find("Health").GetComponent<RawImage>();
-            HealthBar.rectTransform.localScale = new Vector3(
-               health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
-        }
-        
     }
 }

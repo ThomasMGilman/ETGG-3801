@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class BulletScript : MonoBehaviour
 {
@@ -31,13 +30,14 @@ public class BulletScript : MonoBehaviour
         if (ship)
         {
             Bullet_dir = 1;
-            this.source.clip = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sounds/iceball.wav");
+            this.source.clip = Resources.Load<AudioClip>("Sounds/iceball");
         }
         else
         {
             Bullet_dir = -1;
-            this.source.clip = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sounds/flaunch.wav");
+            this.source.clip = Resources.Load<AudioClip>("Sounds/flaunch");
         }
+        print(this.source.clip.ToString());
         this.source.Play();
     }
 
