@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\BulletScript.cs" />
     <Compile Include="Assets\FleetScript.cs" />
+    <Compile Include="Assets\Globals.cs" />
     <Compile Include="Assets\GUIScript.cs" />
     <Compile Include="Assets\InvaderScript.cs" />
     <Compile Include="Assets\NewGameScript.cs" />

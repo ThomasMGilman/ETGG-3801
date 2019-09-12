@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class NewGameScript : MonoBehaviour
+public class NewGameScript : Globals
 {
     // Start is called before the first frame update
     public RawImage Title;
@@ -120,6 +120,7 @@ public class NewGameScript : MonoBehaviour
     {
         //print("starting game!");
         ResumeGameOption.interactable = true;
+        restartGame();                          //set pause state to false
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
@@ -130,6 +131,7 @@ public class NewGameScript : MonoBehaviour
 
     public void resumeGame()
     {
+        setPaused(false);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }

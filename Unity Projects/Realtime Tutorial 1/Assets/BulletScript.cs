@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class BulletScript : Globals
 {
     public float moveSpeed = 1.0f;
     private float dmg = 0f;
@@ -49,16 +49,19 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!collided)
+        if(!paused)
         {
-            Vector3 pos = transform.position;           //ships position matrix
-            pos.x -= Bullet_dir * (moveSpeed * Time.deltaTime); //update left/right position on z plane
-            transform.position = pos;
-        }
-        else
-        {
-            if(!this.source.isPlaying)   //Destroy Bullet when audio is done
-                Destroy(this.gameObject);
+            if (!collided)
+            {
+                Vector3 pos = transform.position;           //ships position matrix
+                pos.x -= Bullet_dir * (moveSpeed * Time.deltaTime); //update left/right position on z plane
+                transform.position = pos;
+            }
+            else
+            {
+                if (!this.source.isPlaying)   //Destroy Bullet when audio is done
+                    Destroy(this.gameObject);
+            }
         }
     }
 

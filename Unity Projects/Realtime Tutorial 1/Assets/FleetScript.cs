@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FleetScript : MonoBehaviour
+public class FleetScript : Globals
 {
     public float Zdirection         = 1f;   //Zdirection for Invaders
     public float moveSpeed          = 1f;
