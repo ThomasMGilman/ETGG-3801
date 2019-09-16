@@ -3,7 +3,23 @@ guid: f2fa86c2a92b49b40865693afa745327
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - GroundBlock_prefab: {fileID: 6981805919112738652, guid: e2355d53ba2302d47b79fbf7e8fbd5a9,
+      type: 3}
+  - FiringPlane_prefab: {fileID: 5712868897916552364, guid: d8bcd359d0572d74794901c0d72ee80d,
+      type: 3}
+  - Base_prefab: {fileID: 1321669061787829462, guid: fb3cfe99e619bad4196f337f3273dfa0,
+      type: 3}
+  - Turret_prefab: {fileID: 8303203828699239023, guid: ffca57136274e47418df1f19fb546383,
+      type: 3}
+  - Player_prefab: {fileID: 3776540875797089146, guid: 1db5a890a65742549a13278556b26c47,
+      type: 3}
+  - Arrow_prefab: {fileID: 2692159482939753199, guid: 6fd23d5e6a112094f98f177df354266b,
+      type: 3}
+  - Rocket_prefab: {fileID: 193203916219761937, guid: 5b1c6db0c71a49340bf72ca2da2ff5b8,
+      type: 3}
+  - Money_prefab: {fileID: 9116776175152747638, guid: a5459306b42f2a24eacf5b73eadcdbb1,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

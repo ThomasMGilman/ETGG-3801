@@ -1,0 +1,2 @@
+D:\School\Programs\ETGG 3801 Real-Time Interactive Prog 1\Unity Projects\Realtime Lab 1\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\School\Programs\ETGG 3801 Real-Time Interactive Prog 1\Unity Projects\Realtime Lab 1\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

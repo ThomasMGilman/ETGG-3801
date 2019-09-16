@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6960886967124894142}
   - component: {fileID: 8605867632246387409}
   - component: {fileID: 9059031695841272519}
+  - component: {fileID: -2886802079453643032}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -78,3 +79,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-2886802079453643032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321669061787829462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ff5d4b2437e064e9baed04df354384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldWidth: 50
+  worldDepth: 50
+  turretCount: 5
+  amplitude: 1
+  turretRadius: 25
+  splashRadius: 5
+  blockSpacing: 0.5
+  CurrencyValue: 1
+  GroundBlock_prefab: {fileID: 0}
+  FiringPlane_prefab: {fileID: 0}
+  Base_prefab: {fileID: 0}
+  Turret_prefab: {fileID: 0}
+  Player_prefab: {fileID: 0}
+  Arrow_prefab: {fileID: 0}
+  Rocket_prefab: {fileID: 0}
+  Money_prefab: {fileID: 0}

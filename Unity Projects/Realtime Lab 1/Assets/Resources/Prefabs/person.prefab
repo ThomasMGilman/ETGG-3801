@@ -419,6 +419,9 @@ GameObject:
   m_Component:
   - component: {fileID: 158661941831022953}
   - component: {fileID: 7834484288730076179}
+  - component: {fileID: -6437103802003652072}
+  - component: {fileID: 5455541456563021895}
+  - component: {fileID: 586433903101183210}
   m_Layer: 0
   m_Name: person
   m_TagString: Untagged
@@ -456,13 +459,72 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 3152e49a500a3044283dc738849f4084, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &-6437103802003652072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776540875797089146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5455541456563021895
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776540875797089146}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &586433903101183210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776540875797089146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53763a95652be9c4fb59de3aabf7d5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldWidth: 50
+  worldDepth: 50
+  turretCount: 5
+  amplitude: 1
+  turretRadius: 25
+  splashRadius: 5
+  blockSpacing: 0.5
+  CurrencyValue: 1
+  GroundBlock_prefab: {fileID: 0}
+  FiringPlane_prefab: {fileID: 0}
+  Base_prefab: {fileID: 0}
+  Turret_prefab: {fileID: 0}
+  Player_prefab: {fileID: 0}
+  Arrow_prefab: {fileID: 0}
+  Rocket_prefab: {fileID: 0}
+  Money_prefab: {fileID: 0}
+  playerHealth: 10
+  playerMoveSpeed: 2
 --- !u!1 &4506062092680337658
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,13 +1014,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9072668726225497481}
-  m_LocalRotation: {x: -0.0026299993, y: -0.98074967, z: 0.19480231, w: -0.013240966}
-  m_LocalPosition: {x: -0.519, y: 10.168, z: 15.438}
+  m_LocalRotation: {x: -0.0013447277, y: -0.9949357, z: 0.09960307, w: -0.013432494}
+  m_LocalPosition: {x: -2.926, y: 9.589, z: 23.234}
   m_LocalScale: {x: 100, y: 100.00001, z: 99.99999}
   m_Children: []
   m_Father: {fileID: 158661941831022953}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 157.532, y: -1.5469971, z: 180}
+  m_LocalEulerAnglesHint: {x: 168.566, y: -1.5469971, z: 180}
 --- !u!20 &5824945884058405376
 Camera:
   m_ObjectHideFlags: 0

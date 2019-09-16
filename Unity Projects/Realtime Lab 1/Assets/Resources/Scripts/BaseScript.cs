@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseScript : MonoBehaviour
+public class BaseScript : GlobalScript
 {
-    public GameObject baseObject;
-    public GameObject groundBlock;
-
     // Start is called before the first frame update
     void Start()
     {
