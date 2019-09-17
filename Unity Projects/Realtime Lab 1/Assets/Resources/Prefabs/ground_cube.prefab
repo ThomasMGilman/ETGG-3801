@@ -130,6 +130,7 @@ MonoBehaviour:
   splashRadius: 5
   blockSpacing: 0.5
   CurrencyValue: 1
+  playerScale: {x: 0.1, y: 0.1, z: 0.1}
   GroundBlock_prefab: {fileID: 0}
   FiringPlane_prefab: {fileID: 0}
   Base_prefab: {fileID: 0}

@@ -17,9 +17,7 @@ public class GlobalScript : MonoBehaviour
     public float blockSpacing = 0.5f;   //gap between blocks
     public float CurrencyValue = 1.00f; //value for currency
 
-    public float randMin = -100;
-    public float randMax = 100;
-    public bool randomizeHills = false;
+    public Vector3 playerScale = new Vector3(1, 1, 1);
 
     //WorldObjects
     public GameObject GroundBlock_prefab;
@@ -45,11 +43,12 @@ public class GlobalScript : MonoBehaviour
 
     private Transform globalParent;
 
-    private void InstantiateGroundBlock(int x, int z, Vector3 worldPos)
+    private void InstantiateObject(out GameObject obj, GameObject prefab, Vector3 worldPos, Vector3 Scale, Transform parent = null)
     {
-        ground[x,z] = Instantiate(GroundBlock_prefab, worldPos, GroundBlock_prefab.transform.rotation);
-        ground[x, z].transform.localScale = GroundBlock_prefab.transform.localScale;
-        ground[x, z].transform.parent = globalParent;
+        obj = Instantiate(prefab, worldPos, prefab.transform.rotation);
+        obj.transform.localScale = prefab.transform.localScale;
+        obj.transform.parent = parent;
+        obj.transform.localScale = Scale;
     }
 
     // Start is called before the first frame update
@@ -66,52 +65,53 @@ public class GlobalScript : MonoBehaviour
         int halfDepth = worldDepth / 2;
 
         float waveInc = 360 / halfDepth;
-        for (int x = -halfWidth; x < halfWidth; x++)
+        for (int x = 0; x < worldWidth; x++)
         {
-            xPos = ((x + 1) + (x * 1)) + x*blockSpacing;
+            xPos = (x + (x * 1)) + x*blockSpacing;
             float angleX = (float)((((x + 1) * waveInc) * Mathf.PI) / 180);
-            for (int z = -halfDepth; z < halfDepth; z++)
+            for (int z = 0; z < worldDepth; z++)
             {
-                zPos = ((z + 1) + (z * 1)) + z*blockSpacing;
+                zPos = (z + (z * 1)) + z*blockSpacing;
                 float angleS = (float)((((z + 1) * waveInc) * Mathf.PI) / 180);
                 
                 //Add Block x, z
                 worldPos.x = xPos; worldPos.z = zPos;     //setPos
-                worldPos.y = !randomizeHills ? Mathf.Sin(angleS * amplitude) * Mathf.Cos(angleX * amplitude) : 
-                    Mathf.Sin((Random.Range(-randMin, randMax) * Mathf.PI / 180)*amplitude) 
-                    * Mathf.Cos((Random.Range(randMin, randMax) * Mathf.PI / 180) * amplitude);
+                worldPos.y = Mathf.Sin(angleS * amplitude) * Mathf.Cos(angleX * amplitude);
 
-                InstantiateGroundBlock(x+halfWidth, z+halfDepth, worldPos);
+                InstantiateObject(out ground[x, z], GroundBlock_prefab, worldPos,
+                    GroundBlock_prefab.transform.localScale, globalParent);
+
+                //place world objects if at center
+                if (x == halfWidth && z == halfDepth)   
+                {
+                    float tmpY = worldPos.y;
+
+                    worldPos.y = tmpY + 1.38f;
+                    InstantiateObject(out homeBase, Base_prefab, worldPos, Base_prefab.transform.localScale);   //setBase in center of map
+
+                    worldPos.y = 100f;
+                    InstantiateObject(out FireingZone, FiringPlane_prefab, worldPos, FiringPlane_prefab.transform.localScale); //set Firing plane in center of map
+
+                    //place turrets
+                    float tmpX = worldPos.x;
+                    float tmpZ = worldPos.z;
+                    for (int i = 0; i < turretCount; i++)
+                    {
+                        float turretAngle = (float)((angleInc * Mathf.PI) / 180);                          //Calculate angle into radians
+
+                        worldPos.x = (turretRadius * Mathf.Cos((i + 1) * turretAngle)) + tmpX;
+                        worldPos.y = 2.03f;
+                        worldPos.z = (turretRadius * Mathf.Sin((i + 1) * turretAngle)) + tmpZ;
+
+                        InstantiateObject(out turrets[i], Turret_prefab, worldPos, Turret_prefab.transform.localScale);
+                    }
+                    worldPos.x = tmpX + .5f; worldPos.y = tmpY + 2; worldPos.z = tmpZ + .5f;
+                    InstantiateObject(out playerChar, Player_prefab, worldPos, playerScale);
+                }
             }
         }
 
-        //SetBase in origin of map
-        worldPos.x = 0;
-        worldPos.y = 1.38f;
-        worldPos.z = 1f;
-        homeBase = Instantiate(Base_prefab, worldPos, Base_prefab.transform.rotation);
-
-        //place firing object
-        worldPos.y = 100f;
-        FireingZone = Instantiate(FiringPlane_prefab, worldPos, FiringPlane_prefab.transform.rotation);
-
-        //place turrets
-        for(int i = 0; i < turretCount; i++)
-        {
-            float angleS = (float)((angleInc * Mathf.PI) / 180);                          //Calculate angle into radians
-
-            worldPos.x =(turretRadius * Mathf.Cos((i + 1) * angleS));
-            worldPos.y = 2.03f;
-            worldPos.z =(turretRadius * Mathf.Sin((i + 1) * angleS));
-
-            turrets[i] = Instantiate(Turret_prefab, worldPos, Turret_prefab.transform.rotation);
-            turrets[i].transform.parent = globalParent;
-        }
-
-        //Place Player Character
-        worldPos.x = 1; worldPos.y = 2; worldPos.z = 1;
-        playerChar = Instantiate(Player_prefab, worldPos, Player_prefab.transform.rotation);
-        playerChar.transform.localScale = Player_prefab.transform.localScale;
+        
     }
 
     // Update is called once per frame

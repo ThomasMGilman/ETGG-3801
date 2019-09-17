@@ -9,25 +9,29 @@ public class PlayerScript : GlobalScript
     public float camMoveSpeed = 1f;
 
     private float heldCurrency = 0;
+    private float gravitationalConstant = 9.8f;
 
+    private Vector3 pos;
     Camera playerCam;
     Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        pos = this.transform.position;
         playerCam = this.GetComponent<Camera>(); //Get players CameraPos
-        Rigidbody rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
     {
+        float xDir = Input.GetAxis("Horizontal");
         float dx = -1 * Input.GetAxis("Horizontal");
         float dz = -1 * Input.GetAxis("Vertical");
 
@@ -37,6 +41,7 @@ public class PlayerScript : GlobalScript
 
         Vector3 pos = transform.position;           //players position matrix
         pos.x += dx * (playerMoveSpeed * Time.deltaTime); //update forward/backward pos on x axes
+        //pos.y -= gravitationalConstant * Time.deltaTime;  //constant downward Motion
         pos.z += dz * (playerMoveSpeed * Time.deltaTime); //update left/right pos on z axes
         transform.position = pos;
 
