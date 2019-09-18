@@ -17,7 +17,7 @@ public class GlobalScript : MonoBehaviour
     public float blockSpacing = 0.5f;   //gap between blocks
     public float CurrencyValue = 1.00f; //value for currency
 
-    public Vector3 playerScale = new Vector3(1, 1, 1);
+    public Vector3 playerScale = new Vector3(.1f, .1f, .1f);
 
     //WorldObjects
     public GameObject GroundBlock_prefab;
@@ -110,8 +110,6 @@ public class GlobalScript : MonoBehaviour
                 }
             }
         }
-
-        
     }
 
     // Update is called once per frame
@@ -123,5 +121,10 @@ public class GlobalScript : MonoBehaviour
     void incScore()
     {
         score += 100;
+    }
+
+    public bool GreaterOrLess(dynamic gOrl, dynamic val)
+    {
+        return (gOrl > val || gOrl < val);
     }
 }

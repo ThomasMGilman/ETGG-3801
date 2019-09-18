@@ -262,9 +262,7 @@ MonoBehaviour:
   splashRadius: 5
   blockSpacing: 0.01
   CurrencyValue: 1
-  randMin: -100
-  randMax: 100
-  randomizeHills: 0
+  playerScale: {x: 0.1, y: 0.1, z: 0.1}
   GroundBlock_prefab: {fileID: 6981805919112738652, guid: e2355d53ba2302d47b79fbf7e8fbd5a9,
     type: 3}
   FiringPlane_prefab: {fileID: 5712868897916552364, guid: d8bcd359d0572d74794901c0d72ee80d,

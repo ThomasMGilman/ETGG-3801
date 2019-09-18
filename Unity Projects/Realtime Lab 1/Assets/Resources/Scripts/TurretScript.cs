@@ -12,6 +12,7 @@ public class TurretScript : MonoBehaviour
         pos = this.transform.position;
         rayDir = new Vector3(0, 1, 0);
         checkInGround();
+        print("Turret at " + pos);
     }
 
     // Update is called once per frame
@@ -30,5 +31,15 @@ public class TurretScript : MonoBehaviour
             this.pos = hit.transform.position;
             print("Hitting the ground, my pos: "+this.pos);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Trigger enter colliding at" + pos);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        print("TriggerStay colliding at "+pos);
     }
 }

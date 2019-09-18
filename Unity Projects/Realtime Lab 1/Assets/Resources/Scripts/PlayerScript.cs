@@ -18,8 +18,8 @@ public class PlayerScript : GlobalScript
     // Start is called before the first frame update
     void Start()
     {
-        pos = this.transform.position;
-        playerCam = this.GetComponent<Camera>(); //Get players CameraPos
+        pos = transform.position;
+        playerCam = GetComponentInChildren<Camera>(); //Get players CameraPos
         rb = GetComponent<Rigidbody>();
     }
 
@@ -29,20 +29,27 @@ public class PlayerScript : GlobalScript
 
     }
 
+    private float getPosOffset(string dir)
+    {
+        float dirVal = Input.GetAxis(dir);
+        return GreaterOrLess(dirVal, 0) ? dirVal * (playerMoveSpeed * Time.deltaTime) : 0;
+    }
+
     private void FixedUpdate()
     {
-        float xDir = Input.GetAxis("Horizontal");
-        float dx = -1 * Input.GetAxis("Horizontal");
-        float dz = -1 * Input.GetAxis("Vertical");
+        Vector3 cfp = new Vector3();
+        cfp.x   = getPosOffset("Horizontal");
+        cfp.z   = getPosOffset("Vertical");
+        cfp     = playerCam.transform.TransformDirection(cfp);
+        cfp.y = 0;
+
+        if (GreaterOrLess(cfp.x, 0) || GreaterOrLess(cfp.y, 0) || GreaterOrLess(cfp.z, 0))
+            print("cam fwrd: " + cfp);
 
         //float rotateX = Input.GetAxis("Mouse Y");
         float rotateY = Input.GetAxis("Mouse X");
-        //float my = Input.GetAxis("Mouse ScrollWheel");
 
-        Vector3 pos = transform.position;           //players position matrix
-        pos.x += dx * (playerMoveSpeed * Time.deltaTime); //update forward/backward pos on x axes
-        //pos.y -= gravitationalConstant * Time.deltaTime;  //constant downward Motion
-        pos.z += dz * (playerMoveSpeed * Time.deltaTime); //update left/right pos on z axes
+        pos += cfp;
         transform.position = pos;
 
         Quaternion camPos = transform.rotation; //Get players CameraPos
