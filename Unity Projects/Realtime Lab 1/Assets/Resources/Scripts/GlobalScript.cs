@@ -39,23 +39,25 @@ public class GlobalScript : MonoBehaviour
     private GameObject homeBase;
     private GameObject FireingZone;
     private GameObject[] turrets;
-    private GameObject[,] ground;
+    private GameObject groundParent;
+    private Dictionary<Vector3, GameObject> ground;
 
     private Transform globalParent;
 
-    private void InstantiateObject(out GameObject obj, GameObject prefab, Vector3 worldPos, Vector3 Scale, Transform parent = null)
+    private GameObject InstantiateObject(GameObject prefab, Vector3 worldPos, Vector3 Scale, Transform parent = null)
     {
-        obj = Instantiate(prefab, worldPos, prefab.transform.rotation);
-        obj.transform.localScale = prefab.transform.localScale;
+        GameObject obj = Instantiate(prefab, worldPos, prefab.transform.rotation);
         obj.transform.parent = parent;
+        obj.transform.localScale = prefab.transform.localScale;
         obj.transform.localScale = Scale;
+        return obj;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         Random.InitState(Time.time.GetHashCode());          //Seed random
-        ground = new GameObject[worldWidth, worldDepth];    //set ground array to world width and height
+        ground = new Dictionary<Vector3, GameObject>();     //setup ground dictionary for easy removall of blocks once they are gone
         turrets = new GameObject[turretCount];              //set turret array
         globalParent = this.transform;                      //setGlobal Parent pointer 
 
@@ -77,8 +79,7 @@ public class GlobalScript : MonoBehaviour
                 //Add Block x, z
                 worldPos.x = xPos; worldPos.z = zPos;     //setPos
                 worldPos.y = Mathf.Sin(angleS * amplitude) * Mathf.Cos(angleX * amplitude);
-
-                InstantiateObject(out ground[x, z], GroundBlock_prefab, worldPos,
+                ground[worldPos] = InstantiateObject(GroundBlock_prefab, worldPos,
                     GroundBlock_prefab.transform.localScale, globalParent);
 
                 //place world objects if at center
@@ -87,10 +88,10 @@ public class GlobalScript : MonoBehaviour
                     float tmpY = worldPos.y;
 
                     worldPos.y = tmpY + 1.38f;
-                    InstantiateObject(out homeBase, Base_prefab, worldPos, Base_prefab.transform.localScale);   //setBase in center of map
+                    homeBase = InstantiateObject(Base_prefab, worldPos, Base_prefab.transform.localScale);   //setBase in center of map
 
                     worldPos.y = 100f;
-                    InstantiateObject(out FireingZone, FiringPlane_prefab, worldPos, FiringPlane_prefab.transform.localScale); //set Firing plane in center of map
+                    FireingZone = InstantiateObject(FiringPlane_prefab, worldPos, FiringPlane_prefab.transform.localScale); //set Firing plane in center of map
 
                     //place turrets
                     float tmpX = worldPos.x;
@@ -103,10 +104,10 @@ public class GlobalScript : MonoBehaviour
                         worldPos.y = 2.03f;
                         worldPos.z = (turretRadius * Mathf.Sin((i + 1) * turretAngle)) + tmpZ;
 
-                        InstantiateObject(out turrets[i], Turret_prefab, worldPos, Turret_prefab.transform.localScale);
+                        turrets[i] = InstantiateObject(Turret_prefab, worldPos, Turret_prefab.transform.localScale);
                     }
                     worldPos.x = tmpX + .5f; worldPos.y = tmpY + 2; worldPos.z = tmpZ + .5f;
-                    InstantiateObject(out playerChar, Player_prefab, worldPos, playerScale);
+                    playerChar = InstantiateObject(Player_prefab, worldPos, playerScale);
                 }
             }
         }

@@ -21,6 +21,8 @@ public class PlayerScript : GlobalScript
         pos = transform.position;
         playerCam = GetComponentInChildren<Camera>(); //Get players CameraPos
         rb = GetComponent<Rigidbody>();
+        rb.useGravity = true;
+        print("MyChilderenCount: " + this.transform.childCount+" MyParent:"+this.transform.parent);
     }
 
     // Update is called once per frame
@@ -37,23 +39,18 @@ public class PlayerScript : GlobalScript
 
     private void FixedUpdate()
     {
+        
         Vector3 cfp = new Vector3();
         cfp.x   = getPosOffset("Horizontal");
         cfp.z   = getPosOffset("Vertical");
         cfp     = playerCam.transform.TransformDirection(cfp);
         cfp.y = 0;
 
-        if (GreaterOrLess(cfp.x, 0) || GreaterOrLess(cfp.y, 0) || GreaterOrLess(cfp.z, 0))
-            print("cam fwrd: " + cfp);
-
-        //float rotateX = Input.GetAxis("Mouse Y");
-        float rotateY = Input.GetAxis("Mouse X");
-
         pos += cfp;
         transform.position = pos;
 
+        float rotateY = Input.GetAxis("Mouse X");
         Quaternion camPos = transform.rotation; //Get players CameraPos
-        //camPos.x += rotateX * (camMoveSpeed * Time.deltaTime); //update forward/backward pos on x axes
         camPos.y += rotateY * (camMoveSpeed * Time.deltaTime); //update left/right pos on z axes
 
         transform.rotation = camPos;
@@ -61,7 +58,13 @@ public class PlayerScript : GlobalScript
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Rocket")
+        print("colliding with other Tag: " + other.tag+" Other name: "+other.name);
+        if (other.gameObject.tag == "ground")
+        {
+            rb.useGravity = false;
+            print("Colliding with ground at: " + this.pos);
+        }
+        else if (other.gameObject.tag == "Rocket")
         {
             playerHealth--;
         }
@@ -69,6 +72,15 @@ public class PlayerScript : GlobalScript
         {
             this.transform.SendMessage("incScore");
             heldCurrency += CurrencyValue;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "ground")
+        {
+            rb.useGravity = true;
+            print("Exiting Collision at: " + pos);
         }
     }
 }

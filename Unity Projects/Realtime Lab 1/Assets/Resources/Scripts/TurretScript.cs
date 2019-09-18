@@ -12,7 +12,7 @@ public class TurretScript : MonoBehaviour
         pos = this.transform.position;
         rayDir = new Vector3(0, 1, 0);
         checkInGround();
-        print("Turret at " + pos);
+        //print("Turret at " + pos);
     }
 
     // Update is called once per frame
