@@ -25,8 +25,8 @@ public class GroundScript : GlobalScript
 
     private void OnTriggerEnter(Collider other)
     {
-        print(this.name+": colliding with other Tag: " + other.tag + " Other name: " + other.name + 
-            " at WorldPos: "+this.transform.position + "\nlocalPos: "+this.transform.localPosition);
+        //print(this.name+": colliding with other Tag: " + other.tag + " Other name: " + other.name + 
+        //    " at WorldPos: "+this.transform.position + "\nlocalPos: "+this.transform.localPosition);
         if(other.tag == "Rocket")
         {
             print("im hit!!");

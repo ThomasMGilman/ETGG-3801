@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurretScript : MonoBehaviour
 {
+    private bool falling = true;
+
     private Vector3 pos;
     private Vector3 rayDir;
     // Start is called before the first frame update
@@ -18,7 +20,11 @@ public class TurretScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(falling)
+        {
+
+        }
+
     }
 
     private void checkInGround()
@@ -35,11 +41,13 @@ public class TurretScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Trigger enter colliding at" + pos);
+        GameObject obj = other.gameObject;
+        float diff = pos.y - obj.transform.position.y;
+        print("Trigger enter colliding at" + pos + " otherPos: "+obj.transform.position+ " diff "+diff);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        print("TriggerStay colliding at "+pos);
+        //print("TriggerStay colliding at "+pos);
     }
 }

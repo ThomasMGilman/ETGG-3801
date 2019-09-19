@@ -236,7 +236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490841792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.65053, y: 1.4162382, z: -99.505615}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -257,7 +257,8 @@ MonoBehaviour:
   worldWidth: 75
   worldDepth: 75
   turretCount: 8
-  amplitude: 2
+  gravitationalConstant: 0.01
+  amplitude: 1
   turretRadius: 50
   splashRadius: 5
   blockSpacing: 0.01
@@ -271,7 +272,7 @@ MonoBehaviour:
     type: 3}
   Turret_prefab: {fileID: 8303203828699239023, guid: ffca57136274e47418df1f19fb546383,
     type: 3}
-  Player_prefab: {fileID: 3776540875797089146, guid: 1db5a890a65742549a13278556b26c47,
+  Player_prefab: {fileID: 6258545199520387402, guid: 1db5a890a65742549a13278556b26c47,
     type: 3}
   Arrow_prefab: {fileID: 2692159482939753199, guid: 6fd23d5e6a112094f98f177df354266b,
     type: 3}

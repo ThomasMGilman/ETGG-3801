@@ -9,9 +9,15 @@ public class PlayerScript : GlobalScript
     public float camMoveSpeed = 1f;
 
     private float heldCurrency = 0;
-    private float gravitationalConstant = 9.8f;
+    private float moveUpVal;
+    private float heightFromCube = 1.000001f;
+
+    private bool moving = false;
+    private bool falling = false;
+    private bool moveUp;
 
     private Vector3 pos;
+    Animator playerAnimation;
     Camera playerCam;
     Rigidbody rb;
 
@@ -19,10 +25,10 @@ public class PlayerScript : GlobalScript
     void Start()
     {
         pos = transform.position;
+        playerAnimation = GetComponent<Animator>();
         playerCam = GetComponentInChildren<Camera>(); //Get players CameraPos
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = true;
-        print("MyChilderenCount: " + this.transform.childCount+" MyParent:"+this.transform.parent);
+        falling = true;
     }
 
     // Update is called once per frame
@@ -39,12 +45,36 @@ public class PlayerScript : GlobalScript
 
     private void FixedUpdate()
     {
-        
+        rb = GetComponent<Rigidbody>();
+
         Vector3 cfp = new Vector3();
         cfp.x   = getPosOffset("Horizontal");
         cfp.z   = getPosOffset("Vertical");
         cfp     = playerCam.transform.TransformDirection(cfp);
         cfp.y = 0;
+
+        if(falling)
+        {
+            cfp.y -= gravitationalConstant;
+        }
+
+        if(moveUp)
+        {
+            cfp.y += moveUpVal;
+            moveUp = false;
+        }
+
+        if( cfp.x != 0 || cfp.z != 0)
+        {
+            moving = true;
+            playerAnimation.SetBool("moving", moving);
+        }
+        else
+        {
+            moving = false;
+            playerAnimation.SetBool("moving", moving);
+        }
+        
 
         pos += cfp;
         transform.position = pos;
@@ -58,29 +88,50 @@ public class PlayerScript : GlobalScript
 
     private void OnTriggerEnter(Collider other)
     {
-        print("colliding with other Tag: " + other.tag+" Other name: "+other.name);
-        if (other.gameObject.tag == "ground")
+        GameObject obj = other.gameObject;
+        //print("colliding with other Tag: " + obj.tag+" Other name: "+ obj.name+ "\notherPos: "+obj.transform.position + " OtherLocalPos: "+obj.transform.localPosition);
+        if (obj.tag == "ground")
         {
-            rb.useGravity = false;
-            print("Colliding with ground at: " + this.pos);
+            falling = false;
+            //float diff2 = pos.y - obj.transform.localPosition.y;
+            float diff = pos.y - obj.transform.position.y;
+            //print("colliding with ground, gPosLocalY: " + obj.transform.localPosition.y + " myPos: " + pos.y + " diff: "+diff2);
+            //print("colliding with ground, gPosWorldY: " + obj.transform.position.y + " myPos: " + pos.y + " diff: " + diff);
+            if (diff < heightFromCube)
+            {
+                moveUp = true;
+                moveUpVal = heightFromCube - diff;
+                //print("moving up: " + moveUpVal + " my pos: " + pos);
+            }
         }
-        else if (other.gameObject.tag == "Rocket")
+        else if (obj.tag == "Rocket")
         {
             playerHealth--;
         }
-        else if(other.gameObject.tag == "Currency")
+        else if(obj.tag == "Currency")
         {
             this.transform.SendMessage("incScore");
             heldCurrency += CurrencyValue;
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        GameObject obj = other.gameObject;
+        if(obj.tag == "ground")
+        {
+            falling = false;
+        }
+    }
+
+
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "ground")
+        GameObject obj = other.gameObject;
+        if (obj.tag == "ground")
         {
-            rb.useGravity = true;
-            print("Exiting Collision at: " + pos);
+            falling = true;
+            //print("Exiting Collision at: " + pos);
         }
     }
 }

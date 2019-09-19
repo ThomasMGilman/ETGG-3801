@@ -10,6 +10,8 @@ public class GlobalScript : MonoBehaviour
     public int worldDepth = 50;
     public int turretCount = 5;
 
+    public float gravitationalConstant = .01f;
+
     public float amplitude = 1;         //sineAmplitudeFor worldGen
     public float turretRadius = 25;
     public float splashRadius = 5;      //Radius for rocket collision/explosion
@@ -81,6 +83,7 @@ public class GlobalScript : MonoBehaviour
                 worldPos.y = Mathf.Sin(angleS * amplitude) * Mathf.Cos(angleX * amplitude);
                 ground[worldPos] = InstantiateObject(GroundBlock_prefab, worldPos,
                     GroundBlock_prefab.transform.localScale, globalParent);
+                ground[worldPos].name = ground[worldPos].name +"_X:"+x.ToString() + "_Z:" + z.ToString();
 
                 //place world objects if at center
                 if (x == halfWidth && z == halfDepth)   
