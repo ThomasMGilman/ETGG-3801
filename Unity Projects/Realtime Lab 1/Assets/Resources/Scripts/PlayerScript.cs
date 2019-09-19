@@ -26,6 +26,7 @@ public class PlayerScript : GlobalScript
     {
         pos = transform.position;
         playerAnimation = GetComponent<Animator>();
+        playerAnimation.speed = 2f;
         playerCam = GetComponentInChildren<Camera>(); //Get players CameraPos
         rb = GetComponent<Rigidbody>();
         falling = true;

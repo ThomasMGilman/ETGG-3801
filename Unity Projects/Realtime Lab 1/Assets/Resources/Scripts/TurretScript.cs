@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretScript : MonoBehaviour
+public class TurretScript : GlobalScript
 {
+    private float offsetHeight;
+    private bool setOffset = false;
     private bool falling = true;
 
     private Vector3 pos;
@@ -22,9 +24,14 @@ public class TurretScript : MonoBehaviour
     {
         if(falling)
         {
-
+            pos.y -= gravitationalConstant;
         }
-
+        if(setOffset)
+        {
+            pos.y = offsetHeight;
+            setOffset = false;
+        }
+        this.transform.position = pos;
     }
 
     private void checkInGround()
@@ -42,8 +49,16 @@ public class TurretScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject obj = other.gameObject;
-        float diff = pos.y - obj.transform.position.y;
-        print("Trigger enter colliding at" + pos + " otherPos: "+obj.transform.position+ " diff "+diff);
+        
+        if(obj.tag == "ground")
+        {
+            float diff = pos.y + obj.transform.position.y;
+            //print("Trigger enter colliding with " + obj.name + " at" + pos + 
+            //    " otherPos: " + obj.transform.position + " diff " + diff);
+            offsetHeight = obj.transform.position.y + 1.8f;
+            setOffset = true;
+            falling = false;
+        }
     }
 
     private void OnTriggerStay(Collider other)
