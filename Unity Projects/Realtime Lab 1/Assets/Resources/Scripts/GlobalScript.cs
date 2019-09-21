@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GlobalScript : MonoBehaviour
 {
-    private int score = 0;
+    [HideInInspector]
+    public int score = 0;
 
     public int worldWidth = 50;
     public int worldDepth = 50;
     public int turretCount = 5;
 
-    public float gravitationalConstant = .01f;
+    public float gravitationalConstant = 1f;
 
     public float amplitude = 1;         //sineAmplitudeFor worldGen
     public float turretRadius = 25;

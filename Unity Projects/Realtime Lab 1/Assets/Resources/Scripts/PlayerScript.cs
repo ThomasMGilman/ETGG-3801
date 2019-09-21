@@ -12,23 +12,24 @@ public class PlayerScript : GlobalScript
     private float moveUpVal;
     private float heightFromCube = 1.000001f;
 
-    private bool moving = false;
-    private bool falling = false;
-    private bool moveUp;
+    private bool moveUp, falling = false;
 
-    private Vector3 pos;
+    private Vector3 pos, camPos;
     Animator playerAnimation;
     Camera playerCam;
     Rigidbody rb;
+
+    CursorLockMode wantMode;    //referenced https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
 
     // Start is called before the first frame update
     void Start()
     {
         pos = transform.position;
+        camPos = transform.rotation.eulerAngles;        //Get players CameraPos
         playerAnimation = GetComponent<Animator>();
-        playerAnimation.speed = 2f;
-        playerCam = GetComponentInChildren<Camera>(); //Get players CameraPos
+        playerCam = GetComponentInChildren<Camera>();   //Get players Camera
         rb = GetComponent<Rigidbody>();
+        playerAnimation.speed = 2f;  
         falling = true;
     }
 
@@ -44,95 +45,147 @@ public class PlayerScript : GlobalScript
         return GreaterOrLess(dirVal, 0) ? dirVal * (playerMoveSpeed * Time.deltaTime) : 0;
     }
 
+    /// <summary>
+    /// Return Vector3 of movement change
+    /// </summary>
+    /// <returns></returns>
+    private Vector3 getPosOffest()
+    {
+        Vector3 newPos = new Vector3();
+        newPos.x = getPosOffset("Horizontal");
+        newPos.z = getPosOffset("Vertical");
+        newPos = playerCam.transform.TransformDirection(newPos);
+        newPos.y = 0;
+
+        if (falling)  newPos.y -= gravitationalConstant * Time.deltaTime;
+        if (moveUp) { newPos.y += moveUpVal; moveUp = false; }
+        playerAnimation.SetBool("moving", (newPos.x != 0 || newPos.z != 0)); //if either x or z movement not 0 moving animation is true
+
+        return newPos;
+    }
+
+    /// <summary>
+    /// Update Camera Position of Player
+    /// </summary>
+    private void updateCamera()
+    {
+        if(wantMode == CursorLockMode.Locked)
+        {
+            float rotateY = getPosOffset("Mouse X");
+            if (rotateY != 0)
+            {
+                camPos.y += rotateY * camMoveSpeed;                 //update left/right pos on z axes
+                transform.rotation = Quaternion.Euler(camPos);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Check Inputs
+    /// </summary>
+    private void checkInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = wantMode = CursorLockMode.None;
+            SetCursorState();
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Cursor.lockState = wantMode = CursorLockMode.Locked;
+            SetCursorState();
+        }
+    }
+
     private void FixedUpdate()
     {
-        rb = GetComponent<Rigidbody>();
+        checkInput();
+        pos += getPosOffest();
+        transform.position = pos;
+        updateCamera();
+    }
 
-        Vector3 cfp = new Vector3();
-        cfp.x   = getPosOffset("Horizontal");
-        cfp.z   = getPosOffset("Vertical");
-        cfp     = playerCam.transform.TransformDirection(cfp);
-        cfp.y = 0;
-
-        if(falling)
+    private void groundCollision(GameObject obj, bool colliding)
+    {
+        if(colliding)
         {
-            cfp.y -= gravitationalConstant;
-        }
-
-        if(moveUp)
-        {
-            cfp.y += moveUpVal;
-            moveUp = false;
-        }
-
-        if( cfp.x != 0 || cfp.z != 0)
-        {
-            moving = true;
-            playerAnimation.SetBool("moving", moving);
+            falling = false;
+            float diff = pos.y - obj.transform.position.y;
+            if (diff < heightFromCube)
+            {
+                moveUp = true;
+                moveUpVal = heightFromCube - diff;
+            }
         }
         else
-        {
-            moving = false;
-            playerAnimation.SetBool("moving", moving);
-        }
-        
+            falling = true;
+    }
 
-        pos += cfp;
-        transform.position = pos;
+    private void moneyCollision(GameObject obj)
+    {
+        Destroy(obj);
+        heldCurrency += CurrencyValue;
+        score += 100;
+    }
 
-        float rotateY = Input.GetAxis("Mouse X");
-        Quaternion camPos = transform.rotation; //Get players CameraPos
-        camPos.y += rotateY * (camMoveSpeed * Time.deltaTime); //update left/right pos on z axes
+    private void rocketCollision(GameObject obj)
+    {
+        playerHealth--;
+        //possible knockback
+    }
 
-        transform.rotation = camPos;
+    private void structureCollision(GameObject obj)
+    {
+        //adjust camera and window view
     }
 
     private void OnTriggerEnter(Collider other)
     {
         GameObject obj = other.gameObject;
         //print("colliding with other Tag: " + obj.tag+" Other name: "+ obj.name+ "\notherPos: "+obj.transform.position + " OtherLocalPos: "+obj.transform.localPosition);
-        if (obj.tag == "ground")
+        switch (obj.tag)
         {
-            falling = false;
-            //float diff2 = pos.y - obj.transform.localPosition.y;
-            float diff = pos.y - obj.transform.position.y;
-            //print("colliding with ground, gPosLocalY: " + obj.transform.localPosition.y + " myPos: " + pos.y + " diff: "+diff2);
-            //print("colliding with ground, gPosWorldY: " + obj.transform.position.y + " myPos: " + pos.y + " diff: " + diff);
-            if (diff < heightFromCube)
-            {
-                moveUp = true;
-                moveUpVal = heightFromCube - diff;
-                //print("moving up: " + moveUpVal + " my pos: " + pos);
-            }
-        }
-        else if (obj.tag == "Rocket")
-        {
-            playerHealth--;
-        }
-        else if(obj.tag == "Currency")
-        {
-            this.transform.SendMessage("incScore");
-            heldCurrency += CurrencyValue;
+            case "ground":
+                groundCollision(obj, true);
+                break;
+            case "money":
+                moneyCollision(obj);
+                break;
+            case "rocket":
+                rocketCollision(obj);
+                break;
+            case "structure":
+                structureCollision(obj);
+                break;
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
         GameObject obj = other.gameObject;
-        if(obj.tag == "ground")
+        switch (obj.tag)
         {
-            falling = false;
+            case "ground":
+                if(falling)
+                    groundCollision(obj, true);
+                break;
         }
     }
-
 
     private void OnTriggerExit(Collider other)
     {
         GameObject obj = other.gameObject;
-        if (obj.tag == "ground")
+        switch (obj.tag)
         {
-            falling = true;
-            //print("Exiting Collision at: " + pos);
+            case "ground":
+                groundCollision(obj, false);
+                break;
         }
+    }
+
+    void SetCursorState()
+    {
+        Cursor.lockState = wantMode;
+        Cursor.visible = (CursorLockMode.Locked != wantMode);
     }
 }

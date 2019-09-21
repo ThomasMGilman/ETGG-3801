@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - money
+  - ground
+  - rocket
+  - structure
   layers:
   - Default
   - TransparentFX
