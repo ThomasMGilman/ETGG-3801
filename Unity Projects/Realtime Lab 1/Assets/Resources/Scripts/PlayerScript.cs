@@ -1,42 +1,91 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : GlobalScript
 {
+    [HideInInspector]
+    public int score = 0;
+
     public int playerHealth = 10;
     public float playerMoveSpeed = 5f;
+    public float jumpHeight = 2f;
     public float camMoveSpeed = 1f;
 
-    private float heldCurrency = 0;
+    private float remainingJump = 0;
+    private float playerFallSpeed = 0;
+    private float moneyheld = 0;
     private float moveUpVal;
     private float heightFromCube = 1.000001f;
 
-    private bool moveUp, falling = false;
+    private bool StructureMode, MoveUp, JumpStart, Jumping, Falling = false;
 
-    private Vector3 pos, camPos;
-    Animator playerAnimation;
-    Camera playerCam;
-    Rigidbody rb;
+    private Vector3 Pos, CamPos;
+    private Animator PlayerAnimation;
+    private Camera PlayerCam, tmp;
+    private Rigidbody Rigbody;
+    private Text BuildingText, ScoreText, MoneyText;
+    private RawImage HealthBar;
+
+    private GameObject buildingTouched;
 
     CursorLockMode wantMode;    //referenced https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
 
-    // Start is called before the first frame update
     void Start()
     {
-        pos = transform.position;
-        camPos = transform.rotation.eulerAngles;        //Get players CameraPos
-        playerAnimation = GetComponent<Animator>();
-        playerCam = GetComponentInChildren<Camera>();   //Get players Camera
-        rb = GetComponent<Rigidbody>();
-        playerAnimation.speed = 2f;  
-        falling = true;
+        Pos = transform.position;
+        CamPos = transform.rotation.eulerAngles;                //Get players CameraPos
+        PlayerAnimation = GetComponent<Animator>();
+        PlayerCam       = GetComponentInChildren<Camera>();     //Get players Camera
+        Rigbody         = GetComponent<Rigidbody>();
+        BuildingText    = GameObject.Find("BuildingText").GetComponent<Text>();
+        ScoreText       = GameObject.Find("ScoreText").GetComponent<Text>();
+        MoneyText       = GameObject.Find("CashText").GetComponent<Text>();
+        PlayerAnimation.speed = 2f;
+        Falling = true;
+        StructureMode = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
+    }
+
+    private void getPosYOffset(out float posY)
+    {
+        posY = 0;
+        float jumpAmount = getPosOffset("Jump");
+        if(!Falling && !Jumping && jumpAmount > 0)
+        {
+            Jumping = true;
+            remainingJump = jumpHeight;
+        }
+        if (Jumping)
+        {
+            if (remainingJump <= 0) { Jumping = false; Falling = true; }
+            else
+            {
+                if (jumpAmount <= 0)
+                {
+                    Jumping = false;
+                    Falling = true;
+                    remainingJump = 0;
+                }
+                else
+                {
+                    remainingJump -= jumpAmount;
+                    posY += jumpAmount;
+                }
+            }
+        }
+        else if (Falling)
+        {
+            playerFallSpeed += gravitationalConstant * Time.deltaTime;
+            //print("FallSpeed: " + playerFallSpeed);
+            posY -= playerFallSpeed;
+        }
+        else if (MoveUp) { posY += moveUpVal; MoveUp = false; }
     }
 
     private float getPosOffset(string dir)
@@ -52,15 +101,15 @@ public class PlayerScript : GlobalScript
     private Vector3 getPosOffest()
     {
         Vector3 newPos = new Vector3();
-        newPos.x = getPosOffset("Horizontal");
-        newPos.z = getPosOffset("Vertical");
-        newPos = playerCam.transform.TransformDirection(newPos);
-        newPos.y = 0;
+        if (!StructureMode)
+        {
+            newPos.x = getPosOffset("Horizontal");
+            newPos.z = getPosOffset("Vertical");
+            newPos = PlayerCam.transform.TransformDirection(newPos);
+            getPosYOffset(out newPos.y);
 
-        if (falling)  newPos.y -= gravitationalConstant * Time.deltaTime;
-        if (moveUp) { newPos.y += moveUpVal; moveUp = false; }
-        playerAnimation.SetBool("moving", (newPos.x != 0 || newPos.z != 0)); //if either x or z movement not 0 moving animation is true
-
+            PlayerAnimation.SetBool("moving", (newPos.x != 0 || newPos.z != 0)); //if either x or z movement not 0 moving animation is true
+        }
         return newPos;
     }
 
@@ -74,8 +123,8 @@ public class PlayerScript : GlobalScript
             float rotateY = getPosOffset("Mouse X");
             if (rotateY != 0)
             {
-                camPos.y += rotateY * camMoveSpeed;                 //update left/right pos on z axes
-                transform.rotation = Quaternion.Euler(camPos);
+                CamPos.y += rotateY * camMoveSpeed;                 //update left/right pos on z axes
+                transform.rotation = Quaternion.Euler(CamPos);
             }
         }
     }
@@ -85,6 +134,14 @@ public class PlayerScript : GlobalScript
     /// </summary>
     private void checkInput()
     {
+        if (Input.GetAxis("Submit") != 0)
+        {
+            if(BuildingText.enabled && !StructureMode)
+            {
+                StructureMode = true;
+                buildingTouched.SendMessage("enterBuilding");
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = wantMode = CursorLockMode.None;
@@ -100,8 +157,8 @@ public class PlayerScript : GlobalScript
     private void FixedUpdate()
     {
         checkInput();
-        pos += getPosOffest();
-        transform.position = pos;
+        Pos += getPosOffest();
+        transform.position = Pos;
         updateCamera();
     }
 
@@ -109,23 +166,27 @@ public class PlayerScript : GlobalScript
     {
         if(colliding)
         {
-            falling = false;
-            float diff = pos.y - obj.transform.position.y;
+            Falling = false;
+            Jumping = false;
+            playerFallSpeed = 0;
+            float diff = Pos.y - obj.transform.position.y;
             if (diff < heightFromCube)
             {
-                moveUp = true;
+                MoveUp = true;
                 moveUpVal = heightFromCube - diff;
             }
         }
         else
-            falling = true;
+            Falling = true;
     }
 
     private void moneyCollision(GameObject obj)
     {
         Destroy(obj);
-        heldCurrency += CurrencyValue;
+        moneyheld += CurrencyValue;
         score += 100;
+        ScoreText.text = "Score: " + score;
+        MoneyText.text = "Money: " + moneyheld;
     }
 
     private void rocketCollision(GameObject obj)
@@ -134,8 +195,15 @@ public class PlayerScript : GlobalScript
         //possible knockback
     }
 
-    private void structureCollision(GameObject obj)
+    private void structureCollision(GameObject obj, bool colliding)
     {
+        if(colliding)
+        {
+            BuildingText.enabled = true;
+            buildingTouched = obj;
+        } 
+        else
+            BuildingText.enabled = false;
         //adjust camera and window view
     }
 
@@ -155,7 +223,7 @@ public class PlayerScript : GlobalScript
                 rocketCollision(obj);
                 break;
             case "structure":
-                structureCollision(obj);
+                structureCollision(obj, true);
                 break;
         }
     }
@@ -166,7 +234,7 @@ public class PlayerScript : GlobalScript
         switch (obj.tag)
         {
             case "ground":
-                if(falling)
+                if(Falling)
                     groundCollision(obj, true);
                 break;
         }
@@ -179,6 +247,9 @@ public class PlayerScript : GlobalScript
         {
             case "ground":
                 groundCollision(obj, false);
+                break;
+            case "structure":
+                structureCollision(obj, false);
                 break;
         }
     }

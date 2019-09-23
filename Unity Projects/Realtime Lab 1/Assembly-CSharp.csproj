@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Resources\Scripts\BaseScript.cs" />
+    <Compile Include="Assets\Resources\Scripts\BuildingScript.cs" />
     <Compile Include="Assets\Resources\Scripts\GlobalScript.cs" />
     <Compile Include="Assets\Resources\Scripts\GroundScript.cs" />
     <Compile Include="Assets\Resources\Scripts\MoneyScript.cs" />
@@ -70,7 +70,6 @@
     <Compile Include="Assets\Resources\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Resources\Scripts\ProjectilePlaneScript.cs" />
     <Compile Include="Assets\Resources\Scripts\ProjectileScript.cs" />
-    <Compile Include="Assets\Resources\Scripts\TurretScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Lab 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

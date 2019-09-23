@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GlobalScript : MonoBehaviour
 {
-    [HideInInspector]
-    public int score = 0;
-
     public int worldWidth = 50;
     public int worldDepth = 50;
     public int turretCount = 5;
@@ -121,11 +118,6 @@ public class GlobalScript : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void incScore()
-    {
-        score += 100;
     }
 
     public bool GreaterOrLess(dynamic gOrl, dynamic val)

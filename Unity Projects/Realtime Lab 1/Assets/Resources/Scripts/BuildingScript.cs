@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretScript : GlobalScript
+public class BuildingScript : GlobalScript
 {
     private float offsetHeight;
     private bool setOffset = false;
     private bool falling = true;
 
+    private string Base = "base(Clone)", Turret = "launcher(Clone)";
+
     private Vector3 pos;
-    private Vector3 rayDir;
     // Start is called before the first frame update
     void Start()
     {
         pos = this.transform.position;
-        rayDir = new Vector3(0, 1, 0);
-        checkInGround();
-        //print("Turret at " + pos);
     }
 
     // Update is called once per frame
@@ -34,18 +32,6 @@ public class TurretScript : GlobalScript
         this.transform.position = pos;
     }
 
-    private void checkInGround()
-    {
-        //raycast for Invaders to know wether or not to fire
-        RaycastHit hit;
-        int layer_mask = 1 << 8;
-        if (Physics.Raycast(pos, rayDir, out hit, 10.0f, layer_mask))
-        {
-            this.pos = hit.transform.position;
-            print("Hitting the ground, my pos: "+this.pos);
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         GameObject obj = other.gameObject;
@@ -53,9 +39,9 @@ public class TurretScript : GlobalScript
         if(obj.tag == "ground")
         {
             float diff = pos.y + obj.transform.position.y;
-            //print("Trigger enter colliding with " + obj.name + " at" + pos + 
+            //print("This: "+ transform.name +"\nTrigger enter colliding with " + obj.name + " at" + pos + 
             //    " otherPos: " + obj.transform.position + " diff " + diff);
-            offsetHeight = obj.transform.position.y + 1.8f;
+            offsetHeight = obj.transform.position.y + (transform.name == Base ? 1.1f : 1.8f);
             setOffset = true;
             falling = false;
         }
