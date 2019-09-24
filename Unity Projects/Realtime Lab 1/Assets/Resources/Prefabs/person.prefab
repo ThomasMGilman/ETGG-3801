@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 820215479205156972}
   - component: {fileID: 536204763897350845}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: PlayerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,7 +770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53763a95652be9c4fb59de3aabf7d5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   worldWidth: 50
   worldDepth: 50
   turretCount: 5
@@ -789,8 +788,10 @@ MonoBehaviour:
   Arrow_prefab: {fileID: 0}
   Rocket_prefab: {fileID: 0}
   Money_prefab: {fileID: 0}
+  score: 0
   playerHealth: 10
   playerMoveSpeed: 5
+  jumpHeight: 2
   camMoveSpeed: 5
 --- !u!65 &3525924075415432800
 BoxCollider:

@@ -8,8 +8,6 @@ public class BuildingScript : GlobalScript
     private bool setOffset = false;
     private bool falling = true;
 
-    private string Base = "base(Clone)", Turret = "launcher(Clone)";
-
     private Vector3 pos;
     // Start is called before the first frame update
     void Start()
@@ -50,5 +48,10 @@ public class BuildingScript : GlobalScript
     private void OnTriggerStay(Collider other)
     {
         //print("TriggerStay colliding at "+pos);
+    }
+
+    private void enterBuilding(bool state)
+    {
+        print("Entering: " + this.name + " state: " + state);
     }
 }

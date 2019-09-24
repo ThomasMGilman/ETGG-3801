@@ -19,6 +19,8 @@ public class GlobalScript : MonoBehaviour
 
     public Vector3 playerScale = new Vector3(.1f, .1f, .1f);
 
+    public string Base = "base(Clone)", Turret = "launcher(Clone)"; //Structure Names
+
     //WorldObjects
     public GameObject GroundBlock_prefab;
     public GameObject FiringPlane_prefab;

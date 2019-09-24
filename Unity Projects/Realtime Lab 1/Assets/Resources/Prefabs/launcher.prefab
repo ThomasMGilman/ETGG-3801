@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5205390363845255514}
   m_Layer: 0
   m_Name: launcher
-  m_TagString: Untagged
+  m_TagString: structure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,8 +122,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999998, z: 0.003460326}
-  m_Center: {x: 0, y: -7.10543e-17, z: -0.008269831}
+  m_Size: {x: 0.02837695, y: 0.028376946, z: 0.004909675}
+  m_Center: {x: -0.00067959784, y: -7.10543e-17, z: -0.008269831}
 --- !u!54 &5205390363845255514
 Rigidbody:
   m_ObjectHideFlags: 0

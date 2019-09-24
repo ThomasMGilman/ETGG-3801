@@ -19,12 +19,15 @@ public class PlayerScript : GlobalScript
     private float moveUpVal;
     private float heightFromCube = 1.000001f;
 
-    private bool StructureMode, MoveUp, JumpStart, Jumping, Falling = false;
+    private float buttonDebounce = 0f;
 
-    private Vector3 Pos, CamPos;
+    private bool StructureMode, animateOutOfBuilding, MoveUp, JumpStart, Jumping, Falling = false;
+
+    private Vector3 Pos, CamPos, playersLastPos;
     private Animator PlayerAnimation;
     private Camera PlayerCam, tmp;
     private Rigidbody Rigbody;
+    private SkinnedMeshRenderer playerImage;
     private Text BuildingText, ScoreText, MoneyText;
     private RawImage HealthBar;
 
@@ -39,17 +42,27 @@ public class PlayerScript : GlobalScript
         PlayerAnimation = GetComponent<Animator>();
         PlayerCam       = GetComponentInChildren<Camera>();     //Get players Camera
         Rigbody         = GetComponent<Rigidbody>();
+        playerImage     = GameObject.Find("PlayerImage").GetComponent<SkinnedMeshRenderer>();
         BuildingText    = GameObject.Find("BuildingText").GetComponent<Text>();
         ScoreText       = GameObject.Find("ScoreText").GetComponent<Text>();
         MoneyText       = GameObject.Find("CashText").GetComponent<Text>();
         PlayerAnimation.speed = 2f;
         Falling = true;
         StructureMode = false;
+        BuildingText.enabled = false;
     }
 
     void Update()
     {
+        if (buttonDebounce > 0) buttonDebounce -= .1f * Time.deltaTime;
+        checkInput();
+    }
 
+    private void FixedUpdate()
+    {
+        Pos += getPosOffest();
+        transform.position = Pos;
+        updateCamera();
     }
 
     private void getPosYOffset(out float posY)
@@ -94,6 +107,22 @@ public class PlayerScript : GlobalScript
         return GreaterOrLess(dirVal, 0) ? dirVal * (playerMoveSpeed * Time.deltaTime) : 0;
     }
 
+    float getDifAmount(float posX, float otherX)
+    {
+        return (posX - otherX);
+    }
+
+    private void adjustToPos(out Vector3 toAdjust, Vector3 other, float yOffset = 0)
+    {
+        toAdjust.x = 0; toAdjust.y = 0; toAdjust.z = 0;
+        if (Pos.x != other.x || Pos.y != other.y + 2 || Pos.z != other.z)
+        {
+            if (Pos.x != other.x)           toAdjust.x = getDifAmount(other.x, Pos.x);
+            if (Pos.y != other.y + yOffset) toAdjust.y = getDifAmount(other.y + yOffset, Pos.y);
+            if (Pos.z != other.z)           toAdjust.z = getDifAmount(other.z, Pos.z);
+        }
+    }
+
     /// <summary>
     /// Return Vector3 of movement change
     /// </summary>
@@ -103,12 +132,25 @@ public class PlayerScript : GlobalScript
         Vector3 newPos = new Vector3();
         if (!StructureMode)
         {
-            newPos.x = getPosOffset("Horizontal");
-            newPos.z = getPosOffset("Vertical");
-            newPos = PlayerCam.transform.TransformDirection(newPos);
-            getPosYOffset(out newPos.y);
+            if(animateOutOfBuilding)
+            {
+                adjustToPos(out newPos, playersLastPos);
+                if (Pos == playersLastPos) animateOutOfBuilding = false;
+            }
+            else
+            {
+                newPos.x = getPosOffset("Horizontal");
+                newPos.z = getPosOffset("Vertical");
+                newPos = PlayerCam.transform.TransformDirection(newPos);
+                getPosYOffset(out newPos.y);
 
-            PlayerAnimation.SetBool("moving", (newPos.x != 0 || newPos.z != 0)); //if either x or z movement not 0 moving animation is true
+                PlayerAnimation.SetBool("moving", (newPos.x != 0 || newPos.z != 0)); //if either x or z movement not 0 moving animation is true
+            }
+        }
+        else
+        {
+            Vector3 buildPos = buildingTouched.transform.position;
+            adjustToPos(out newPos, buildPos, 2);
         }
         return newPos;
     }
@@ -129,37 +171,54 @@ public class PlayerScript : GlobalScript
         }
     }
 
+    private void enterBuilding()
+    {
+        //move into building cameraPosition
+        if(StructureMode)
+        {
+            playersLastPos = Pos;
+            if (buildingTouched.name == Base)
+            {
+
+            }
+            else if (buildingTouched.name == Turret)
+            {
+
+            }
+            else
+                print("Cannot enter a nonStructure object!!! what are you trying to enter?! : " + buildingTouched.name);
+        }
+        else //move camerback
+        {
+            if(Pos != playersLastPos)
+                animateOutOfBuilding = true;
+        }
+    }
+
     /// <summary>
     /// Check Inputs
     /// </summary>
     private void checkInput()
     {
-        if (Input.GetAxis("Submit") != 0)
+        if (Input.GetKeyDown(KeyCode.E) && buttonDebounce <= 0) ////WORK ON THIS HERE
         {
-            if(BuildingText.enabled && !StructureMode)
-            {
-                StructureMode = true;
-                buildingTouched.SendMessage("enterBuilding");
-            }
+            StructureMode = BuildingText.enabled;
+            if (StructureMode) BuildingText.enabled = false;
+            else BuildingText.enabled = true;
+            buttonDebounce = .2f;
+
+            playerImage.enabled = !StructureMode;
+            buildingTouched.SendMessage("enterBuilding", StructureMode);    //update gui display
+            enterBuilding();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.lockState = wantMode = CursorLockMode.None;
-            SetCursorState();
+            SetCursorState(CursorLockMode.None);
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Cursor.lockState = wantMode = CursorLockMode.Locked;
-            SetCursorState();
+            SetCursorState(CursorLockMode.Locked);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        checkInput();
-        Pos += getPosOffest();
-        transform.position = Pos;
-        updateCamera();
     }
 
     private void groundCollision(GameObject obj, bool colliding)
@@ -198,12 +257,8 @@ public class PlayerScript : GlobalScript
     private void structureCollision(GameObject obj, bool colliding)
     {
         if(colliding)
-        {
-            BuildingText.enabled = true;
             buildingTouched = obj;
-        } 
-        else
-            BuildingText.enabled = false;
+        BuildingText.enabled = colliding;
         //adjust camera and window view
     }
 
@@ -254,9 +309,9 @@ public class PlayerScript : GlobalScript
         }
     }
 
-    void SetCursorState()
+    private void SetCursorState(CursorLockMode state)
     {
-        Cursor.lockState = wantMode;
+        Cursor.lockState = wantMode = state;
         Cursor.visible = (CursorLockMode.Locked != wantMode);
     }
 }
