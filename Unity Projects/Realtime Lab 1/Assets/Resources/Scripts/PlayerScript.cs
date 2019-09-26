@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : GlobalScript
 {
@@ -59,6 +60,8 @@ public class PlayerScript : GlobalScript
         camOriginPos = PlayerCam.transform.position;
         camOriginY = camOriginPos.y;
         camOriginZ = camOriginPos.z;
+
+        SetCursorState(CursorLockMode.Locked);
     }
 
     void Update()
@@ -219,6 +222,7 @@ public class PlayerScript : GlobalScript
     /// </summary>
     private void checkInput()
     {
+        float fireing = Input.GetAxis("Fire2");
         if (Input.GetKeyDown(KeyCode.E) && buttonDebounce <= 0)
         {
             if ((StructureMode && !BuildingText.enabled) || (!StructureMode && BuildingText.enabled))
@@ -234,10 +238,17 @@ public class PlayerScript : GlobalScript
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SetCursorState(CursorLockMode.None);
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+            SetCursorState(CursorLockMode.None);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SetCursorState(CursorLockMode.Locked);
+        }
+        if (fireing != 0 && StructureMode && buildingTouched.name == Turret)
+        {
+            GameObject arrow = Instantiate(Arrow_prefab, Pos, this.transform.rotation);
         }
     }
 

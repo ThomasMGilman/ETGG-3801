@@ -861,13 +861,16 @@ MonoBehaviour:
   playerScale: {x: 0.1, y: 0.1, z: 0.1}
   Base: base(Clone)
   Turret: launcher(Clone)
+  allSet: 0
   GroundBlock_prefab: {fileID: 0}
   FiringPlane_prefab: {fileID: 0}
   Base_prefab: {fileID: 0}
   Turret_prefab: {fileID: 0}
   Player_prefab: {fileID: 0}
-  Arrow_prefab: {fileID: 0}
-  Rocket_prefab: {fileID: 0}
+  Arrow_prefab: {fileID: 2692159482939753199, guid: 6fd23d5e6a112094f98f177df354266b,
+    type: 3}
+  Rocket_prefab: {fileID: 193203916219761937, guid: 5b1c6db0c71a49340bf72ca2da2ff5b8,
+    type: 3}
   Money_prefab: {fileID: 0}
   score: 0
   playerHealth: 10

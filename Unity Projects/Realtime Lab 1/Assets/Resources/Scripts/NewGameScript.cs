@@ -14,6 +14,7 @@ public class NewGameScript : GlobalScript
 
     public float ButtonGap = 50f;       //Gap between buttons
     public float AnimationSpeed = 1f;   //speed at which menu scrolls upwards
+
     public bool AnimateMenu = true;     //animate Menu upwards by default when game starts
 
     private RectTransform pRTransform;
