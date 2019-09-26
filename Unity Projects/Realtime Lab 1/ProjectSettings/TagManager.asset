@@ -8,6 +8,7 @@ TagManager:
   - ground
   - rocket
   - structure
+  - arrow
   layers:
   - Default
   - TransparentFX

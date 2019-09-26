@@ -20,10 +20,11 @@ public class PlayerScript : GlobalScript
     private float heightFromCube = 1.000001f;
 
     private float buttonDebounce = 0f;
+    float camOriginY, camOriginZ;
 
     private bool StructureMode, animateOutOfBuilding, MoveUp, JumpStart, Jumping, Falling = false;
 
-    private Vector3 Pos, CamPos, playersLastPos;
+    private Vector3 Pos, camOriginPos, CamPos, camPivPos, playersLastPos;
     private Animator PlayerAnimation;
     private Camera PlayerCam, tmp;
     private Rigidbody Rigbody;
@@ -32,24 +33,32 @@ public class PlayerScript : GlobalScript
     private RawImage HealthBar;
 
     private GameObject buildingTouched;
+    private GameObject camPivot;
 
     CursorLockMode wantMode;    //referenced https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
 
     void Start()
     {
-        Pos = transform.position;
-        CamPos = transform.rotation.eulerAngles;                //Get players CameraPos
+        //print(this.transform.childCount);
         PlayerAnimation = GetComponent<Animator>();
-        PlayerCam       = GetComponentInChildren<Camera>();     //Get players Camera
-        Rigbody         = GetComponent<Rigidbody>();
-        playerImage     = GameObject.Find("PlayerImage").GetComponent<SkinnedMeshRenderer>();
-        BuildingText    = GameObject.Find("BuildingText").GetComponent<Text>();
-        ScoreText       = GameObject.Find("ScoreText").GetComponent<Text>();
-        MoneyText       = GameObject.Find("CashText").GetComponent<Text>();
+        PlayerCam = GetComponentInChildren<Camera>();     //Get players Camera
+        Rigbody = GetComponent<Rigidbody>();
+        playerImage = this.transform.GetChild(2).GetComponent<SkinnedMeshRenderer>();       //drawing image of player
+        camPivot = this.transform.GetChild(3).gameObject;                                   //Pivot Point for the camera
+        PlayerCam = camPivot.transform.GetChild(0).GetComponent<Camera>();
+        BuildingText = GameObject.Find("BuildingText").GetComponent<Text>();                //Text that displays when close to building
+        ScoreText = GameObject.Find("ScoreText").GetComponent<Text>();                      //Players Score
+        MoneyText = GameObject.Find("CashText").GetComponent<Text>();                       //Players Money
         PlayerAnimation.speed = 2f;
         Falling = true;
         StructureMode = false;
         BuildingText.enabled = false;
+        Pos = transform.position;
+        CamPos = transform.rotation.eulerAngles;                //Get players CameraPos
+        camPivPos = camPivot.transform.rotation.eulerAngles;    //Get CameraPivot Object angle
+        camOriginPos = PlayerCam.transform.position;
+        camOriginY = camOriginPos.y;
+        camOriginZ = camOriginPos.z;
     }
 
     void Update()
@@ -112,14 +121,14 @@ public class PlayerScript : GlobalScript
         return (posX - otherX);
     }
 
-    private void adjustToPos(out Vector3 toAdjust, Vector3 other, float yOffset = 0)
+    private void adjustToPos(out Vector3 toAdjust, Vector3 other, float yOffset = 0, float zOffset = 0)
     {
         toAdjust.x = 0; toAdjust.y = 0; toAdjust.z = 0;
-        if (Pos.x != other.x || Pos.y != other.y + 2 || Pos.z != other.z)
+        if (Pos.x != other.x || Pos.y != other.y + yOffset || Pos.z != other.z + zOffset)
         {
             if (Pos.x != other.x)           toAdjust.x = getDifAmount(other.x, Pos.x);
             if (Pos.y != other.y + yOffset) toAdjust.y = getDifAmount(other.y + yOffset, Pos.y);
-            if (Pos.z != other.z)           toAdjust.z = getDifAmount(other.z, Pos.z);
+            if (Pos.z != other.z + zOffset) toAdjust.z = getDifAmount(other.z + zOffset, Pos.z);
         }
     }
 
@@ -136,6 +145,7 @@ public class PlayerScript : GlobalScript
             {
                 adjustToPos(out newPos, playersLastPos);
                 if (Pos == playersLastPos) animateOutOfBuilding = false;
+                PlayerCam.transform.position = camOriginPos;
             }
             else
             {
@@ -150,7 +160,10 @@ public class PlayerScript : GlobalScript
         else
         {
             Vector3 buildPos = buildingTouched.transform.position;
-            adjustToPos(out newPos, buildPos, 2);
+            if (buildingTouched.name == Base)
+                adjustToPos(out newPos, buildPos, 3, -1);
+            else
+                adjustToPos(out newPos, buildPos, 2);
         }
         return newPos;
     }
@@ -162,11 +175,20 @@ public class PlayerScript : GlobalScript
     {
         if(wantMode == CursorLockMode.Locked)
         {
-            float rotateY = getPosOffset("Mouse X");
+            float rotateY   = getPosOffset("Mouse X");
+            float pivotCam  = getPosOffset("Mouse Y");
             if (rotateY != 0)
             {
                 CamPos.y += rotateY * camMoveSpeed;                 //update left/right pos on z axes
+                camPivPos.y = CamPos.y;
                 transform.rotation = Quaternion.Euler(CamPos);
+            }
+            if (pivotCam != 0)
+            {
+                float newPivX = camPivPos.x + pivotCam;
+                if (newPivX < 60 && newPivX > -50)
+                    camPivPos.x = newPivX;
+                camPivot.transform.rotation = Quaternion.Euler(camPivPos);
             }
         }
     }
@@ -177,39 +199,37 @@ public class PlayerScript : GlobalScript
         if(StructureMode)
         {
             playersLastPos = Pos;
-            if (buildingTouched.name == Base)
-            {
-
-            }
-            else if (buildingTouched.name == Turret)
-            {
-
-            }
-            else
-                print("Cannot enter a nonStructure object!!! what are you trying to enter?! : " + buildingTouched.name);
+            camOriginPos = PlayerCam.transform.position;
+            Vector3 tmp = camOriginPos;
+            tmp.y = transform.position.y;
+            tmp.z = transform.position.z;
+            PlayerCam.transform.position = tmp;
         }
         else //move camerback
         {
             if(Pos != playersLastPos)
+            {
                 animateOutOfBuilding = true;
+            }
         }
     }
 
     /// <summary>
-    /// Check Inputs
+    /// Check Inputs, and whether entering building or not
     /// </summary>
     private void checkInput()
     {
-        if (Input.GetKeyDown(KeyCode.E) && buttonDebounce <= 0) ////WORK ON THIS HERE
+        if (Input.GetKeyDown(KeyCode.E) && buttonDebounce <= 0)
         {
+            if ((StructureMode && !BuildingText.enabled) || (!StructureMode && BuildingText.enabled))
+                enterBuilding();
+
             StructureMode = BuildingText.enabled;
             if (StructureMode) BuildingText.enabled = false;
-            else BuildingText.enabled = true;
             buttonDebounce = .2f;
-
             playerImage.enabled = !StructureMode;
-            buildingTouched.SendMessage("enterBuilding", StructureMode);    //update gui display
-            enterBuilding();
+            if(buildingTouched != null)
+                buildingTouched.SendMessage("enterBuilding", StructureMode);    //update gui display
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -259,7 +279,6 @@ public class PlayerScript : GlobalScript
         if(colliding)
             buildingTouched = obj;
         BuildingText.enabled = colliding;
-        //adjust camera and window view
     }
 
     private void OnTriggerEnter(Collider other)

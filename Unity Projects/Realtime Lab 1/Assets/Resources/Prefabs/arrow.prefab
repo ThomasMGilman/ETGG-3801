@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5858695722714886730}
   m_Layer: 0
   m_Name: arrow
-  m_TagString: Untagged
+  m_TagString: rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,3 +91,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eb72dc3eb8a094584a08b8bd5714f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldWidth: 75
+  worldDepth: 75
+  turretCount: 5
+  gravitationalConstant: 1
+  amplitude: 1
+  turretRadius: 25
+  splashRadius: 5
+  blockSpacing: 0.5
+  CurrencyValue: 1
+  playerScale: {x: 0.1, y: 0.1, z: 0.1}
+  Base: base(Clone)
+  Turret: launcher(Clone)
+  allSet: 0
+  GroundBlock_prefab: {fileID: 0}
+  FiringPlane_prefab: {fileID: 0}
+  Base_prefab: {fileID: 0}
+  Turret_prefab: {fileID: 0}
+  Player_prefab: {fileID: 0}
+  Arrow_prefab: {fileID: 0}
+  Rocket_prefab: {fileID: 0}
+  Money_prefab: {fileID: 0}

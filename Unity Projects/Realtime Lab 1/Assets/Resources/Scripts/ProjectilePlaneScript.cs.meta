@@ -3,7 +3,16 @@ guid: 91ebcfd412bfbcb46aeca7c0ded3ca65
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - GroundBlock_prefab: {instanceID: 0}
+  - FiringPlane_prefab: {instanceID: 0}
+  - Base_prefab: {instanceID: 0}
+  - Turret_prefab: {instanceID: 0}
+  - Player_prefab: {instanceID: 0}
+  - Arrow_prefab: {instanceID: 0}
+  - Rocket_prefab: {fileID: 193203916219761937, guid: 5b1c6db0c71a49340bf72ca2da2ff5b8,
+      type: 3}
+  - Money_prefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

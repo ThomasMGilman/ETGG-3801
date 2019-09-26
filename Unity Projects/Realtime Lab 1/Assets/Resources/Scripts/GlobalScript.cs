@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GlobalScript : MonoBehaviour
 {
-    public int worldWidth = 50;
-    public int worldDepth = 50;
+    public int worldWidth = 75;
+    public int worldDepth = 75;
     public int turretCount = 5;
 
     public float gravitationalConstant = 1f;
@@ -20,6 +20,8 @@ public class GlobalScript : MonoBehaviour
     public Vector3 playerScale = new Vector3(.1f, .1f, .1f);
 
     public string Base = "base(Clone)", Turret = "launcher(Clone)"; //Structure Names
+
+    public bool allSet = false;
 
     //WorldObjects
     public GameObject GroundBlock_prefab;
@@ -42,11 +44,13 @@ public class GlobalScript : MonoBehaviour
     private GameObject FireingZone;
     private GameObject[] turrets;
     private GameObject groundParent;
-    private Dictionary<Vector3, GameObject> ground;
+    
+    [HideInInspector]
+    public Dictionary<Vector3, GameObject> ground;
 
     private Transform globalParent;
 
-    private GameObject InstantiateObject(GameObject prefab, Vector3 worldPos, Vector3 Scale, Transform parent = null)
+    public GameObject InstantiateObject(GameObject prefab, Vector3 worldPos, Vector3 Scale, Transform parent = null)
     {
         GameObject obj = Instantiate(prefab, worldPos, prefab.transform.rotation);
         obj.transform.parent = parent;
@@ -75,15 +79,16 @@ public class GlobalScript : MonoBehaviour
             float angleX = (float)((((x + 1) * waveInc) * Mathf.PI) / 180);
             for (int z = 0; z < worldDepth; z++)
             {
+                Vector3 blockLocation = new Vector3(x, 0, z);
                 zPos = (z + (z * 1)) + z*blockSpacing;
                 float angleS = (float)((((z + 1) * waveInc) * Mathf.PI) / 180);
                 
                 //Add Block x, z
                 worldPos.x = xPos; worldPos.z = zPos;     //setPos
                 worldPos.y = Mathf.Sin(angleS * amplitude) * Mathf.Cos(angleX * amplitude);
-                ground[worldPos] = InstantiateObject(GroundBlock_prefab, worldPos,
+                ground[blockLocation] = InstantiateObject(GroundBlock_prefab, worldPos,
                     GroundBlock_prefab.transform.localScale, globalParent);
-                ground[worldPos].name = ground[worldPos].name +"_X:"+x.ToString() + "_Z:" + z.ToString();
+                ground[blockLocation].name = ground[blockLocation].name +"_X:"+x.ToString() + "_Z:" + z.ToString();
 
                 //place world objects if at center
                 if (x == halfWidth && z == halfDepth)   
@@ -114,6 +119,7 @@ public class GlobalScript : MonoBehaviour
                 }
             }
         }
+        FireingZone.SendMessage("ToCheck", ground);
     }
 
     // Update is called once per frame

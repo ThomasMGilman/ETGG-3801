@@ -123,6 +123,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ebcfd412bfbcb46aeca7c0ded3ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldWidth: 75
+  worldDepth: 75
+  turretCount: 5
+  gravitationalConstant: 0.0001
+  amplitude: 1
+  turretRadius: 25
+  splashRadius: 5
+  rocketRate: 2000
+  rocketFallRate: 5
+  blockSpacing: 0.5
+  CurrencyValue: 1
+  playerScale: {x: 0.1, y: 0.1, z: 0.1}
+  Base: base(Clone)
+  Turret: launcher(Clone)
+  allSet: 0
+  GroundBlock_prefab: {fileID: 0}
+  FiringPlane_prefab: {fileID: 0}
+  Base_prefab: {fileID: 0}
+  Turret_prefab: {fileID: 0}
+  Player_prefab: {fileID: 0}
+  Arrow_prefab: {fileID: 0}
+  Rocket_prefab: {fileID: 193203916219761937, guid: 5b1c6db0c71a49340bf72ca2da2ff5b8,
+    type: 3}
+  Money_prefab: {fileID: 0}
 --- !u!1 &8922240438779683214
 GameObject:
   m_ObjectHideFlags: 0

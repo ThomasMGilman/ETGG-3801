@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1135593921669929044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3309629677629171370}
+  m_Layer: 0
+  m_Name: CameraSnapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3309629677629171370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135593921669929044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.000000019074, y: 0.000000040531, z: 0.01595}
+  m_LocalScale: {x: -0.00061390427, y: -0.00061390427, z: -0.00061390427}
+  m_Children: []
+  m_Father: {fileID: 2109194757086587895}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8303203828699239023
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +61,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -2.3140926, y: 1.66, z: 1.06}
   m_LocalScale: {x: 100, y: 99.99997, z: 99.99997}
-  m_Children: []
+  m_Children:
+  - {fileID: 3309629677629171370}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,16 +131,21 @@ MonoBehaviour:
   amplitude: 1
   turretRadius: 25
   splashRadius: 5
+  rocketRate: 10
   blockSpacing: 0.5
   CurrencyValue: 1
   playerScale: {x: 0.1, y: 0.1, z: 0.1}
+  Base: base(Clone)
+  Turret: launcher(Clone)
   GroundBlock_prefab: {fileID: 0}
   FiringPlane_prefab: {fileID: 0}
   Base_prefab: {fileID: 0}
   Turret_prefab: {fileID: 0}
   Player_prefab: {fileID: 0}
-  Arrow_prefab: {fileID: 0}
-  Rocket_prefab: {fileID: 0}
+  Arrow_prefab: {fileID: 2692159482939753199, guid: 6fd23d5e6a112094f98f177df354266b,
+    type: 3}
+  Rocket_prefab: {fileID: 193203916219761937, guid: 5b1c6db0c71a49340bf72ca2da2ff5b8,
+    type: 3}
   Money_prefab: {fileID: 0}
 --- !u!65 &314831670754541239
 BoxCollider:
