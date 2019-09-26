@@ -30,9 +30,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2692159482939753199}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.7463869, y: -0.78400373, z: 4.868612}
-  m_LocalScale: {x: 27.35793, y: 27.357922, z: 27.357922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.24684405, y: 0, z: -0.23878738}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,7 +115,8 @@ MonoBehaviour:
   Player_prefab: {fileID: 0}
   Arrow_prefab: {fileID: 0}
   Rocket_prefab: {fileID: 0}
-  Money_prefab: {fileID: 0}
+  Money_prefab: {fileID: 9116776175152747638, guid: a5459306b42f2a24eacf5b73eadcdbb1,
+    type: 3}
 --- !u!65 &6660925737241787575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

@@ -875,6 +875,7 @@ MonoBehaviour:
   score: 0
   playerHealth: 10
   playerMoveSpeed: 5
+  playerRunSpeed: 20
   jumpHeight: 2
   camMoveSpeed: 5
 --- !u!65 &3525924075415432800

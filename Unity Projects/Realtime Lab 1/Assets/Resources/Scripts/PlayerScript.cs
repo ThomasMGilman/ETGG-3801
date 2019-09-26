@@ -11,16 +11,18 @@ public class PlayerScript : GlobalScript
 
     public int playerHealth = 10;
     public float playerMoveSpeed = 5f;
+    public float playerRunSpeed = 20f;
     public float jumpHeight = 2f;
     public float camMoveSpeed = 1f;
 
     private float remainingJump = 0;
+    private float runRate;
     private float playerFallSpeed = 0;
     private float moneyheld = 0;
     private float moveUpVal;
     private float heightFromCube = 1.000001f;
 
-    private float buttonDebounce = 0f;
+    private float EnterDebounce = 0f, fireDebounce = 0;
     float camOriginY, camOriginZ;
 
     private bool StructureMode, animateOutOfBuilding, MoveUp, JumpStart, Jumping, Falling = false;
@@ -41,6 +43,7 @@ public class PlayerScript : GlobalScript
     void Start()
     {
         //print(this.transform.childCount);
+        runRate = playerMoveSpeed;
         PlayerAnimation = GetComponent<Animator>();
         PlayerCam = GetComponentInChildren<Camera>();     //Get players Camera
         Rigbody = GetComponent<Rigidbody>();
@@ -66,7 +69,7 @@ public class PlayerScript : GlobalScript
 
     void Update()
     {
-        if (buttonDebounce > 0) buttonDebounce -= .1f * Time.deltaTime;
+        if (EnterDebounce > 0) EnterDebounce -= .1f * Time.deltaTime;
         checkInput();
     }
 
@@ -109,6 +112,7 @@ public class PlayerScript : GlobalScript
             playerFallSpeed += gravitationalConstant * Time.deltaTime;
             //print("FallSpeed: " + playerFallSpeed);
             posY -= playerFallSpeed;
+            if (posY < -9) gameOver();
         }
         else if (MoveUp) { posY += moveUpVal; MoveUp = false; }
     }
@@ -116,7 +120,7 @@ public class PlayerScript : GlobalScript
     private float getPosOffset(string dir)
     {
         float dirVal = Input.GetAxis(dir);
-        return GreaterOrLess(dirVal, 0) ? dirVal * (playerMoveSpeed * Time.deltaTime) : 0;
+        return GreaterOrLess(dirVal, 0) ? dirVal * (runRate * Time.deltaTime) : 0;
     }
 
     float getDifAmount(float posX, float otherX)
@@ -217,24 +221,43 @@ public class PlayerScript : GlobalScript
         }
     }
 
+    private void checkenterBuilding()
+    {
+        if ((StructureMode && !BuildingText.enabled) || (!StructureMode && BuildingText.enabled))
+            enterBuilding();
+
+        StructureMode = BuildingText.enabled;
+        if (StructureMode) BuildingText.enabled = false;
+        EnterDebounce = .2f;
+        playerImage.enabled = !StructureMode;
+        if (buildingTouched != null)
+            buildingTouched.SendMessage("enterBuilding", StructureMode);    //update gui display
+    }
+
+    private void fireRocket()
+    {
+        Vector3 tmp = Pos;
+        //tmp.y += 2;
+        GameObject arrow = Instantiate(Arrow_prefab, tmp, Arrow_prefab.transform.rotation);
+        Vector3 camEuler = PlayerCam.transform.eulerAngles;
+        camEuler.x = 0;
+        camEuler.y += 90;
+        camEuler.z = -camPivPos.x;
+        arrow.transform.eulerAngles = camEuler;
+        print("CamEuler: " + camEuler + " arrowEuler: " + arrow.transform.eulerAngles);
+        print("ArrowRotation: " + arrow.transform.rotation.eulerAngles);
+        arrow.transform.forward = PlayerCam.transform.forward;
+    }
+
     /// <summary>
     /// Check Inputs, and whether entering building or not
     /// </summary>
     private void checkInput()
     {
         float fireing = Input.GetAxis("Fire2");
-        if (Input.GetKeyDown(KeyCode.E) && buttonDebounce <= 0)
-        {
-            if ((StructureMode && !BuildingText.enabled) || (!StructureMode && BuildingText.enabled))
-                enterBuilding();
+        if (Input.GetKeyDown(KeyCode.E) && EnterDebounce <= 0)
+            checkenterBuilding();
 
-            StructureMode = BuildingText.enabled;
-            if (StructureMode) BuildingText.enabled = false;
-            buttonDebounce = .2f;
-            playerImage.enabled = !StructureMode;
-            if(buildingTouched != null)
-                buildingTouched.SendMessage("enterBuilding", StructureMode);    //update gui display
-        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SetCursorState(CursorLockMode.None);
@@ -242,14 +265,19 @@ public class PlayerScript : GlobalScript
         }
         if (Input.GetKeyDown(KeyCode.Q))
             SetCursorState(CursorLockMode.None);
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
             SetCursorState(CursorLockMode.Locked);
-        }
-        if (fireing != 0 && StructureMode && buildingTouched.name == Turret)
+
+        runRate = Input.GetKey(KeyCode.LeftShift) ? playerRunSpeed : playerMoveSpeed;
+
+        if (fireing != 0 && StructureMode && buildingTouched.name == Turret && fireDebounce <= 0)
         {
-            GameObject arrow = Instantiate(Arrow_prefab, Pos, this.transform.rotation);
+            fireDebounce = .2f;
+            fireRocket();
         }
+        if(fireDebounce > 0)
+            fireDebounce -= .1f * Time.deltaTime;
     }
 
     private void groundCollision(GameObject obj, bool colliding)
@@ -343,5 +371,11 @@ public class PlayerScript : GlobalScript
     {
         Cursor.lockState = wantMode = state;
         Cursor.visible = (CursorLockMode.Locked != wantMode);
+    }
+
+    private void gameOver()
+    {
+        SetCursorState(CursorLockMode.None);
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }

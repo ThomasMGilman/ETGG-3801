@@ -37,6 +37,7 @@ public class MoneyScript : GlobalScript
             pos.y -= gravitationalConstant * Time.deltaTime;
 
         transform.position = pos;
+        if (pos.y < -10) Destroy(this.gameObject);
     }
 
     private void groundCollision(GameObject obj, bool colliding)
@@ -56,6 +57,12 @@ public class MoneyScript : GlobalScript
     }
 
     private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "ground")
+            groundCollision(other.gameObject, true);
+    }
+
+    private void OnTriggerContinue(Collider other)
     {
         if (other.tag == "ground")
             groundCollision(other.gameObject, true);
