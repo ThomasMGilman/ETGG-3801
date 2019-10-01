@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3309629677629171370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraSnapPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: -6533384075764187312}
   - component: {fileID: 314831670754541239}
   - component: {fileID: 5205390363845255514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: launcher
   m_TagString: structure
   m_Icon: {fileID: 0}
@@ -127,12 +127,12 @@ MonoBehaviour:
   worldWidth: 50
   worldDepth: 50
   turretCount: 5
+  CurrencyValue: 1
   gravitationalConstant: 0.01
   amplitude: 1
   turretRadius: 25
   splashRadius: 5
   blockSpacing: 0.5
-  CurrencyValue: 1
   playerScale: {x: 0.1, y: 0.1, z: 0.1}
   Base: base(Clone)
   Turret: launcher(Clone)

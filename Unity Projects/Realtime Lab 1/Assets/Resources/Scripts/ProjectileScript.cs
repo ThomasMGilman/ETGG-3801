@@ -8,8 +8,9 @@ public class ProjectileScript : GlobalScript
 
     Vector3 pos, prevForwardDir, distPoint;
     ParticleSystem dyingAnimation;
+    MeshRenderer meshRenderer;
     bool isDead = false;
-    float rocketFallRate = 10;
+    float rocketFallRate = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +18,17 @@ public class ProjectileScript : GlobalScript
         dyingAnimation = this.gameObject.GetComponent<ParticleSystem>();
         distPoint = new Vector3(0, 0, 0); //default distPoint
         prevForwardDir = this.transform.forward;
-        if(this.name == "rocket(Clone)")
+        if (this.name == "rocket(Clone)")
         {
             Vector3 tmpRotation = this.transform.rotation.eulerAngles;
             tmpRotation.x += 90;
             this.transform.rotation = Quaternion.Euler(tmpRotation);
+            meshRenderer = this.GetComponent<MeshRenderer>();
+        }
+        else
+        {
+            rocketFallRate = 20;
+            meshRenderer = this.transform.GetChild(0).GetComponent<MeshRenderer>();
         }
     }
 
@@ -30,7 +37,7 @@ public class ProjectileScript : GlobalScript
     {
         if (!isDead)
         {
-            pos += (this.transform.forward ) * Time.deltaTime;
+            pos += rocketFallRate * (this.transform.forward ) * Time.deltaTime;
             this.transform.position = pos;
         }
         if ((isDead && !dyingAnimation.isPlaying) || pos.y > 1000 || pos.y < -8 || checkPointReached())
@@ -79,7 +86,9 @@ public class ProjectileScript : GlobalScript
         if(other.tag == "ground" || other.tag == "structure" || other.tag == "rocket")
         {
             if (other.name == "rocket(Clone)") Instantiate(Money_prefab, pos, Money_prefab.transform.localRotation);
-            this.GetComponent<MeshRenderer>().enabled = false;
+
+            print("This: " + this.transform.name + " is hit by: " + other.transform.name);
+            meshRenderer.enabled = false;
             dyingAnimation.Play();
             isDead = true;
         }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8438529719595424740}
   - component: {fileID: 7034244851207482654}
   - component: {fileID: 3531458512965792136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rocket
   m_TagString: rocket
   m_Icon: {fileID: 0}
@@ -99,12 +99,12 @@ MonoBehaviour:
   worldWidth: 75
   worldDepth: 75
   turretCount: 5
+  CurrencyValue: 1
   gravitationalConstant: 1
   amplitude: 1
   turretRadius: 25
   splashRadius: 5
   blockSpacing: 0.5
-  CurrencyValue: 1
   playerScale: {x: 0.1, y: 0.1, z: 0.1}
   Base: base(Clone)
   Turret: launcher(Clone)
@@ -118,6 +118,7 @@ MonoBehaviour:
   Rocket_prefab: {fileID: 0}
   Money_prefab: {fileID: 9116776175152747638, guid: a5459306b42f2a24eacf5b73eadcdbb1,
     type: 3}
+  radiusToPoint: 1
 --- !u!198 &1279861140999202095
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4878,8 +4879,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4225334215467858992}
   - component: {fileID: 6228822444167072584}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 10
+  m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

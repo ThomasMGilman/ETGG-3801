@@ -15,10 +15,13 @@ public class PlayerScript : GlobalScript
     public float jumpHeight = 2f;
     public float camMoveSpeed = 1f;
 
+    public float reticleMaxDistance = 100f; //a multiplier of the forward pos
+    private float reticleDistance = 1f;     //current Reticle Distance multiplier
+
+    private int moneyheld = 0;
     private float remainingJump = 0;
     private float runRate;
     private float playerFallSpeed = 0;
-    private float moneyheld = 0;
     private float moveUpVal;
     private float heightFromCube = 1.000001f;
 
@@ -27,16 +30,18 @@ public class PlayerScript : GlobalScript
 
     private bool StructureMode, animateOutOfBuilding, MoveUp, JumpStart, Jumping, Falling = false;
 
-    private Vector3 Pos, camOriginPos, CamPos, camPivPos, playersLastPos;
+    private Vector3 camOriginPos, camOriginRotation, playerOriginRotation;
+    private Vector3 Pos, CamPos, camPivPos, playersLastPos;
     private Animator PlayerAnimation;
     private Camera PlayerCam, tmp;
     private Rigidbody Rigbody;
     private SkinnedMeshRenderer playerImage;
     private Text BuildingText, ScoreText, MoneyText;
-    private RawImage HealthBar;
+    private RawImage HealthBar, ShotHeightView;
 
     private GameObject buildingTouched;
     private GameObject camPivot;
+    private GameObject playerReticle;
 
     CursorLockMode wantMode;    //referenced https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
 
@@ -45,7 +50,6 @@ public class PlayerScript : GlobalScript
         //print(this.transform.childCount);
         runRate = playerMoveSpeed;
         PlayerAnimation = GetComponent<Animator>();
-        PlayerCam = GetComponentInChildren<Camera>();     //Get players Camera
         Rigbody = GetComponent<Rigidbody>();
         playerImage = this.transform.GetChild(2).GetComponent<SkinnedMeshRenderer>();       //drawing image of player
         camPivot = this.transform.GetChild(3).gameObject;                                   //Pivot Point for the camera
@@ -53,6 +57,9 @@ public class PlayerScript : GlobalScript
         BuildingText = GameObject.Find("BuildingText").GetComponent<Text>();                //Text that displays when close to building
         ScoreText = GameObject.Find("ScoreText").GetComponent<Text>();                      //Players Score
         MoneyText = GameObject.Find("CashText").GetComponent<Text>();                       //Players Money
+        ShotHeightView = GameObject.Find("ShotHeightView").GetComponent<RawImage>();        //get the height minimap
+        playerReticle = this.transform.GetChild(5).gameObject;                              //playersReticle while in turret
+        ShotHeightView.enabled = false;
         PlayerAnimation.speed = 2f;
         Falling = true;
         StructureMode = false;
@@ -77,6 +84,14 @@ public class PlayerScript : GlobalScript
     {
         Pos += getPosOffest();
         transform.position = Pos;
+        if(animateOutOfBuilding)
+        {
+            animateOutOfBuilding = false;
+            transform.position = playersLastPos;
+            transform.rotation = Quaternion.Euler(playerOriginRotation);
+            PlayerCam.transform.position = camOriginPos;
+            PlayerCam.transform.rotation = Quaternion.Euler(camOriginRotation);
+        }
         updateCamera();
     }
 
@@ -150,9 +165,8 @@ public class PlayerScript : GlobalScript
         {
             if(animateOutOfBuilding)
             {
+                
                 adjustToPos(out newPos, playersLastPos);
-                if (Pos == playersLastPos) animateOutOfBuilding = false;
-                PlayerCam.transform.position = camOriginPos;
             }
             else
             {
@@ -171,6 +185,21 @@ public class PlayerScript : GlobalScript
                 adjustToPos(out newPos, buildPos, 3, -1);
             else
                 adjustToPos(out newPos, buildPos, 2);
+
+            float reticleAdjust = getPosOffset("Vertical");
+            float newRet = reticleDistance + reticleAdjust;
+            if (!(newRet > reticleMaxDistance) && !(newRet < 1) && newRet != reticleDistance)
+            {
+                reticleDistance = newRet;
+                print("ReticleDistance: " + reticleDistance);
+            }
+                
+            Vector3 newRetPos = this.transform.position + PlayerCam.transform.forward * reticleDistance;
+            if (newRetPos != playerReticle.transform.position)
+            {
+                playerReticle.transform.position = newRetPos;
+                //print("PlayerPos: " + this.transform.position + " RetPos: " + playerReticle.transform.position);
+            }   
         }
         return newPos;
     }
@@ -202,12 +231,22 @@ public class PlayerScript : GlobalScript
 
     private void enterBuilding()
     {
+        print("Entering Structure: " + StructureMode);
+        StructureMode = BuildingText.enabled;
+        ShotHeightView.enabled = StructureMode;
+        playerReticle.GetComponent<MeshRenderer>().enabled = StructureMode;
         //move into building cameraPosition
         if(StructureMode)
         {
             playersLastPos = Pos;
+            playerOriginRotation = this.transform.rotation.eulerAngles;
             camOriginPos = PlayerCam.transform.position;
+            camOriginRotation = PlayerCam.transform.rotation.eulerAngles;
+            playerReticle.transform.position = this.transform.position;
+            reticleDistance = 1;
+
             Vector3 tmp = camOriginPos;
+            tmp.x = transform.position.x;
             tmp.y = transform.position.y;
             tmp.z = transform.position.z;
             PlayerCam.transform.position = tmp;
@@ -226,7 +265,6 @@ public class PlayerScript : GlobalScript
         if ((StructureMode && !BuildingText.enabled) || (!StructureMode && BuildingText.enabled))
             enterBuilding();
 
-        StructureMode = BuildingText.enabled;
         if (StructureMode) BuildingText.enabled = false;
         EnterDebounce = .2f;
         playerImage.enabled = !StructureMode;
@@ -244,8 +282,6 @@ public class PlayerScript : GlobalScript
         camEuler.y += 90;
         camEuler.z = -camPivPos.x;
         arrow.transform.eulerAngles = camEuler;
-        print("CamEuler: " + camEuler + " arrowEuler: " + arrow.transform.eulerAngles);
-        print("ArrowRotation: " + arrow.transform.rotation.eulerAngles);
         arrow.transform.forward = PlayerCam.transform.forward;
     }
 

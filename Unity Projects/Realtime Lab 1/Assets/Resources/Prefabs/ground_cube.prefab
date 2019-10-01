@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2061430330440590}
   - component: {fileID: 7014406933979900073}
   - component: {fileID: 7761570597740327699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground_cube
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -125,14 +125,12 @@ MonoBehaviour:
   worldWidth: 50
   worldDepth: 50
   turretCount: 5
+  CurrencyValue: 1
   gravitationalConstant: 0.01
   amplitude: 1
   turretRadius: 25
   splashRadius: 5
-  rocketRate: 10
-  rocketFallRate: 2
   blockSpacing: 0.5
-  CurrencyValue: 1
   playerScale: {x: 0.1, y: 0.1, z: 0.1}
   Base: base(Clone)
   Turret: launcher(Clone)

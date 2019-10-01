@@ -9,6 +9,7 @@ TagManager:
   - rocket
   - structure
   - arrow
+  - Highlight
   layers:
   - Default
   - TransparentFX
@@ -18,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Structure
+  - Rocket
+  - Reticle
+  - RocketMiniMapHighlight
   - 
   - 
   - 

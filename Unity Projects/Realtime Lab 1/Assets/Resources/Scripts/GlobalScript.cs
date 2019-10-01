@@ -7,15 +7,14 @@ public class GlobalScript : MonoBehaviour
     public int worldWidth = 75;
     public int worldDepth = 75;
     public int turretCount = 5;
+    public int CurrencyValue = 1;       //value for currency
 
     public float gravitationalConstant = 1f;
 
     public float amplitude = 1;         //sineAmplitudeFor worldGen
     public float turretRadius = 25;
     public float splashRadius = 5;      //Radius for rocket collision/explosion
-
-    public float blockSpacing = 0.5f;   //gap between blocks
-    public float CurrencyValue = 1.00f; //value for currency
+    public float blockSpacing = 0.5f;   //gap between blocks 
 
     public Vector3 playerScale = new Vector3(.1f, .1f, .1f);
 
