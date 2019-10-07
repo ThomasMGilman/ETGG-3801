@@ -71,6 +71,7 @@
     <Compile Include="Assets\Resources\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Resources\Scripts\ProjectilePlaneScript.cs" />
     <Compile Include="Assets\Resources\Scripts\ProjectileScript.cs" />
+    <None Include="Assets\Resources\Sources.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unity Projects/Realtime Lab 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

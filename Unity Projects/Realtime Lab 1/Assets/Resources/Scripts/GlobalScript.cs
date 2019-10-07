@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GlobalScript : MonoBehaviour
 {
@@ -15,10 +16,11 @@ public class GlobalScript : MonoBehaviour
     public float turretRadius = 25;
     public float splashRadius = 5;      //Radius for rocket collision/explosion
     public float blockSpacing = 0.5f;   //gap between blocks 
+    private float health = 1;
 
     public Vector3 playerScale = new Vector3(.1f, .1f, .1f);
 
-    public string Base = "base(Clone)", Turret = "launcher(Clone)"; //Structure Names
+    public string Base = "base(Clone)", Turret = "launcher(Clone)", groundName = "ground_cube(Clone)"; //Structure Names
 
     public bool allSet = false;
 
@@ -45,9 +47,15 @@ public class GlobalScript : MonoBehaviour
     private GameObject groundParent;
     
     [HideInInspector]
-    public Dictionary<Vector3, GameObject> ground;
+    public Dictionary<string, groundGroup> ground;
 
     private Transform globalParent;
+
+    public struct groundGroup
+    {
+        public GameObject ground;
+        public int x, z;
+    };
 
     public GameObject InstantiateObject(GameObject prefab, Vector3 worldPos, Vector3 Scale, Transform parent = null)
     {
@@ -62,7 +70,7 @@ public class GlobalScript : MonoBehaviour
     void Start()
     {
         Random.InitState(Time.time.GetHashCode());          //Seed random
-        ground = new Dictionary<Vector3, GameObject>();     //setup ground dictionary for easy removall of blocks once they are gone
+        ground = new Dictionary<string, groundGroup>();     //setup ground dictionary for easy removall of blocks once they are gone
         turrets = new GameObject[turretCount];              //set turret array
         globalParent = this.transform;                      //setGlobal Parent pointer 
 
@@ -81,13 +89,18 @@ public class GlobalScript : MonoBehaviour
                 Vector3 blockLocation = new Vector3(x, 0, z);
                 zPos = (z + (z * 1)) + z*blockSpacing;
                 float angleS = (float)((((z + 1) * waveInc) * Mathf.PI) / 180);
-                
+                string name = groundName+"_X:" + x.ToString() + "_Z:" + z.ToString();
                 //Add Block x, z
                 worldPos.x = xPos; worldPos.z = zPos;     //setPos
                 worldPos.y = Mathf.Sin(angleS * amplitude) * Mathf.Cos(angleX * amplitude);
-                ground[blockLocation] = InstantiateObject(GroundBlock_prefab, worldPos,
+
+                groundGroup g = new groundGroup();
+                g.ground = InstantiateObject(GroundBlock_prefab, worldPos,
                     GroundBlock_prefab.transform.localScale, globalParent);
-                ground[blockLocation].name = ground[blockLocation].name +"_X:"+x.ToString() + "_Z:" + z.ToString();
+                g.x = x; g.z = z;
+                ground[name] = g;
+                //print(ground[name].name + " new name: " + name);
+                ground[name].ground.name = name;
 
                 //place world objects if at center
                 if (x == halfWidth && z == halfDepth)   
@@ -130,5 +143,17 @@ public class GlobalScript : MonoBehaviour
     public bool GreaterOrLess(dynamic gOrl, dynamic val)
     {
         return (gOrl > val || gOrl < val);
+    }
+
+    public void removeHealth()
+    {
+        float newHealth = health - .1f;
+        health = newHealth;
+        RawImage HealthBar = GameObject.Find("Health").GetComponent<RawImage>();
+        HealthBar.rectTransform.localScale = new Vector3(
+           health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
+
+        if (newHealth <= 0.0)
+            return;     //GameOver
     }
 }

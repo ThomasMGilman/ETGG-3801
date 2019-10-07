@@ -13,11 +13,12 @@ public class ProjectilePlaneScript : GlobalScript
     float minRocketRate = 1f;
     float maxRocketRate = 10f;
 
-    private GameObject firstBlock, lastBlock;
-    Dictionary<Vector3, GameObject> g;
+    private groundGroup firstBlock, lastBlock;
+    private Dictionary<string, groundGroup> g;
     // Start is called before the first frame update
     void Start()
     {
+        Random.InitState(Time.time.GetHashCode());
         fireTimer = minRocketRate;
         pos = this.transform.position;
         setMinMaxRange();
@@ -25,17 +26,17 @@ public class ProjectilePlaneScript : GlobalScript
 
     private void setMinMaxRange()
     {
-        Vector3 minBlock = new Vector3(0, 0, 0);
-        Vector3 maxBlock = new Vector3(worldWidth-1, 0, worldDepth-1);
+        string minBlock = groundName + "_X:0_Z:0";
+        string maxBlock = groundName + "_X:" + (worldWidth - 1) + "_Z:" + (worldDepth - 1);
         if(g.TryGetValue(minBlock, out firstBlock))
         {
-            minX = firstBlock.transform.position.x;
-            minZ = firstBlock.transform.position.z;
+            minX = firstBlock.ground.transform.position.x;
+            minZ = firstBlock.ground.transform.position.z;
         }
         if(g.TryGetValue(maxBlock, out lastBlock))
         {
-            maxX = lastBlock.transform.position.x;
-            maxZ = lastBlock.transform.position.z;
+            maxX = lastBlock.ground.transform.position.x;
+            maxZ = lastBlock.ground.transform.position.z;
             ready = true;
         }
     }
@@ -49,15 +50,16 @@ public class ProjectilePlaneScript : GlobalScript
             Vector3 tmpPos = pos;
             tmpPos.x = Random.Range(minX, maxX);
             tmpPos.z = Random.Range(minZ, maxZ);
-            InstantiateObject(Rocket_prefab, tmpPos, Rocket_prefab.transform.localScale, this.transform);
+            GameObject newRocket = InstantiateObject(Rocket_prefab, tmpPos, Rocket_prefab.transform.localScale, this.transform);
             fireTimer = Random.Range(minRocketRate, maxRocketRate);
             rocketCount++;
+            newRocket.SendMessage("ToCheck", g);
         }
     }
 
-    public void ToCheck(Dictionary<Vector3, GameObject> gin)
+    public void ToCheck(Dictionary<string, groundGroup> map)
     {
-        g = gin;
+        g = map;
         setMinMaxRange();
     }
 

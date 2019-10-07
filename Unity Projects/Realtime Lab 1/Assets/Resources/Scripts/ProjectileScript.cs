@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class ProjectileScript : GlobalScript
 {
-    public float radiusToPoint = 1f;
-
     Vector3 pos, prevForwardDir, distPoint;
     ParticleSystem dyingAnimation;
     MeshRenderer meshRenderer;
+    AudioSource aSource;
+    GameObject destination;
     bool isDead = false;
-    float rocketFallRate = 1;
+    private float radiusToPoint = 2f, rocketFallRate = 1;
+    Dictionary<string, groundGroup> worldMap;
     // Start is called before the first frame update
     void Start()
     {
+        aSource = this.GetComponent<AudioSource>();
         pos = this.transform.position;
         dyingAnimation = this.gameObject.GetComponent<ParticleSystem>();
         distPoint = new Vector3(0, 0, 0); //default distPoint
@@ -40,29 +42,8 @@ public class ProjectileScript : GlobalScript
             pos += rocketFallRate * (this.transform.forward ) * Time.deltaTime;
             this.transform.position = pos;
         }
-        if ((isDead && !dyingAnimation.isPlaying) || pos.y > 1000 || pos.y < -8 || checkPointReached())
+        if ((isDead && !dyingAnimation.isPlaying && !aSource.isPlaying) || pos.y > 300 || pos.y < -8)
             detonation();
-    }
-
-    /// <summary>
-    /// check if projectile  has reached the point where it should detonate
-    /// check each point within a radius around the point to reach
-    /// </summary>
-    /// <returns></returns>
-    private bool checkPointReached()
-    {
-        if(pos.x >= distPoint.x - radiusToPoint 
-        && pos.x <= distPoint.x + radiusToPoint)
-        {
-            if(pos.y >= distPoint.y - radiusToPoint
-            && pos.y <= distPoint.y + radiusToPoint)
-            {
-                if (pos.z >= distPoint.z - radiusToPoint
-                && pos.z <= distPoint.z + radiusToPoint)
-                    return true;
-            }
-        }
-        return false;
     }
 
     /// <summary>
@@ -70,7 +51,8 @@ public class ProjectileScript : GlobalScript
     /// </summary>
     private void detonation()
     {   
-        if(this.name == "rocket(Clone)") this.transform.parent.SendMessage("deadRocket");
+        if (this.name == "rocket(Clone)") this.transform.parent.SendMessage("deadRocket");
+        if (this.name == "arrow(Clone)") Destroy(destination);
         Destroy(gameObject);
     }
 
@@ -83,19 +65,59 @@ public class ProjectileScript : GlobalScript
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "ground" || other.tag == "structure" || other.tag == "rocket")
+        if(other.tag == "ground" || other.tag == "structure" || other.tag == "rocket" || other.tag == "arrowDestination")
         {
             if (other.name == "rocket(Clone)") Instantiate(Money_prefab, pos, Money_prefab.transform.localRotation);
 
-            print("This: " + this.transform.name + " is hit by: " + other.transform.name);
+            //print("This: " + this.transform.name + " is hit by: " + other.transform.name+ " "+ other.tag);
+            aSource.Stop();
+            aSource.volume = 100;
+            aSource.clip = Resources.Load<AudioClip>("Sounds/Grenade");
+            aSource.loop = false;
+            aSource.Play();
+
             meshRenderer.enabled = false;
             dyingAnimation.Play();
             isDead = true;
+
+            if (this.name == "rocket(Clone)") //Hit in radius of rocket collision
+            {
+
+                float posX = worldMap[other.name].x;
+                float posZ = worldMap[other.name].z;
+
+                print(worldMap[other.name].ground.name);
+                
+                for (int x = (int)(posX - radiusToPoint); x < (int)(posX + radiusToPoint); x++)
+                {
+                    for (int z = (int)(posZ - radiusToPoint); z < (int)(posZ + radiusToPoint); z++)
+                    {
+                        string key = groundName + "_X:" + x.ToString()
+                            + "_Z:" + z.ToString();
+                        //print(other.name + " keyToTry: "+key);
+                        groundGroup r;
+                        if (worldMap.TryGetValue(key, out r))
+                            r.ground.SendMessage("hit");
+                        else
+                        {
+                            bool result = key == other.name;
+                            print(key + " = " + other.name + " " + result.ToString());
+                            print("could not find key!!!: " + key);
+                        }
+                            
+                    }
+                }
+            }
         }
     }
 
-    private void setDistance(Vector3 distPos)
+    private void ToCheck(Dictionary<string, groundGroup> map)
     {
-        distPoint = distPos;
+        worldMap = map;
+    }
+
+    private void setDestination(GameObject d)
+    {
+        destination = d;
     }
 }

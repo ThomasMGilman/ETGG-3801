@@ -10,6 +10,7 @@ TagManager:
   - structure
   - arrow
   - Highlight
+  - arrowDestination
   layers:
   - Default
   - TransparentFX

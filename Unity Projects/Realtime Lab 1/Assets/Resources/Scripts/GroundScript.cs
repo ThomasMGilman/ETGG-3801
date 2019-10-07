@@ -40,4 +40,10 @@ public class GroundScript : GlobalScript
             falling = true;
         }
     }
+
+    private void hit()
+    {
+        //print(this.name + " hit!!!");
+        falling = true;
+    }
 }

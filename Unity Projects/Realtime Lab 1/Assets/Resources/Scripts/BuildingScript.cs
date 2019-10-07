@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class BuildingScript : GlobalScript
 {
-    private float health = 1;
     private float offsetHeight;
     private bool setOffset = false;
     private bool falling = true;
@@ -48,14 +47,7 @@ public class BuildingScript : GlobalScript
         }
         if(obj.tag == "rocket" && this.name == Base)
         {
-            float newHealth = health - .1f;
-            health = newHealth;
-            RawImage HealthBar = GameObject.Find("Health").GetComponent<RawImage>();
-            HealthBar.rectTransform.localScale = new Vector3(
-               health, HealthBar.transform.localScale.y, HealthBar.transform.localScale.z);
-
-            if (newHealth <= 0.0)
-                return;     //GameOver
+            removeHealth();
         }
     }
 

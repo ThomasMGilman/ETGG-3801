@@ -9,7 +9,6 @@ public class PlayerScript : GlobalScript
     [HideInInspector]
     public int score = 0;
 
-    public int playerHealth = 10;
     public float playerMoveSpeed = 5f;
     public float playerRunSpeed = 20f;
     public float jumpHeight = 2f;
@@ -25,7 +24,7 @@ public class PlayerScript : GlobalScript
     private float moveUpVal;
     private float heightFromCube = 1.000001f;
 
-    private float EnterDebounce = 0f, fireDebounce = 0;
+    private float EnterDebounce = 0f, fireDebounce1 = 0, fireDebounce2 = 0;
     float camOriginY, camOriginZ;
 
     private bool StructureMode, animateOutOfBuilding, MoveUp, JumpStart, Jumping, Falling = false;
@@ -42,6 +41,7 @@ public class PlayerScript : GlobalScript
     private GameObject buildingTouched;
     private GameObject camPivot;
     private GameObject playerReticle;
+    private GameObject arrowDestinationBox;
 
     CursorLockMode wantMode;    //referenced https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
 
@@ -59,6 +59,7 @@ public class PlayerScript : GlobalScript
         MoneyText = GameObject.Find("CashText").GetComponent<Text>();                       //Players Money
         ShotHeightView = GameObject.Find("ShotHeightView").GetComponent<RawImage>();        //get the height minimap
         playerReticle = this.transform.GetChild(5).gameObject;                              //playersReticle while in turret
+        arrowDestinationBox = Resources.Load<GameObject>("Prefabs/arrowDestination");
         ShotHeightView.enabled = false;
         PlayerAnimation.speed = 2f;
         Falling = true;
@@ -165,7 +166,6 @@ public class PlayerScript : GlobalScript
         {
             if(animateOutOfBuilding)
             {
-                
                 adjustToPos(out newPos, playersLastPos);
             }
             else
@@ -276,11 +276,16 @@ public class PlayerScript : GlobalScript
     {
         Vector3 tmp = Pos;
         //tmp.y += 2;
-        GameObject arrow = Instantiate(Arrow_prefab, tmp, Arrow_prefab.transform.rotation);
+        GameObject destinationBox = Instantiate(arrowDestinationBox, playerReticle.transform.position, arrowDestinationBox.transform.rotation);
+        print(destinationBox.name+": "+destinationBox.transform.position);
         Vector3 camEuler = PlayerCam.transform.eulerAngles;
         camEuler.x = 0;
         camEuler.y += 90;
         camEuler.z = -camPivPos.x;
+
+        GameObject arrow = Instantiate(Arrow_prefab, tmp, Arrow_prefab.transform.rotation);
+        arrow.SendMessage("setDestination", destinationBox);
+        print(arrow.name + ": " + arrow.transform.position);
         arrow.transform.eulerAngles = camEuler;
         arrow.transform.forward = PlayerCam.transform.forward;
     }
@@ -290,7 +295,8 @@ public class PlayerScript : GlobalScript
     /// </summary>
     private void checkInput()
     {
-        float fireing = Input.GetAxis("Fire2");
+        float fireing2 = Input.GetAxis("Fire2");
+        float fireing1 = Input.GetAxis("Fire1");
         if (Input.GetKeyDown(KeyCode.E) && EnterDebounce <= 0)
             checkenterBuilding();
 
@@ -307,13 +313,22 @@ public class PlayerScript : GlobalScript
 
         runRate = Input.GetKey(KeyCode.LeftShift) ? playerRunSpeed : playerMoveSpeed;
 
-        if (fireing != 0 && StructureMode && buildingTouched.name == Turret && fireDebounce <= 0)
+        if (fireing1 != 0 && StructureMode && buildingTouched.name == Turret && fireDebounce1 <= 0)
         {
-            fireDebounce = .2f;
+            fireDebounce1 = .2f;
             fireRocket();
         }
-        if(fireDebounce > 0)
-            fireDebounce -= .1f * Time.deltaTime;
+        else if(fireing2 != 0 && moneyheld > 1)
+        {
+            fireDebounce2 = .2f;
+            if (buildingTouched.name == Turret) autoFire();
+            else heal();
+            moneyheld -= CurrencyValue;
+        }
+        if(fireDebounce1 > 0)
+            fireDebounce1 -= .1f * Time.deltaTime;
+        if (fireDebounce2 > 0)
+            fireDebounce2 -= .1f * Time.deltaTime;
     }
 
     private void groundCollision(GameObject obj, bool colliding)
@@ -345,7 +360,7 @@ public class PlayerScript : GlobalScript
 
     private void rocketCollision(GameObject obj)
     {
-        playerHealth--;
+        removeHealth();
         //possible knockback
     }
 
@@ -413,5 +428,15 @@ public class PlayerScript : GlobalScript
     {
         SetCursorState(CursorLockMode.None);
         SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    private void autoFire()
+    {
+
+    }
+
+    private void heal()
+    {
+
     }
 }
