@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SpaceInvaders_Unreal.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{B95B10D6-CAD5-4736-B98D-0C1FCFBBBB3A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SpaceInvaders_Unreal.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SpaceInvaders_UnrealEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA444C5E-2435-4099-92A4-E02D64B5B16A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\Android">
+      <UniqueIdentifier>{69584D9F-22B3-49C2-8D02-BDB23F73C9F0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Android\AndroidEngine.ini">
+      <Filter>Config\Android</Filter>
+    </None>
+    <Filter Include="Config\IOS">
+      <UniqueIdentifier>{7B77FE95-C11B-4AFE-B9C9-065422FBB9BF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\IOS\IOSEngine.ini">
+      <Filter>Config\IOS</Filter>
+    </None>
+    <Filter Include="Config\Linux">
+      <UniqueIdentifier>{BDBF7D55-506D-4F99-8383-916B1675E976}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Linux\LinuxEngine.ini">
+      <Filter>Config\Linux</Filter>
+    </None>
+    <Filter Include="Config\Mac">
+      <UniqueIdentifier>{6A1E904B-F3CF-42FC-A4EA-194A6833E0CE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Mac\MacEngine.ini">
+      <Filter>Config\Mac</Filter>
+    </None>
+    <Filter Include="Config\PS4">
+      <UniqueIdentifier>{3B800402-4FAD-4A72-8F55-5B6DCD778F17}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\PS4\PS4Engine.ini">
+      <Filter>Config\PS4</Filter>
+    </None>
+    <Filter Include="Config\Switch">
+      <UniqueIdentifier>{54F98F40-96C1-424E-BC71-243E04C3CCB0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Switch\SwitchEngine.ini">
+      <Filter>Config\Switch</Filter>
+    </None>
+    <Filter Include="Config\Windows">
+      <UniqueIdentifier>{0B1D38A8-921F-4296-93E2-04E64E079237}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Windows\WindowsEngine.ini">
+      <Filter>Config\Windows</Filter>
+    </None>
+    <Filter Include="Config\XboxOne">
+      <UniqueIdentifier>{E9A73520-54FE-4664-8F1B-19C06A36C14D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\XboxOne\XboxOneEngine.ini">
+      <Filter>Config\XboxOne</Filter>
+    </None>
+    <Filter Include="Source\SpaceInvaders_Unreal">
+      <UniqueIdentifier>{4F2523AC-8604-4B2A-8691-968807E50B95}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SpaceInvaders_Unreal\SpaceInvaders_Unreal.Build.cs">
+      <Filter>Source\SpaceInvaders_Unreal</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SpaceInvaders_Unreal\SpaceInvaders_Unreal.cpp">
+      <Filter>Source\SpaceInvaders_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceInvaders_Unreal\SpaceInvaders_Unreal.h">
+      <Filter>Source\SpaceInvaders_Unreal</Filter>
+    </ClInclude>
+    <Filter Include="Source\SpaceInvaders_Unreal\Private">
+      <UniqueIdentifier>{0DC5F6BF-4496-48EA-969A-971D7B8224DB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SpaceInvaders_Unreal\Private\InvaderSpawner.cpp">
+      <Filter>Source\SpaceInvaders_Unreal\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\SpaceInvaders_Unreal\Public">
+      <UniqueIdentifier>{06642245-A3DB-49B3-90D1-C2D9F596787A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\SpaceInvaders_Unreal\Public\InvaderSpawner.h">
+      <Filter>Source\SpaceInvaders_Unreal\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

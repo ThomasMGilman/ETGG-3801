@@ -1,0 +1,6 @@
+﻿  Parsing headers for SpaceInvaders_UnrealEditor
+    Running UnrealHeaderTool "D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\SpaceInvaders_Unreal.uproject" "D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\SpaceInvaders_UnrealEditor\Development\SpaceInvaders_UnrealEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for SpaceInvaders_UnrealEditor in 8.8892537 seconds
+  Using Visual Studio 2019 14.23.28105 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 6 actions with 12 processes...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(44,5): warning MSB5021: Terminating the task executable "cmd" and its child processes because the build was canceled.
