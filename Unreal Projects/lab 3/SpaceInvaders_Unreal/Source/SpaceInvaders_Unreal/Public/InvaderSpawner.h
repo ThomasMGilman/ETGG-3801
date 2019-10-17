@@ -19,12 +19,30 @@ public:
 	UPROPERTY(EditAnywhere, Category = "InvaderVariables")
 		int32 num_rows = 10;
 
+	//The spacing amount between invaders per row
+	UPROPERTY(EditAnywhere, Category = "InvaderVariables")
+		float rowSpacing = 0;
+
 	//The number of Columns of the Invader Fleet
 	UPROPERTY(EditAnywhere, Category = "InvaderVariables")
 		int32 num_cols = 10;
 
+	//The spacing amount between invaders per column
+	UPROPERTY(EditAnywhere, Category = "InvaderVariables")
+		float colSpacing = 0;
+
+	//Speed for the invader movement
+	UPROPERTY(EditAnywhere, Category = "InvaderVariables")
+		float move_speed;
+
+	//The max time in seconds to move forward after colliding with a wall
+	UPROPERTY(EditAnywhere, Category = "InvaderVariables")
+		float forward_time;
+
 	UPROPERTY(EditAnywhere, Category = "InvaderVariables")
 		TSubclassOf<class AActor> spawn_type;
+
+	
 
 	void LogString(const TCHAR* msg)
 	{
@@ -32,11 +50,15 @@ public:
 	}
 
 protected:
+	bool moving_left;
+	float move_forward_time;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
+	UFUNCTION(BluePrintCallable, Category = "MyFunctions")
+	virtual void hitWall();
 };

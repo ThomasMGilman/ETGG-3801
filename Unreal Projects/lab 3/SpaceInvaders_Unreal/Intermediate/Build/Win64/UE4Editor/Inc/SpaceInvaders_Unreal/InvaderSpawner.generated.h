@@ -13,8 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SPACEINVADERS_UNREAL_InvaderSpawner_generated_h
 
-#define SpaceInvaders_Unreal_Source_SpaceInvaders_Unreal_Public_InvaderSpawner_h_12_RPC_WRAPPERS
-#define SpaceInvaders_Unreal_Source_SpaceInvaders_Unreal_Public_InvaderSpawner_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceInvaders_Unreal_Source_SpaceInvaders_Unreal_Public_InvaderSpawner_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(exechitWall) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->hitWall(); \
+		P_NATIVE_END; \
+	}
+
+
+#define SpaceInvaders_Unreal_Source_SpaceInvaders_Unreal_Public_InvaderSpawner_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(exechitWall) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->hitWall(); \
+		P_NATIVE_END; \
+	}
+
+
 #define SpaceInvaders_Unreal_Source_SpaceInvaders_Unreal_Public_InvaderSpawner_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAInvaderSpawner(); \

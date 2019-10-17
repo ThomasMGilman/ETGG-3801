@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-SpaceInvaders_Unreal-4389.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\SpaceInvaders_UnrealEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\UE4Editor\Development\SpaceInvaders_Unreal\InvaderSpawner.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\UE4Editor\Development\SpaceInvaders_Unreal\SpaceInvaders_Unreal.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\UE4Editor\Development\SpaceInvaders_Unreal\InvaderSpawner.gen.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\UE4Editor\Development\SpaceInvaders_Unreal\SpaceInvaders_Unreal.init.gen.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\UE4Editor\Development\SpaceInvaders_Unreal\Default.rc2.res"
+/OUT:"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win64\UE4Editor\Development\SpaceInvaders_Unreal\UE4Editor-SpaceInvaders_Unreal-4389.lib"
+/INCLUDE:IMPLEMENT_MODULE_SpaceInvaders_Unreal
