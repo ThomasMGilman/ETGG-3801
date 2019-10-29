@@ -5,5 +5,7 @@ KiteDemo/
 #ignore Visual Studio folders
 .vs/
 
+Binaries/
+
 #ignore this as its rather large
 SharedPCH.Engine.h.pch
