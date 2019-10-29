@@ -59,6 +59,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	
-	UFUNCTION(BluePrintCallable, Category = "MyFunctions")
-	virtual void hitWall();
+	UFUNCTION(BluePrintCallable, Category = "wallCollisionHandle")
+	void hitWall();
 };

@@ -380,7 +380,9 @@
     <None Include="..\..\Config\Windows\WindowsEngine.ini" />
     <None Include="..\..\Config\XboxOne\XboxOneEngine.ini" />
     <None Include="..\..\Source\SpaceInvaders_Unreal\SpaceInvaders_Unreal.Build.cs" />
+    <ClCompile Include="..\..\Source\SpaceInvaders_Unreal\Private\Invader_Spawner.cpp" />
     <ClCompile Include="..\..\Source\SpaceInvaders_Unreal\SpaceInvaders_Unreal.cpp" />
+    <ClInclude Include="..\..\Source\SpaceInvaders_Unreal\Public\Invader_Spawner.h" />
     <ClInclude Include="..\..\Source\SpaceInvaders_Unreal\SpaceInvaders_Unreal.h" />
     <ClCompile Include="..\..\Source\SpaceInvaders_Unreal\Private\InvaderSpawner.cpp" />
     <ClInclude Include="..\..\Source\SpaceInvaders_Unreal\Public\InvaderSpawner.h" />

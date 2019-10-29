@@ -99,4 +99,14 @@
       <Filter>Source\SpaceInvaders_Unreal\Public</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\SpaceInvaders_Unreal\Public\Invader_Spawner.h">
+      <Filter>Source\SpaceInvaders_Unreal\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\SpaceInvaders_Unreal\Private\Invader_Spawner.cpp">
+      <Filter>Source\SpaceInvaders_Unreal\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

@@ -38,11 +38,11 @@ void EmptyLinkFunctionForGeneratedCodeInvaderSpawner() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AInvaderSpawner_hitWall_Statics::Function_MetaDataParams[] = {
-		{ "Category", "MyFunctions" },
+		{ "Category", "wallCollisionHandle" },
 		{ "ModuleRelativePath", "Public/InvaderSpawner.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AInvaderSpawner_hitWall_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AInvaderSpawner, nullptr, "hitWall", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AInvaderSpawner_hitWall_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AInvaderSpawner_hitWall_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AInvaderSpawner_hitWall_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AInvaderSpawner, nullptr, "hitWall", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AInvaderSpawner_hitWall_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AInvaderSpawner_hitWall_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AInvaderSpawner_hitWall()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -100,7 +100,7 @@ void EmptyLinkFunctionForGeneratedCodeInvaderSpawner() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceInvaders_Unreal,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AInvaderSpawner_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AInvaderSpawner_hitWall, "hitWall" }, // 913578907
+		{ &Z_Construct_UFunction_AInvaderSpawner_hitWall, "hitWall" }, // 1967886003
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AInvaderSpawner_Statics::Class_MetaDataParams[] = {
@@ -205,7 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeInvaderSpawner() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AInvaderSpawner, 730073081);
+	IMPLEMENT_CLASS(AInvaderSpawner, 2957119722);
 	template<> SPACEINVADERS_UNREAL_API UClass* StaticClass<AInvaderSpawner>()
 	{
 		return AInvaderSpawner::StaticClass();

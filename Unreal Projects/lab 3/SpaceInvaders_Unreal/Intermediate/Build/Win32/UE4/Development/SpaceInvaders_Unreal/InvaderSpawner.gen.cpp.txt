@@ -1,0 +1,5 @@
+D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win32\UE4\Development\SpaceInvaders_Unreal\Definitions.SpaceInvaders_Unreal.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Source\SpaceInvaders_Unreal/Public/InvaderSpawner.h
+D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 3\SpaceInvaders_Unreal\Intermediate\Build\Win32\UE4\Inc\SpaceInvaders_Unreal\InvaderSpawner.generated.h

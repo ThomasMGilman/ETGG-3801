@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeSpaceInvaders_Unreal_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x28C3064C,
-				0x4071BD8A,
+				0x7979E806,
+				0x78261CE4,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
