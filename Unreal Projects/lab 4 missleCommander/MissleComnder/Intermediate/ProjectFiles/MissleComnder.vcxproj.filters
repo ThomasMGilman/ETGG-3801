@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\MissleComnder.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{0FD1A3C4-46B1-4C3A-8EC9-82364F51D521}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\MissleComnder.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\MissleComnderEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{3F4659D0-8B5A-4920-B688-A870E72E8579}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\Android">
+      <UniqueIdentifier>{4E62535B-F909-41B1-8736-0C32FA763330}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Android\AndroidEngine.ini">
+      <Filter>Config\Android</Filter>
+    </None>
+    <Filter Include="Config\IOS">
+      <UniqueIdentifier>{209578FD-FB7E-43E1-BA2D-AC25A94A3B93}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\IOS\IOSEngine.ini">
+      <Filter>Config\IOS</Filter>
+    </None>
+    <Filter Include="Config\Linux">
+      <UniqueIdentifier>{D3946273-1E19-4190-9768-42C874F1023B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Linux\LinuxEngine.ini">
+      <Filter>Config\Linux</Filter>
+    </None>
+    <Filter Include="Config\Mac">
+      <UniqueIdentifier>{C609C11B-142C-4545-B815-10C9BFBE7FE3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Mac\MacEngine.ini">
+      <Filter>Config\Mac</Filter>
+    </None>
+    <Filter Include="Config\PS4">
+      <UniqueIdentifier>{B57541BA-80AE-4E7D-AB61-8D75F8DD9C9C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\PS4\PS4Engine.ini">
+      <Filter>Config\PS4</Filter>
+    </None>
+    <Filter Include="Config\Switch">
+      <UniqueIdentifier>{3BADEE7D-CD3C-4729-924D-9FEA4C8AB982}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Switch\SwitchEngine.ini">
+      <Filter>Config\Switch</Filter>
+    </None>
+    <Filter Include="Config\Windows">
+      <UniqueIdentifier>{46C30F21-2008-466B-A464-55404119FDB6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Windows\WindowsEngine.ini">
+      <Filter>Config\Windows</Filter>
+    </None>
+    <Filter Include="Config\XboxOne">
+      <UniqueIdentifier>{6C164F6E-EFE1-4BBA-988C-E247063116ED}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\XboxOne\XboxOneEngine.ini">
+      <Filter>Config\XboxOne</Filter>
+    </None>
+    <Filter Include="Source\MissleComnder">
+      <UniqueIdentifier>{3F2F2CB6-BA0C-4F81-B4C0-B1FE99D15ED4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\MissleComnder\MissleComnder.Build.cs">
+      <Filter>Source\MissleComnder</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\MissleComnder\MissleComnder.cpp">
+      <Filter>Source\MissleComnder</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MissleComnder\MissleComnder.h">
+      <Filter>Source\MissleComnder</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MissleComnder\worldSpawner.cpp">
+      <Filter>Source\MissleComnder</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MissleComnder\worldSpawner.h">
+      <Filter>Source\MissleComnder</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
