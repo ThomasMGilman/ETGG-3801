@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MissleComnder-7358.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\MissleComnderEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\MissleComnder.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\worldSpawner.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\MissleComnder.init.gen.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\worldSpawner.gen.cpp.obj"
+"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\Default.rc2.res"
+/OUT:"D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\UE4Editor-MissleComnder-7358.lib"
+/INCLUDE:IMPLEMENT_MODULE_MissleComnder

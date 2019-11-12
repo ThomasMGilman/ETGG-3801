@@ -14,45 +14,68 @@ AworldSpawner::AworldSpawner()
 	USphereComponent* rootSComp = CreateDefaultSubobject<USphereComponent>(TEXT("MyRoot"));
 	RootComponent = rootSComp;
 	rootSComp->InitSphereRadius(1.0f);
+
+	//InstancedStaticMeshComponent = NewObject<UInstancedStaticMeshComponent>();
+	//InstancedStaticMeshComponent->SetStaticMesh(StaticMesh);
+	//InstancedStaticMeshComponent->RegisterComponentWithWorld(GetWorld());
 }
 
 // Called when the game starts or when spawned
 void AworldSpawner::BeginPlay()
 {
-	Super::BeginPlay();
+	//Super::BeginPlay();
 
 	if (spawn_type != NULL)
 	{
 		FVector extents;
 		USceneComponent* my_scene_root = (USceneComponent*)GetComponentByClass(USceneComponent::StaticClass());
+		AActor* new_Ground_Block;
+		UInstancedStaticMeshComponent* InstancedStaticMeshComponent = NewObject<UInstancedStaticMeshComponent>();
+		float XangleIncrement = 360 / xWave_Amplitude, ZanlgeIncrement = 360 / zWave_Amplitude;
+		int halfWidth = world_Width / 2, halfDepth = world_Depth / 2;
 
-		for (int x = -world_Width / 2; x < world_Width / 2; x++)
+		for (int x = 0; x < world_Width; x++)
 		{
-			for (int z = -world_Depth / 2; z < world_Depth / 2; z++)
+			float xPos = x * (extents.Y + col_Spacing) - halfWidth;		//SET X LOCATION OF BLOCK
+			float angleX = ((xPos) * XangleIncrement * PI) / 180; //convert to radians
+			for (int z = 0; z < world_Depth; z++)
 			{
-				FVector loc = GetActorLocation() + FVector(x * (extents.Y + col_Spacing), z * (extents.X + row_Spacing), 0);
-				FTransform transform;
-				transform.SetLocation(loc);
+				float zPos = z * (extents.X + row_Spacing) - halfDepth;			//SET Z LOCATION OF BLOCK
+				float angleZ = ((zPos) * ZanlgeIncrement * PI) / 180;
+				float yPos = sinf(angleZ * wave_Amplitude) * cosf(angleX * wave_Amplitude);
 
-				FActorSpawnParameters spawn_params;
+				FVector loc = GetActorLocation() + FVector(xPos, zPos, yPos);
+				FTransform transform;
+				transform.SetLocation(loc);										//Set objects location
+
+				FActorSpawnParameters spawn_params;								//Set owner and collision
 				spawn_params.Owner = this;
 				spawn_params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-				AActor* new_Ground_Block = GetWorld()->SpawnActor(spawn_type.Get(), &transform, spawn_params);
-				if (!new_Ground_Block)
-					LogString(*((FString)"Ground block is null for some reason"));
-
-				#if WITH_EDITOR
-				new_Ground_Block->SetActorLabel("Block_" + FString::FromInt(z) + "_" + FString::FromInt(x));
-				#endif
-
-				new_Ground_Block->AttachToComponent(my_scene_root, FAttachmentTransformRules::KeepWorldTransform);
-				if (new_Ground_Block && x == 0 && z == 0)
+				if (x == 0 && z == 0)
 				{
-					FBox box = new_Ground_Block->GetComponentsBoundingBox();
-					extents = box.GetExtent() * 2;
-					LogString(*("Extents: " + extents.ToString()));
+					new_Ground_Block = GetWorld()->SpawnActor(spawn_type.Get(), &transform, spawn_params);
+					if (!new_Ground_Block)
+						LogString(*((FString)"Ground block is null for some reason"));
+
+#if WITH_EDITOR
+					new_Ground_Block->SetActorLabel("Block_" + FString::FromInt(z) + "_" + FString::FromInt(x));
+#endif
+					InstancedStaticMeshComponent->RegisterComponentWithWorld(GetWorld());
+
+					InstancedStaticMeshComponent->AttachToComponent(new_Ground_Block->GetRootComponent(), FAttachmentTransformRules::KeepWorldTransform); //attach Instanced Static Mesh to new Actor
+					InstancedStaticMeshComponent->AddInstanceWorldSpace(transform);
+
+					new_Ground_Block->AttachToComponent(my_scene_root, FAttachmentTransformRules::KeepWorldTransform);
+					if (new_Ground_Block)
+					{
+						FBox box = new_Ground_Block->GetComponentsBoundingBox();
+						extents = box.GetExtent() * 2;
+						LogString(*("Extents: " + extents.ToString()));
+					}
 				}
+				else
+					InstancedStaticMeshComponent->AddInstanceWorldSpace(transform);
 			}
 		}
 	}

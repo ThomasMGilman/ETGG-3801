@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeMissleComnder_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x27E2B756,
+				0x46E44542,
 				0x47D58AFD,
 				METADATA_PARAMS(nullptr, 0)
 			};

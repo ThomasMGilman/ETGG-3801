@@ -1,0 +1,15 @@
+﻿  Parsing headers for MissleComnderEditor
+    Running UnrealHeaderTool "D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\MissleComnder.uproject" "D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\MissleComnderEditor\Development\MissleComnderEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for MissleComnderEditor in 5.125482 seconds
+  Using Visual Studio 2019 14.23.28105 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 6 actions with 12 processes...
+    [1/6] MissleComnder.init.gen.cpp
+    [2/6] worldSpawner.gen.cpp
+    [3/6] worldSpawner.cpp
+    [4/6] UE4Editor-MissleComnder-0016.lib
+       Creating library D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\UE4Editor-MissleComnder-0016.lib and object D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\UE4Editor-MissleComnder-0016.exp
+    [5/6] UE4Editor-MissleComnder-0016.dll
+       Creating library D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\UE4Editor-MissleComnder-0016.suppressed.lib and object D:\SchoolAndProjects\Programs\ETGG 3801_02 Realtime Interactive\Unreal Projects\lab 4 missleCommander\MissleComnder\Intermediate\Build\Win64\UE4Editor\Development\MissleComnder\UE4Editor-MissleComnder-0016.suppressed.exp
+    [6/6] MissleComnderEditor.target
+  Total time in Parallel executor: 2.38 seconds
+  Total execution time: 8.21 seconds
