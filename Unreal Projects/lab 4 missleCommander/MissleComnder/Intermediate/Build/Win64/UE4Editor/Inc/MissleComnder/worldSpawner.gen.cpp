@@ -19,6 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 	UPackage* Z_Construct_UPackage__Script_MissleComnder();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UInstancedStaticMeshComponent_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	void AworldSpawner::StaticRegisterNativesAworldSpawner()
 	{
@@ -34,9 +36,17 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_spawn_type_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Player_SpawnType_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_spawn_type;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Player_SpawnType;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GroundInstance_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_GroundInstance;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshInstances_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshInstances;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_row_Spacing_MetaData[];
 #endif
@@ -45,6 +55,10 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_col_Spacing_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_col_Spacing;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_startLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_startLocation;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_world_Height_MetaData[];
 #endif
@@ -88,12 +102,27 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_spawn_type_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType_MetaData[] = {
 		{ "Category", "WorldVariables" },
 		{ "ModuleRelativePath", "worldSpawner.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_spawn_type = { "spawn_type", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, spawn_type), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_spawn_type_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_spawn_type_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType = { "Player_SpawnType", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, Player_SpawnType), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_GroundInstance_MetaData[] = {
+		{ "Category", "WorldVariables" },
+		{ "ModuleRelativePath", "worldSpawner.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_GroundInstance = { "GroundInstance", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, GroundInstance), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_GroundInstance_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_GroundInstance_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_MeshInstances_MetaData[] = {
+		{ "Category", "WorldVariables" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "worldSpawner.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_MeshInstances = { "MeshInstances", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, MeshInstances), Z_Construct_UClass_UInstancedStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_MeshInstances_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_MeshInstances_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_row_Spacing_MetaData[] = {
 		{ "Category", "WorldVariables" },
@@ -108,6 +137,13 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_col_Spacing = { "col_Spacing", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, col_Spacing), METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_col_Spacing_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_col_Spacing_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_startLocation_MetaData[] = {
+		{ "Category", "WorldVariables" },
+		{ "ModuleRelativePath", "worldSpawner.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_startLocation = { "startLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, startLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_startLocation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_startLocation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_world_Height_MetaData[] = {
 		{ "Category", "WorldVariables" },
@@ -158,9 +194,12 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_world_Width = { "world_Width", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, world_Width), METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_world_Width_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_world_Width_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AworldSpawner_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_spawn_type,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_GroundInstance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_MeshInstances,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_row_Spacing,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_col_Spacing,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_startLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_world_Height,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_zWave_Amplitude,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AworldSpawner_Statics::NewProp_xWave_Amplitude,
@@ -196,7 +235,7 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AworldSpawner, 1588022855);
+	IMPLEMENT_CLASS(AworldSpawner, 617754485);
 	template<> MISSLECOMNDER_API UClass* StaticClass<AworldSpawner>()
 	{
 		return AworldSpawner::StaticClass();

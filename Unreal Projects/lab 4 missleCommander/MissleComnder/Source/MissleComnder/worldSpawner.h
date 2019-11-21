@@ -11,7 +11,7 @@
 UCLASS()
 class MISSLECOMNDER_API AworldSpawner : public AActor
 {
-	GENERATED_BODY()
+	GENERATED_UCLASS_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
@@ -39,16 +39,22 @@ public:
 		float world_Height = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		FVector startLocation = { 0,0,0 };
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		float col_Spacing = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		float row_Spacing = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
-		TSubclassOf<class AActor> spawn_type;
+		class UInstancedStaticMeshComponent* MeshInstances;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
-		UStaticMesh *StaticMesh;
+		TSubclassOf<class AActor> GroundInstance;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		TSubclassOf<class AActor> Player_SpawnType;
 
 	void LogString(const TCHAR* msg)
 	{

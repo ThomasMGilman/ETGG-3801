@@ -77,7 +77,7 @@ public: \
 	MissleComnder_Source_MissleComnder_worldSpawner_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	MissleComnder_Source_MissleComnder_worldSpawner_h_14_INCLASS_NO_PURE_DECLS \
 	MissleComnder_Source_MissleComnder_worldSpawner_h_14_ENHANCED_CONSTRUCTORS \
-private: \
+static_assert(false, "Unknown access specifier for GENERATED_BODY() macro in class worldSpawner."); \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
