@@ -44,7 +44,7 @@ void AworldSpawner::BeginPlay()
 			{
 				float zPos = startLocation.Y + (z * row_Spacing - halfDepth);			//SET Z LOCATION OF BLOCK
 				float angleZ = ((zPos) * ZanlgeIncrement * PI) / 180;
-				float yPos = sinf(angleZ * wave_Amplitude) * cosf(angleX * wave_Amplitude);
+				float yPos = sinf(angleZ) * cosf(angleX) * wave_Amplitude;
 
 				//Set objects location
 				InstanceTransform.SetLocation(GetActorLocation() + FVector(xPos, zPos, yPos));	//Set Instance Location and place Instance
@@ -53,8 +53,7 @@ void AworldSpawner::BeginPlay()
 
 				//if (x == halfWidth - 1 && z == halfDepth - 1)	//Spawn Player
 				//{
-
-					//InstanceTransform.SetLocation(GetActorLocation() + FVector(xPos, zPos, yPos + 100));
+					//Player_SpawnType->SetActorLocation(GetActorLocation() + FVector(xPos, zPos, yPos + 100));
 					//GetWorld()->SpawnActor(Player_SpawnType.Get(), &InstanceTransform);
 					//UE_LOG(LogTemp, Warning, TEXT("spawning actor"));
 				//}

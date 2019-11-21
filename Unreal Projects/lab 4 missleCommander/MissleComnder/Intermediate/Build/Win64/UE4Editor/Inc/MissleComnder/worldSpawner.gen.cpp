@@ -17,8 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 	MISSLECOMNDER_API UClass* Z_Construct_UClass_AworldSpawner();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_MissleComnder();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_UInstancedStaticMeshComponent_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
@@ -38,7 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Player_SpawnType_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Player_SpawnType;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Player_SpawnType;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GroundInstance_MetaData[];
 #endif
@@ -107,7 +107,7 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 		{ "ModuleRelativePath", "worldSpawner.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType = { "Player_SpawnType", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, Player_SpawnType), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType = { "Player_SpawnType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AworldSpawner, Player_SpawnType), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType_MetaData, ARRAY_COUNT(Z_Construct_UClass_AworldSpawner_Statics::NewProp_Player_SpawnType_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AworldSpawner_Statics::NewProp_GroundInstance_MetaData[] = {
 		{ "Category", "WorldVariables" },
@@ -235,7 +235,7 @@ void EmptyLinkFunctionForGeneratedCodeworldSpawner() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AworldSpawner, 617754485);
+	IMPLEMENT_CLASS(AworldSpawner, 1061745464);
 	template<> MISSLECOMNDER_API UClass* StaticClass<AworldSpawner>()
 	{
 		return AworldSpawner::StaticClass();

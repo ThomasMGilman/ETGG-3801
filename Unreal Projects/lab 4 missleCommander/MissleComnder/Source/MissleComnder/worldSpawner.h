@@ -54,7 +54,7 @@ public:
 		TSubclassOf<class AActor> GroundInstance;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
-		TSubclassOf<class AActor> Player_SpawnType;
+		AActor* Player_SpawnType;
 
 	void LogString(const TCHAR* msg)
 	{

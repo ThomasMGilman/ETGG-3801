@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MissleComnder.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8CEDB5EA-C993-4A0A-B8D0-70791100D6F4}</UniqueIdentifier>
+      <UniqueIdentifier>{D2D40511-EC24-4BE6-866E-E7217A81E643}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MissleComnder.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{AB230D22-9BDF-4123-9FD5-F31D017C0505}</UniqueIdentifier>
+      <UniqueIdentifier>{5786609B-3B56-4BFB-AAA7-191B5F06E106}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,55 +27,55 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\Android">
-      <UniqueIdentifier>{D23768FA-C765-4E27-8CB1-B8CD0192E149}</UniqueIdentifier>
+      <UniqueIdentifier>{D55E69B4-1299-49D6-8E62-F8419862A85B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Android\AndroidEngine.ini">
       <Filter>Config\Android</Filter>
     </None>
     <Filter Include="Config\IOS">
-      <UniqueIdentifier>{603622E7-3BB2-4CD4-82CD-B16A87243434}</UniqueIdentifier>
+      <UniqueIdentifier>{165F9861-CD76-48D4-AE7D-F7C926528979}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\IOS\IOSEngine.ini">
       <Filter>Config\IOS</Filter>
     </None>
     <Filter Include="Config\Linux">
-      <UniqueIdentifier>{D888BC45-85D2-4BFA-8FBF-FED730CADE98}</UniqueIdentifier>
+      <UniqueIdentifier>{D1987E76-291B-46F2-9B95-A3EBD78D3740}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Linux\LinuxEngine.ini">
       <Filter>Config\Linux</Filter>
     </None>
     <Filter Include="Config\Mac">
-      <UniqueIdentifier>{DFD673E7-7074-49FE-A5C6-A67DFE52F243}</UniqueIdentifier>
+      <UniqueIdentifier>{29C67735-A3ED-4961-A8BD-9F6B65CEAC6B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Mac\MacEngine.ini">
       <Filter>Config\Mac</Filter>
     </None>
     <Filter Include="Config\PS4">
-      <UniqueIdentifier>{12003E44-7660-449C-9309-111B7853B643}</UniqueIdentifier>
+      <UniqueIdentifier>{29FBF0F8-D207-491B-8324-893C1BF7E5C4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\PS4\PS4Engine.ini">
       <Filter>Config\PS4</Filter>
     </None>
     <Filter Include="Config\Switch">
-      <UniqueIdentifier>{AD86DE78-83D0-42F3-BFCB-88F669859892}</UniqueIdentifier>
+      <UniqueIdentifier>{453A0B8F-B4ED-4DE5-BA0F-8FA1B34416A1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Switch\SwitchEngine.ini">
       <Filter>Config\Switch</Filter>
     </None>
     <Filter Include="Config\Windows">
-      <UniqueIdentifier>{F0BBAC8E-ED2C-440D-B3BA-72D47A6A6906}</UniqueIdentifier>
+      <UniqueIdentifier>{CD7A0C02-F0D6-40B1-B75D-19C794BDE36C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Windows\WindowsEngine.ini">
       <Filter>Config\Windows</Filter>
     </None>
     <Filter Include="Config\XboxOne">
-      <UniqueIdentifier>{0F5E94D6-EB6C-48CE-9D4F-26DF166DDC4F}</UniqueIdentifier>
+      <UniqueIdentifier>{9E18ED7B-49C3-4F0B-87BC-92498170B556}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\XboxOne\XboxOneEngine.ini">
       <Filter>Config\XboxOne</Filter>
     </None>
     <Filter Include="Source\MissleComnder">
-      <UniqueIdentifier>{3D055A67-2E81-4AEE-BFB6-85112ABE88A1}</UniqueIdentifier>
+      <UniqueIdentifier>{349F9187-0582-4DE1-A5D1-7DF0C878AECE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MissleComnder\MissleComnder.Build.cs">
       <Filter>Source\MissleComnder</Filter>
