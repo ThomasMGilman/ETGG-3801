@@ -44,7 +44,7 @@ void AworldSpawner::BeginPlay()
 			{
 				float zPos = startLocation.Y + (z * row_Spacing - halfDepth);			//SET Z LOCATION OF BLOCK
 				float angleZ = ((zPos) * ZanlgeIncrement * PI) / 180;
-				float yPos = sinf(angleZ) * cosf(angleX) * wave_Amplitude;
+				float yPos = sinf(angleZ * wave_Amplitude) * cosf(angleX * wave_Amplitude) * wave_Amplitude;
 
 				//Set objects location
 				InstanceTransform.SetLocation(GetActorLocation() + FVector(xPos, zPos, yPos));	//Set Instance Location and place Instance
