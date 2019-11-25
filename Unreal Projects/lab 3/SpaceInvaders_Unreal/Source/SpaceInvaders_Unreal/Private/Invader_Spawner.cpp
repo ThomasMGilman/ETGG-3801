@@ -21,6 +21,7 @@ void AInvader_Spawner::BeginPlay()
 {
 	Super::BeginPlay();
 
+
 	if (spawn_type != NULL)
 	{
 		FVector extents;

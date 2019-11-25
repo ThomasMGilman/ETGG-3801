@@ -3,6 +3,7 @@
 
 #include "worldSpawner.h"
 #include "Components/SphereComponent.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values
 AworldSpawner::AworldSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
@@ -25,14 +26,14 @@ void AworldSpawner::BeginPlay()
 
 	FTransform InstanceTransform;
 	InstanceTransform.SetLocation(startLocation);
-	AActor* ground = GetWorld()->SpawnActor(GroundInstance.Get(), &InstanceTransform, spawnParams);
 	
+	AActor* ground = GetWorld()->SpawnActor(GroundInstance.Get(), &InstanceTransform, spawnParams);
 
 	if (GroundInstance != NULL)
 	{
 		MeshInstances->AttachTo(ground->GetRootComponent());
 		MeshInstances->RegisterComponent();
-
+		FTransform transform;
 		float XangleIncrement = 360 / xWave_Amplitude, ZanlgeIncrement = 360 / zWave_Amplitude;
 		int halfWidth = world_Width / 2, halfDepth = world_Depth / 2;
 
@@ -47,16 +48,32 @@ void AworldSpawner::BeginPlay()
 				float yPos = sinf(angleZ * wave_Amplitude) * cosf(angleX * wave_Amplitude) * wave_Amplitude;
 
 				//Set objects location
-				InstanceTransform.SetLocation(GetActorLocation() + FVector(xPos, zPos, yPos));	//Set Instance Location and place Instance
+				FVector curPos = FVector(xPos, zPos, yPos);
+				InstanceTransform.SetLocation(GetActorLocation() + curPos);	//Set Instance Location and place Instance
 				MeshInstances->AddInstance(InstanceTransform);
 				
 
-				//if (x == halfWidth - 1 && z == halfDepth - 1)	//Spawn Player
-				//{
+				if (x == halfWidth - 1 && z == halfDepth - 1)	//Spawn Player
+				{
+					float turret_AngleInc = 360 / turret_Count;
+					transform.SetLocation(curPos + FVector(0, 0, base_heightOffset));
+					AActor* base = GetWorld()->SpawnActor(Base_SpawnType.Get(), &transform, spawnParams);			//Spawn Base
+
+					for (int turNum = 0; turNum < turret_Count; turNum++)
+					{
+						float turretAngle = (float)((turret_AngleInc * PI) / 180);
+						float turPosX = turret_radiusMul * turret_radius * cos((turNum + 1) * turretAngle) + xPos;
+						float turPosY = turret_radiusMul * turret_radius * sin((turNum + 1) * turretAngle) + zPos;
+						float turPosZ = sinf(((turPosY * ZanlgeIncrement * PI) / 180) * wave_Amplitude) * cosf(((turPosX * XangleIncrement * PI) / 180) * wave_Amplitude) * wave_Amplitude;
+						FVector turPos = FVector(turPosX, turPosY, turPosZ + turret_heightOffset);
+
+						transform.SetLocation(turPos);
+						AActor* newTurret = GetWorld()->SpawnActor(Turret_SpawnType.Get(), &transform, spawnParams);
+					}
 					//Player_SpawnType->SetActorLocation(GetActorLocation() + FVector(xPos, zPos, yPos + 100));
 					//GetWorld()->SpawnActor(Player_SpawnType.Get(), &InstanceTransform);
 					//UE_LOG(LogTemp, Warning, TEXT("spawning actor"));
-				//}
+				}
 			}
 		}
 	}

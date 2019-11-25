@@ -39,19 +39,37 @@ public:
 		float world_Height = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
-		FVector startLocation = { 0,0,0 };
-
-	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		float col_Spacing = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		float row_Spacing = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		float base_heightOffset = 1;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		float turret_heightOffset = 1;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		float turret_radius = 1;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		float turret_radiusMul = 1;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		FVector startLocation = { 0,0,0 };
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		class UInstancedStaticMeshComponent* MeshInstances;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		TSubclassOf<class AActor> GroundInstance;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		TSubclassOf<class AActor> Turret_SpawnType;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		TSubclassOf<class AActor> Base_SpawnType;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		AActor* Player_SpawnType;
