@@ -1,0 +1,1481 @@
+﻿Log file open, 11/25/19 12:27:19
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: MissleComnder
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.057501
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogInit: Build: ++UE4+Release-4.23-CL-9631420
+LogInit: Engine Version: 4.23.1-9631420+++UE4+Release-4.23
+LogInit: Compatible Engine Version: 4.23.0-8386587+++UE4+Release-4.23
+LogInit: Net CL: 8386587
+LogInit: OS: Windows 10 (Release 1903) (), CPU: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz, GPU: NVIDIA GeForce GTX 980 Ti
+LogInit: Compiled (64-bit): Oct 18 2019 02:07:44
+LogInit: Compiled with Visual C++: 19.16.27030.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.23
+LogInit: Command Line: 
+LogInit: Base Directory: D:/Epic Games/UE_4.23/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 23
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 3
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 34
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 35
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 31
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 11
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 2
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 2
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 27
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 6
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 9
+LogInit: Presizing for max 16777216 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Engine.ini]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:1]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Engine.ini]
+[2019.11.25-17.27.19:653][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Engine.ini]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.11.25-17.27.19:653][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Engine.ini]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.11.25-17.27.19:654][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Engine.ini]
+[2019.11.25-17.27.19:654][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Engine.ini]
+[2019.11.25-17.27.19:656][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:656][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.11.25-17.27.19:656][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.11.25-17.27.19:656][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:656][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.11.25-17.27.19:656][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:656][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.11.25-17.27.19:657][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.11.25-17.27.19:658][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.11.25-17.27.19:658][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.11.25-17.27.19:658][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.11.25-17.27.19:658][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.11.25-17.27.19:658][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:658][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.11.25-17.27.19:658][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.11.25-17.27.19:658][  0]LogInit: Selected Device Profile: [Windows]
+[2019.11.25-17.27.19:658][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.11.25-17.27.19:660][  0]LogHAL: Display: Platform has ~ 16 GB [17104371712 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.11.25-17.27.19:660][  0]LogInit: Going up to parent DeviceProfile []
+[2019.11.25-17.27.19:660][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.11.25-17.27.19:660][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Scalability.ini]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2019.11.25-17.27.19:661][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Config/Windows/Engine.ini]
+[2019.11.25-17.27.19:661][  0]LogInit: Computer: THOMASS_TOWER
+[2019.11.25-17.27.19:661][  0]LogInit: User: Thoma
+[2019.11.25-17.27.19:661][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.11.25-17.27.19:661][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2019.11.25-17.27.19:661][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2019.11.25-17.27.19:661][  0]LogMemory: Platform Memory Stats for Windows
+[2019.11.25-17.27.19:661][  0]LogMemory: Process Physical Memory: 101.17 MB used, 101.17 MB peak
+[2019.11.25-17.27.19:661][  0]LogMemory: Process Virtual Memory: 88.80 MB used, 88.80 MB peak
+[2019.11.25-17.27.19:661][  0]LogMemory: Physical Memory: 5404.11 MB used,  10907.89 MB free, 16312.00 MB total
+[2019.11.25-17.27.19:661][  0]LogMemory: Virtual Memory: 4657.43 MB used,  134213072.00 MB free, 134217728.00 MB total
+[2019.11.25-17.27.19:664][  0]LogWindows: WindowsPlatformFeatures enabled
+[2019.11.25-17.27.19:684][  0]LogInit: Using OS detected language (en-US).
+[2019.11.25-17.27.19:684][  0]LogInit: Using OS detected locale (en-US).
+[2019.11.25-17.27.19:685][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.11.25-17.27.19:812][  0]LogInit: Setting process to per monitor DPI aware
+[2019.11.25-17.27.19:857][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.11.25-17.27.19:857][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.11.25-17.27.20:039][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.11.25-17.27.20:039][  0]LogD3D11RHI: D3D11 adapters:
+[2019.11.25-17.27.20:089][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 980 Ti' (Feature Level 11_0)
+[2019.11.25-17.27.20:089][  0]LogD3D11RHI:       6097/0/8156 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2019.11.25-17.27.20:091][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.11.25-17.27.20:091][  0]LogD3D11RHI:       0/0/8156 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.11.25-17.27.20:091][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.11.25-17.27.20:098][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.11.25-17.27.20:098][  0]LogD3D11RHI:     GPU DeviceId: 0x17c8 (for the marketing name, search the web for "GPU Device Id")
+[2019.11.25-17.27.20:098][  0]LogWindows: EnumDisplayDevices:
+[2019.11.25-17.27.20:098][  0]LogWindows:    0. 'NVIDIA GeForce GTX 980 Ti' (P:1 D:1)
+[2019.11.25-17.27.20:098][  0]LogWindows:    1. 'NVIDIA GeForce GTX 980 Ti' (P:0 D:0)
+[2019.11.25-17.27.20:099][  0]LogWindows:    2. 'NVIDIA GeForce GTX 980 Ti' (P:0 D:0)
+[2019.11.25-17.27.20:099][  0]LogWindows:    3. 'NVIDIA GeForce GTX 980 Ti' (P:0 D:0)
+[2019.11.25-17.27.20:099][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2019.11.25-17.27.20:099][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 980 Ti
+[2019.11.25-17.27.20:099][  0]LogD3D11RHI:   Driver Version: 441.20 (internal:26.21.14.4120, unified:441.20)
+[2019.11.25-17.27.20:099][  0]LogD3D11RHI:      Driver Date: 11-6-2019
+[2019.11.25-17.27.20:099][  0]LogRHI: Texture pool is 4268 MB (70% of 6097 MB)
+[2019.11.25-17.27.20:132][  0]LogD3D11RHI: Async texture creation enabled
+[2019.11.25-17.27.20:145][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2019.11.25-17.27.20:389][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
+[2019.11.25-17.27.20:395][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
+[2019.11.25-17.27.20:401][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
+[2019.11.25-17.27.20:408][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
+[2019.11.25-17.27.20:415][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
+[2019.11.25-17.27.20:421][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
+[2019.11.25-17.27.20:428][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
+[2019.11.25-17.27.20:434][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
+[2019.11.25-17.27.20:437][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
+[2019.11.25-17.27.20:463][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
+[2019.11.25-17.27.20:464][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
+[2019.11.25-17.27.20:478][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
+[2019.11.25-17.27.20:478][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
+[2019.11.25-17.27.20:488][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
+[2019.11.25-17.27.20:488][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
+[2019.11.25-17.27.20:494][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
+[2019.11.25-17.27.20:500][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
+[2019.11.25-17.27.20:506][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
+[2019.11.25-17.27.20:512][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
+[2019.11.25-17.27.20:529][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
+[2019.11.25-17.27.20:529][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
+[2019.11.25-17.27.20:529][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.11.25-17.27.20:536][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2019.11.25-17.27.20:572][  0]LogShaderCompilers: Guid format shader working directory is -76 characters bigger than the processId version (../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Intermediate/Shaders/WorkingDirectory/14476/).
+[2019.11.25-17.27.20:572][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Thoma/AppData/Local/Temp/UnrealShaderWorkingDir/67DB61EF459116D7B1F7D0850BCFA2AB/'.
+[2019.11.25-17.27.20:573][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.11.25-17.27.20:573][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.11.25-17.27.20:573][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.11.25-17.27.21:063][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.11.25-17.27.21:104][  0]LogDerivedDataCache: Loaded boot cache 0.04s 73MB C:/Users/Thoma/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
+[2019.11.25-17.27.21:104][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Thoma/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc
+[2019.11.25-17.27.21:104][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.11.25-17.27.21:104][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.11.25-17.27.21:104][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.11.25-17.27.21:104][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.11.25-17.27.21:112][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.11.25-17.27.21:112][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.11.25-17.27.21:112][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2019.11.25-17.27.21:113][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Thoma/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.11.25-17.27.21:113][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.11.25-17.27.21:113][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.11.25-17.27.21:128][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.11.25-17.27.21:130][  0]LogSlate: Using FreeType 2.6.0
+[2019.11.25-17.27.21:131][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.11.25-17.27.21:182][  0]LogAssetRegistry: FAssetRegistry took 0.0018 seconds to start up
+[2019.11.25-17.27.21:379][  0]LogInit: Selected Device Profile: [Windows]
+[2019.11.25-17.27.21:508][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.11.25-17.27.21:508][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2019.11.25-17.27.21:508][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.11.25-17.27.21:508][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2019.11.25-17.27.21:508][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2019.11.25-17.27.21:516][  0]LogNetVersion: MissleComnder 1.0.0, NetCL: 8386587, EngineNetVer: 11, GameNetVer: 0 (Checksum: 2994690250)
+[2019.11.25-17.27.21:828][  0]LogPackageLocalizationCache: Processed 12 localized package path(s) for 1 prioritized culture(s) in 0.030490 seconds
+[2019.11.25-17.27.21:834][  0]LogUObjectArray: 43444 objects as part of root set at end of initial load.
+[2019.11.25-17.27.21:834][  0]LogUObjectAllocator: 7548648 out of 0 bytes used by permanent object pool.
+[2019.11.25-17.27.21:834][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.11.25-17.27.22:600][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.11.25-17.27.22:603][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.11.25-17.27.22:649][  0]SourceControl: Source control is disabled
+[2019.11.25-17.27.22:649][  0]SourceControl: Source control is disabled
+[2019.11.25-17.27.22:650][  0]SourceControl: Source control is disabled
+[2019.11.25-17.27.22:651][  0]SourceControl: Source control is disabled
+[2019.11.25-17.27.22:720][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.11.25-17.27.22:822][  0]LogOcInput: OculusInput pre-init called
+[2019.11.25-17.27.22:826][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2019.11.25-17.27.22:826][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2019.11.25-17.27.22:879][  0]LogEngine: Initializing Engine...
+[2019.11.25-17.27.22:879][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.11.25-17.27.22:880][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2019.11.25-17.27.23:050][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.11.25-17.27.23:060][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.11.25-17.27.23:085][  0]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.11.25-17.27.23:103][  0]LogInit: FAudioDevice initialized.
+[2019.11.25-17.27.23:103][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.11.25-17.27.23:263][  0]LogDerivedDataCache: Saved boot cache 0.16s 73MB C:/Users/Thoma/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
+[2019.11.25-17.27.23:271][  0]LogInit: Texture streaming: Enabled
+[2019.11.25-17.27.23:310][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.11.25-17.27.23:310][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2019.11.25-17.27.23:312][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2019.11.25-17.27.23:416][  0]LogInit: Transaction tracking system initialized
+[2019.11.25-17.27.23:443][  0]BlueprintLog: New page: Editor Load
+[2019.11.25-17.27.23:497][  0]LocalizationService: Localization service is disabled
+[2019.11.25-17.27.23:679][  0]LogFileCache: Scanning file cache for directory 'D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/' took 0.00s
+[2019.11.25-17.27.23:679][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.11.25-17.27.23:680][  0]LogCook: Display: Mobile HDR setting 1
+[2019.11.25-17.27.23:813][  0]SourceControl: Source control is disabled
+[2019.11.25-17.27.23:813][  0]LightingResults: New page: Lighting Build
+[2019.11.25-17.27.23:815][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.27.23:815][  0]MapCheck: New page: Map Check
+[2019.11.25-17.27.23:815][  0]LightingResults: New page: Lighting Build
+[2019.11.25-17.27.23:833][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.21ms
+[2019.11.25-17.27.24:061][  0]LogAIModule: Creating AISystem for world GameMap
+[2019.11.25-17.27.24:064][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.11.25-17.27.24:085][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2019.11.25-17.27.24:086][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.11.25-17.27.24:086][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.075ms to complete.
+[2019.11.25-17.27.24:086][  0]LogFileHelpers: Loading map 'GameMap' took 0.272
+[2019.11.25-17.27.24:196][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.11.25-17.27.24:203][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.11.25-17.27.24:209][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.11.25-17.27.24:215][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.11.25-17.27.24:219][  0]LogCollectionManager: Loaded 0 collections in 0.001151 seconds
+[2019.11.25-17.27.24:223][  0]LogFileCache: Scanning file cache for directory 'D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/Collections/' took 0.00s
+[2019.11.25-17.27.24:224][  0]LogFileCache: Scanning file cache for directory 'D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/Developers/Thoma/Collections/' took 0.00s
+[2019.11.25-17.27.24:224][  0]LogFileCache: Scanning file cache for directory 'D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/Collections/' took 0.00s
+[2019.11.25-17.27.24:224][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2019.11.25-17.27.24:230][  0]LogContentBrowser: Native class hierarchy populated in 0.0063 seconds. Added 2864 classes and 682 folders.
+[2019.11.25-17.27.24:234][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.11.25-17.27.24:288][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.11.25-17.27.24:292][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0004 seconds. Added 1 classes and 2 folders.
+[2019.11.25-17.27.24:313][  0]LogSlate: Took 0.000212 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.11.25-17.27.24:315][  0]LogSlate: Took 0.000156 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.11.25-17.27.24:319][  0]LogSlate: Took 0.000187 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.11.25-17.27.24:367][  0]LogRenderer: Reallocating scene render targets to support 256x256 Format 10 NumSamples 1 (Frame:1).
+[2019.11.25-17.27.24:380][  0]LogRenderer: Reallocating scene render targets to support 1540x808 Format 10 NumSamples 1 (Frame:1).
+[2019.11.25-17.27.24:439][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.11.25-17.27.24:439][  0]LogLoad: (Engine Initialization) Total time: 6.24 seconds
+[2019.11.25-17.27.24:439][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.11.25-17.27.24:449][  0]LoadErrors: Error: /Game/BluePrints/PlayerBP : Failed import for FloatProperty /Game/Animation/PlayerAnimGraph.PlayerAnimGraph_C:walkingAmount Referenced by export Function /Game/BluePrints/PlayerBP.PlayerBP_C:ExecuteUbergraph_PlayerBP
+[2019.11.25-17.27.24:449][  0]LoadErrors: Error: /Game/BluePrints/gameModeBP : Failed import for ObjectProperty /Game/UserOverlay/InGameUI.InGameUI_C:enterText Referenced by export Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText
+[2019.11.25-17.27.24:485][  0]LogAssetRegistry: Asset discovery search completed in 3.3031 seconds
+[2019.11.25-17.27.24:489][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000004 seconds (found 0 objects)
+[2019.11.25-17.27.24:489][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000041 seconds (updated 0 objects)
+[2019.11.25-17.27.24:490][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.11.25-17.27.24:499][  0]LogSlate: FSceneViewport::OnFocusLost() reason 5
+[2019.11.25-17.27.24:566][  1]LogFileCache: Retrieving MD5 hashes for directory 'D:/School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/' took 0.12s
+[2019.11.25-17.27.25:459][ 95]LogSlate: Took 0.000227 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.11.25-17.27.29:382][566]LogSlate: Window 'Message Log' being destroyed
+[2019.11.25-17.27.29:386][566]LogSlate: Window 'Message Log' being destroyed
+[2019.11.25-17.27.32:337][908]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.11.25-17.27.37:267][445]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/BluePrints/gameModeBP.gameModeBP
+[2019.11.25-17.27.37:425][445]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0005 seconds. Added 121 classes and 0 folders.
+[2019.11.25-17.27.38:128][445]LogSlate: Took 0.000199 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2019.11.25-17.27.38:162][446]LogSlate: Took 0.000227 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2019.11.25-17.27.51:171][990]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2019.11.25-17.27.51:674][ 46]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.11.25-17.28.08:706][ 30]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.11.25-17.29.45:438][391]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2019.11.25-17.29.46:007][448]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.11.25-17.32.34:648][631]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/BluePrints/BaseBP.BaseBP
+[2019.11.25-17.32.42:942][577]LogEditorTransaction: Undo Move Node
+[2019.11.25-17.34.08:168][691]BlueprintLog: New page: Compile BaseBP
+[2019.11.25-17.34.08:171][691]LogBlueprint: Error: [Compiler BaseBP] This blueprint (self) is not a gameModeBP_C, therefore ' Target ' must have a connection.
+[2019.11.25-17.34.08:171][691]LogBlueprint: Error: [Compiler BaseBP] This blueprint (self) is not a gameModeBP_C, therefore ' Target ' must have a connection.
+[2019.11.25-17.34.08:317][691]LogUObjectHash: Compacting FUObjectHashTables data took   2.85ms
+[2019.11.25-17.34.35:867][930]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/BaseBPC14A1420422F47FF59927E8336ADC67F.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/BaseBP.uasset'
+[2019.11.25-17.34.36:779][ 38]BlueprintLog: New page: Compile BaseBP
+[2019.11.25-17.34.36:782][ 38]LogBlueprint: Error: [Compiler BaseBP] This blueprint (self) is not a gameModeBP_C, therefore ' Target ' must have a connection.
+[2019.11.25-17.34.36:782][ 38]LogBlueprint: Error: [Compiler BaseBP] This blueprint (self) is not a gameModeBP_C, therefore ' Target ' must have a connection.
+[2019.11.25-17.34.36:920][ 38]LogUObjectHash: Compacting FUObjectHashTables data took   2.57ms
+[2019.11.25-17.34.51:009][718]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/BaseBP1188471440D8764AFDD6AF94F6A027A3.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/BaseBP.uasset'
+[2019.11.25-17.34.51:626][791]BlueprintLog: New page: Compile BaseBP
+[2019.11.25-17.34.51:781][791]LogUObjectHash: Compacting FUObjectHashTables data took   3.23ms
+[2019.11.25-17.34.57:999][487]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/BluePrints/TurretBP.TurretBP
+[2019.11.25-17.35.01:243][688]LogSlate: Window 'Delete Variable' being destroyed
+[2019.11.25-17.35.32:097][189]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/TurretBP2318BE1C4F5DA06CC87A91866ECFE9CA.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/TurretBP.uasset'
+[2019.11.25-17.35.32:959][286]BlueprintLog: New page: Compile TurretBP
+[2019.11.25-17.35.33:097][286]LogUObjectHash: Compacting FUObjectHashTables data took   2.54ms
+[2019.11.25-17.35.33:905][373]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/TurretBP369FBEF449406FD3A25DC2B00B684D73.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/TurretBP.uasset'
+[2019.11.25-17.35.42:116][303]LogSlate: Window 'TurretBP' being destroyed
+[2019.11.25-17.35.44:650][572]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/BluePrints/PlayerBP.PlayerBP
+[2019.11.25-17.36.01:242][280]LogSlate: Window 'Delete Variable' being destroyed
+[2019.11.25-17.36.24:580][997]LogEditorSessionSummary: EditorSessionSummary sent report. Type=Shutdown, SessionId={D7BC5810-4FF9-1EB5-82C5-3A8012D3FEC9}
+[2019.11.25-17.36.42:680][105]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/PlayerBPE0958758497D876A7AC55298D673593E.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/PlayerBP.uasset'
+[2019.11.25-17.36.43:246][167]BlueprintLog: New page: Compile PlayerBP
+[2019.11.25-17.36.43:261][167]LogBlueprint: Error: [Compiler PlayerBP] This blueprint (self) is not a gameModeBP_C, therefore ' Target ' must have a connection.
+[2019.11.25-17.36.43:263][167]LogBlueprint: Error: [Compiler PlayerBP] Variable node  Get CurrentScore  uses an invalid target.  It may depend on a node that is not connected to the execution chain, and got purged.
+[2019.11.25-17.36.43:409][167]LogUObjectHash: Compacting FUObjectHashTables data took   2.70ms
+[2019.11.25-17.36.56:913][755]BlueprintLog: New page: Compile PlayerBP
+[2019.11.25-17.36.57:090][755]LogUObjectHash: Compacting FUObjectHashTables data took   2.82ms
+[2019.11.25-17.36.58:026][847]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/PlayerBPC5FB09284137F72830B422978ADC9B44.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/PlayerBP.uasset'
+[2019.11.25-17.37.06:060][728]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/BluePrints/RocketBP.RocketBP
+[2019.11.25-17.37.24:579][860]LogEditorSessionSummary: EditorSessionSummary sent report. Type=Shutdown, SessionId={90757DDD-4AFD-2F4A-752E-6990A6977BE9}
+[2019.11.25-17.37.52:284][143]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/RocketBP46AA0E42437130F89D55B2A0DE6CE4DA.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/RocketBP.uasset'
+[2019.11.25-17.37.54:244][375]BlueprintLog: New page: Compile RocketBP
+[2019.11.25-17.37.54:389][375]LogUObjectHash: Compacting FUObjectHashTables data took   2.77ms
+[2019.11.25-17.37.56:972][672]LogTemp: Repeating last play command: Selected Viewport
+[2019.11.25-17.37.56:992][672]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.37.56:992][672]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.11.25-17.37.56:992][672]PIE: New page: PIE session: GameMap (Nov 25, 2019, 7:37:56 AM)
+[2019.11.25-17.37.56:993][672]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2019.11.25-17.37.56:994][672]LogPlayLevel: Creating play world package: /Game/GameScene/UEDPIE_0_GameMap
+[2019.11.25-17.37.56:996][672]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001989s)
+[2019.11.25-17.37.56:997][672]LogAIModule: Creating AISystem for world GameMap
+[2019.11.25-17.37.56:997][672]LogPlayLevel: PIE: World Init took: (0.000834s)
+[2019.11.25-17.37.56:997][672]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GameScene/GameMap.GameMap to /Game/GameScene/UEDPIE_0_GameMap.GameMap (0.002979s)
+[2019.11.25-17.37.57:026][672]LogUObjectHash: Compacting FUObjectHashTables data took   2.54ms
+[2019.11.25-17.37.57:040][672]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.11.25-17.37.57:056][672]LogInit: FAudioDevice initialized.
+[2019.11.25-17.37.57:066][672]LogLoad: Game class is 'gameModeBP_C'
+[2019.11.25-17.37.57:067][672]LogWorld: Bringing World /Game/GameScene/UEDPIE_0_GameMap.GameMap up for play (max tick rate 0) at 2019.11.25-12.37.57
+[2019.11.25-17.37.57:067][672]LogWorld: Bringing up level for play took: 0.000450
+[2019.11.25-17.37.57:068][672]LogOnline: OSS: Creating online subsystem instance for: :Context_13
+[2019.11.25-17.37.57:075][672]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0004 seconds. Added 20 classes and 0 folders.
+[2019.11.25-17.37.57:076][672]LogActorComponent: RegisterComponentWithWorld: (/Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.worldSpawner_0.MeshInstances) Already registered. Aborting.
+[2019.11.25-17.37.57:089][672]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.37.57:089][672]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.37.57:089][672]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.37.57:090][672]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.37.57:091][672]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.37.57:091][672]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.37.57:109][672]LogBlueprintUserMessages: Warning: Time Dilation must be between 0.000100 and 20.000000.  Clamped value to that range.
+[2019.11.25-17.37.57:109][672]PIE: Play in editor start time for /Game/GameScene/UEDPIE_0_GameMap 0.522
+[2019.11.25-17.37.57:109][672]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.38.07:324][850]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:324][850]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00B0
+[2019.11.25-17.38.07:324][850]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:324][850]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00C5
+[2019.11.25-17.38.07:324][850]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:324][850]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:325][850]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00F2
+[2019.11.25-17.38.07:325][850]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:325][850]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:0107
+[2019.11.25-17.38.07:325][850]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:332][851]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:332][851]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00B0
+[2019.11.25-17.38.07:333][851]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:333][851]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00C5
+[2019.11.25-17.38.07:333][851]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:849][913]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:849][913]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00F2
+[2019.11.25-17.38.07:849][913]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:849][913]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:0107
+[2019.11.25-17.38.07:849][913]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:857][914]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:857][914]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00B0
+[2019.11.25-17.38.07:857][914]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:857][914]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00C5
+[2019.11.25-17.38.07:857][914]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:857][914]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:857][914]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00F2
+[2019.11.25-17.38.07:857][914]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:857][914]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:0107
+[2019.11.25-17.38.07:857][914]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:865][915]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:865][915]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00B0
+[2019.11.25-17.38.07:865][915]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:865][915]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00C5
+[2019.11.25-17.38.07:865][915]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:866][915]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:866][915]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00F2
+[2019.11.25-17.38.07:866][915]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:866][915]LogScript: Warning: Accessed None
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:0107
+[2019.11.25-17.38.07:866][915]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:874][916]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:874][916]LogScript: Warning: Accessed None trying to read property InGame_UI
+	gameModeBP_C /Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.gameModeBP_C_0
+	Function /Game/BluePrints/gameModeBP.gameModeBP_C:Display_enterText:00B0
+[2019.11.25-17.38.07:874][916]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:874][916]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:874][916]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:874][916]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:874][916]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:882][917]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:882][917]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:882][917]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:882][917]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:882][917]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:882][917]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:890][918]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:890][918]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:890][918]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:891][918]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:891][918]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:891][918]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:899][919]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:899][919]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:899][919]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:899][919]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.07:899][919]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.07:899][919]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.08:191][954]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.08:191][954]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.08:191][954]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.08:191][954]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.08:191][954]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.08:191][954]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.08:199][955]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.08:199][955]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.08:199][955]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.10:317][209]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.10:317][209]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.10:317][209]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.10:325][210]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.10:325][210]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.10:325][210]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.10:333][211]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.10:333][211]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.10:333][211]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:459][706]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.14:460][706]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:460][706]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:460][706]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.14:460][706]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:460][706]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:467][707]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.14:467][707]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:467][707]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:467][707]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.14:467][707]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:467][707]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:476][708]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.14:476][708]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.14:476][708]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:103][783]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.15:103][783]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:103][783]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:103][783]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.15:103][783]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:103][783]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:103][783]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.15:104][783]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:104][783]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:111][784]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.15:112][784]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:112][784]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:112][784]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.15:112][784]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.15:112][784]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:298][646]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:298][646]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:298][646]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:298][646]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:298][646]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:298][646]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:306][647]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:306][647]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:306][647]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:348][652]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:348][652]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:348][652]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:356][653]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:356][653]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:356][653]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:447][664]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:447][664]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:447][664]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:456][665]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:456][665]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:456][665]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:547][676]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:548][676]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:548][676]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:556][677]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:556][677]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:556][677]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:648][688]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:648][688]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:648][688]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:648][688]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:648][688]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:648][688]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:748][700]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:748][700]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:748][700]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:748][700]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:748][700]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:748][700]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:848][712]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:848][712]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:848][712]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:848][712]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:848][712]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:848][712]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:948][724]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:948][724]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:948][724]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:948][724]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.22:948][724]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.22:948][724]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:048][736]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:048][736]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:048][736]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:056][737]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:056][737]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:056][737]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:148][748]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:148][748]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:148][748]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:148][748]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:148][748]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:148][748]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:247][760]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:247][760]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:247][760]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:256][761]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:256][761]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:256][761]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:306][767]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:306][767]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:306][767]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:306][767]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:306][767]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:306][767]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:306][767]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.23:306][767]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.23:306][767]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.24:578][919]LogEditorSessionSummary: EditorSessionSummary sent report. Type=Shutdown, SessionId={FE047CB4-4DED-DE5C-6C34-908614D9B923}
+[2019.11.25-17.38.26:638][166]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.26:638][166]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:638][166]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:721][176]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.26:721][176]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:722][176]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:730][177]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.26:730][177]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:730][177]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:821][188]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.26:821][188]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:821][188]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:829][189]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.26:829][189]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:829][189]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:920][200]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.26:921][200]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:921][200]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:929][201]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.26:929][201]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.26:929][201]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:021][212]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:021][212]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:022][212]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:030][213]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:030][213]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:030][213]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:121][224]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:121][224]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:121][224]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:129][225]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:130][225]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:130][225]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:221][236]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:221][236]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:221][236]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:222][236]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:222][236]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:222][236]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:321][248]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:321][248]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:321][248]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:329][249]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:329][249]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:329][249]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:421][260]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:421][260]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:421][260]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:421][260]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:421][260]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:421][260]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:521][272]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:521][272]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:521][272]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:521][272]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:522][272]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:522][272]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:621][284]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:621][284]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:621][284]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:629][285]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:629][285]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:629][285]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:721][296]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:721][296]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:721][296]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:721][296]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:721][296]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:721][296]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:821][308]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:821][308]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:821][308]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:829][309]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:829][309]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:830][309]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:921][320]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:921][320]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:921][320]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:922][320]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.27:922][320]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.27:922][320]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:021][332]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:021][332]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:021][332]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:029][333]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:029][333]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:030][333]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:121][344]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:121][344]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:121][344]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:121][344]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:122][344]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:122][344]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:221][356]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:221][356]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:221][356]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:221][356]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:221][356]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:221][356]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:321][368]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:321][368]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:321][368]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:322][368]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:322][368]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:322][368]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:421][380]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:421][380]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:421][380]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:429][381]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:429][381]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:429][381]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:521][392]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:521][392]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:521][392]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:521][392]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:521][392]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:521][392]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:621][404]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:621][404]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:621][404]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:621][404]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:621][404]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:621][404]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:721][416]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:721][416]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:721][416]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:721][416]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:721][416]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:721][416]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:821][428]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:821][428]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:821][428]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:830][429]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:830][429]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:830][429]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:923][440]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:923][440]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:923][440]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:930][441]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.28:930][441]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.28:930][441]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.29:039][454]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.29:039][454]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.29:039][454]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.30:173][590]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.30:173][590]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.30:173][590]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.30:173][590]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.30:173][590]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.30:173][590]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.30:181][591]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.30:181][591]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.30:181][591]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.31:781][783]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.31:781][783]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.31:781][783]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:181][951]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.33:181][951]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:181][951]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:740][ 18]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.33:740][ 18]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:740][ 18]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:740][ 18]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.33:740][ 18]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:740][ 18]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:740][ 18]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.33:740][ 18]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.33:740][ 18]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:298][ 85]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.34:298][ 85]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:298][ 85]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:298][ 85]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.34:298][ 85]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:298][ 85]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:306][ 86]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.34:306][ 86]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:306][ 86]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:840][150]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.38.34:840][150]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property InGame_UI". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.34:840][150]PIE: Error: Blueprint Runtime Error: "Accessed None". Blueprint:  gameModeBP Function:  Display Enter Text Graph:  Display_enterText Node:  Set Opacity
+[2019.11.25-17.38.35:473][226]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.11.25-17.38.35:874][274]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.38.35:874][274]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.11.25-17.38.35:874][274]LogWorld: BeginTearingDown for /Game/GameScene/UEDPIE_0_GameMap
+[2019.11.25-17.38.35:874][274]LogWorld: UWorld::CleanupWorld for GameMap, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.38.35:891][274]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.11.25-17.38.35:891][274]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.38.35:930][274]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.11.25-17.38.35:950][274]LogUObjectHash: Compacting FUObjectHashTables data took   3.06ms
+[2019.11.25-17.38.36:001][275]LogPlayLevel: Display: Destroying online subsystem :Context_13
+[2019.11.25-17.38.45:807][427]LogSlate: Window 'Message Log' being destroyed
+[2019.11.25-17.38.45:812][427]LogSlate: Window 'Message Log' being destroyed
+[2019.11.25-17.40.43:995][348]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/gameModeBP0FA450B64E90C86CC44182898F2BD4DD.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/gameModeBP.uasset'
+[2019.11.25-17.40.44:329][386]BlueprintLog: New page: Compile gameModeBP
+[2019.11.25-17.40.44:547][386]LogUObjectHash: Compacting FUObjectHashTables data took   3.25ms
+[2019.11.25-17.40.45:134][435]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/gameModeBP14BB333748724325F9A04788F6B0FE85.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/gameModeBP.uasset'
+[2019.11.25-17.40.46:023][539]LogTemp: Repeating last play command: Selected Viewport
+[2019.11.25-17.40.46:045][539]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.40.46:045][539]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.11.25-17.40.46:045][539]PIE: New page: PIE session: GameMap (Nov 25, 2019, 7:40:46 AM)
+[2019.11.25-17.40.46:045][539]LogPlayLevel: Creating play world package: /Game/GameScene/UEDPIE_0_GameMap
+[2019.11.25-17.40.46:047][539]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001943s)
+[2019.11.25-17.40.46:048][539]LogAIModule: Creating AISystem for world GameMap
+[2019.11.25-17.40.46:048][539]LogPlayLevel: PIE: World Init took: (0.000806s)
+[2019.11.25-17.40.46:048][539]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GameScene/GameMap.GameMap to /Game/GameScene/UEDPIE_0_GameMap.GameMap (0.002853s)
+[2019.11.25-17.40.46:082][539]LogUObjectHash: Compacting FUObjectHashTables data took   3.47ms
+[2019.11.25-17.40.46:095][539]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.11.25-17.40.46:109][539]LogInit: FAudioDevice initialized.
+[2019.11.25-17.40.46:118][539]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.11.25-17.40.46:119][539]LogLoad: Game class is 'gameModeBP_C'
+[2019.11.25-17.40.46:120][539]LogWorld: Bringing World /Game/GameScene/UEDPIE_0_GameMap.GameMap up for play (max tick rate 0) at 2019.11.25-12.40.46
+[2019.11.25-17.40.46:120][539]LogWorld: Bringing up level for play took: 0.000683
+[2019.11.25-17.40.46:120][539]LogOnline: OSS: Creating online subsystem instance for: :Context_14
+[2019.11.25-17.40.46:123][539]LogActorComponent: RegisterComponentWithWorld: (/Game/GameScene/UEDPIE_0_GameMap.GameMap:PersistentLevel.worldSpawner_0.MeshInstances) Already registered. Aborting.
+[2019.11.25-17.40.46:141][539]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.46:142][539]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.46:142][539]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.46:143][539]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.46:143][539]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.46:143][539]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.46:165][539]PIE: Warning: The widget 'InGameUI_C' was already added to the screen.
+[2019.11.25-17.40.46:165][539]LogBlueprintUserMessages: Warning: Time Dilation must be between 0.000100 and 20.000000.  Clamped value to that range.
+[2019.11.25-17.40.46:166][539]PIE: Play in editor start time for /Game/GameScene/UEDPIE_0_GameMap -0.422
+[2019.11.25-17.40.46:167][539]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.40.55:341][636]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.55:341][636]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.55:349][637]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.56:408][764]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.56:408][764]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.56:408][764]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:032][839]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:032][839]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:041][840]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:041][840]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:049][841]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:433][887]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:441][888]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:442][888]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:450][889]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.57:450][889]LogBlueprintUserMessages: [gameModeBP_C_0] Calling
+[2019.11.25-17.40.58:416][  5]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.11.25-17.40.58:483][ 12]LogSlate: Window 'MissleComnder Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.11.25-17.40.58:489][ 12]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.40.58:490][ 12]LogWorld: BeginTearingDown for /Game/GameScene/UEDPIE_0_GameMap
+[2019.11.25-17.40.58:490][ 12]LogWorld: UWorld::CleanupWorld for GameMap, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.40.58:500][ 12]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.11.25-17.40.58:500][ 12]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GameScene/GameMap.GameMap:PersistentLevel' has LevelScriptBlueprint '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap' with GeneratedClass '/Game/GameScene/GameMap.GameMap_C' with ClassGeneratedBy '/Game/GameScene/GameMap.GameMap:PersistentLevel.GameMap'
+[2019.11.25-17.40.58:540][ 12]LogUObjectHash: Compacting FUObjectHashTables data took   2.26ms
+[2019.11.25-17.40.58:580][ 14]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2019.11.25-17.41.02:095][431]LogSlate: Window 'Message Log' being destroyed
+[2019.11.25-17.41.02:100][431]LogSlate: Window 'Message Log' being destroyed
+[2019.11.25-17.41.11:249][516]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/gameModeBP4D78A8E5409356ECA091798943CAE927.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/gameModeBP.uasset'
+[2019.11.25-17.41.17:651][272]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/gameModeBPF6ABDBE04F03F4A8D24218856DE5D8D1.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/gameModeBP.uasset'
+[2019.11.25-17.41.35:791][441]BlueprintLog: New page: Compile gameModeBP
+[2019.11.25-17.41.35:798][441]LogBlueprint: Error: [Compiler gameModeBP] This blueprint (self) is not a UserWidget, therefore ' Target ' must have a connection.
+[2019.11.25-17.41.35:970][441]LogUObjectHash: Compacting FUObjectHashTables data took   2.83ms
+[2019.11.25-17.41.40:608][973]BlueprintLog: New page: Compile gameModeBP
+[2019.11.25-17.41.40:793][973]LogUObjectHash: Compacting FUObjectHashTables data took   3.50ms
+[2019.11.25-17.41.41:394][ 24]LogSavePackage: Moving '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Saved/gameModeBPF6D2EFD147EC7219BEE1928ED9D4A7B0.tmp' to '../../../../../School/Programs/ETGG 3801 Real-Time Interactive Prog 1/Unreal Projects/lab 4 missleCommander/MissleComnder/Content/BluePrints/gameModeBP.uasset'
+[2019.11.25-17.58.16:082][970]LogUObjectHash: Compacting FUObjectHashTables data took   3.70ms
+[2019.11.25-17.58.16:134][970]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.16:176][970]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2019.11.25-17.58.16:176][970]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.16:217][970]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2019.11.25-17.58.16:217][970]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.16:256][970]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2019.11.25-17.58.16:256][970]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.16:285][970]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2019.11.25-17.58.16:285][970]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.16:312][970]LogSlate: Window 'MissleComnder - Unreal Editor' being destroyed
+[2019.11.25-17.58.16:449][971]Cmd: QUIT_EDITOR
+[2019.11.25-17.58.17:320][971]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.11.25-17.58.17:359][971]LogExit: Preparing to exit.
+[2019.11.25-17.58.17:534][971]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:536][971]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:539][971]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:541][971]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:544][971]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:546][971]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:548][971]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:580][971]LogDemo: Cleaned up 0 splitscreen connections with owner deletion
+[2019.11.25-17.58.17:587][971]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2019.11.25-17.58.17:588][971]LogExit: Editor shut down
+[2019.11.25-17.58.17:588][971]LogExit: Transaction tracking system shut down
+[2019.11.25-17.58.17:819][971]LogExit: Object subsystem successfully closed.
+[2019.11.25-17.58.17:845][971]LogShaderCompilers: Display: Shaders left to compile 0
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (676)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module Voice (674)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module BlueprintGraph (672)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (670)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module SceneOutliner (668)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module AddContentDialog (666)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module WidgetCarousel (665)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module EditorWidgets (662)
+[2019.11.25-17.58.17:857][971]LogModuleManager: Shutting down and abandoning module CollectionManager (660)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module StatsViewer (658)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module VirtualTexturingEditor (656)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module FoliageEdit (654)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module LandscapeEditor (652)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module MeshPaintMode (650)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (648)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module ActorPickerMode (646)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module GeometryMode (644)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module TextureAlignMode (642)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module BspMode (640)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (638)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (636)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module AutomationWorker (634)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module OculusMR (632)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (630)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (628)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (626)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module PlacementMode (625)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module MaterialEditor (624)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (620)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (618)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (616)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (614)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (612)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module WebMMedia (610)
+[2019.11.25-17.58.17:858][971]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (608)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (606)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module SequenceRecorder (605)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (602)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (600)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (598)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (596)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (594)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (592)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (590)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (588)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module MagicLeapMediaCodecFactory (586)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (584)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (582)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module CharacterAI (580)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module SmartSnapping (578)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module SessionServices (576)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module MeshPaint (574)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module ViewportSnapping (572)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module ViewportInteraction (570)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module ClothPainter (568)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (567)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module LogVisualizer (564)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module IntroTutorials (562)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (561)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (558)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (556)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (554)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (552)
+[2019.11.25-17.58.17:859][971]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (551)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (548)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (546)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (544)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (542)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module TimeManagementEditor (540)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module InputBindingEditor (538)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module MergeActors (536)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (534)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module LocalizationService (533)
+[2019.11.25-17.58.19:543][971]LogModuleManager: Shutting down and abandoning module HardwareTargeting (530)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (528)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module UndoHistory (526)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module XmlParser (524)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module Blutility (522)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (520)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (519)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (516)
+[2019.11.25-17.58.19:544][971]LogModuleManager: Shutting down and abandoning module SettingsEditor (514)
+[2019.11.25-17.58.19:545][971]LogModuleManager: Shutting down and abandoning module ProjectLauncher (512)
+[2019.11.25-17.58.19:545][971]LogModuleManager: Shutting down and abandoning module SessionFrontend (510)
+[2019.11.25-17.58.19:545][971]LogModuleManager: Shutting down and abandoning module ProfilerClient (508)
+[2019.11.25-17.58.19:545][971]LogModuleManager: Shutting down and abandoning module DeviceManager (506)
+[2019.11.25-17.58.19:545][971]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (505)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module AutomationController (502)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module AutomationWindow (500)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module Layers (498)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (496)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module DetailCustomizations (494)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module PackagesDialog (492)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module AnimationBlueprintEditor (490)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module Persona (488)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (487)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module AnimGraph (485)
+[2019.11.25-17.58.19:599][971]LogModuleManager: Shutting down and abandoning module Kismet (482)
+[2019.11.25-17.58.19:624][971]LogModuleManager: Shutting down and abandoning module KismetWidgets (481)
+[2019.11.25-17.58.19:624][971]LogModuleManager: Shutting down and abandoning module GraphEditor (478)
+[2019.11.25-17.58.19:625][971]LogModuleManager: Shutting down and abandoning module StructViewer (476)
+[2019.11.25-17.58.19:625][971]LogModuleManager: Shutting down and abandoning module ClassViewer (474)
+[2019.11.25-17.58.19:625][971]LogModuleManager: Shutting down and abandoning module Toolbox (472)
+[2019.11.25-17.58.19:625][971]LogModuleManager: Shutting down and abandoning module DesktopPlatform (471)
+[2019.11.25-17.58.19:625][971]LogModuleManager: Shutting down and abandoning module ModuleUI (468)
+[2019.11.25-17.58.19:625][971]LogModuleManager: Shutting down and abandoning module MovieSceneTools (466)
+[2019.11.25-17.58.19:625][971]LogModuleManager: Shutting down and abandoning module OutputLog (464)
+[2019.11.25-17.58.19:626][971]LogModuleManager: Shutting down and abandoning module GammaUI (462)
+[2019.11.25-17.58.19:626][971]LogModuleManager: Shutting down and abandoning module Documentation (460)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module LiveCoding (458)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module LevelSequence (456)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (454)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module MovieScene (452)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (450)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module LauncherPlatform (448)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module AnalyticsET (446)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module PortalServices (444)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module PortalRpc (442)
+[2019.11.25-17.58.19:627][971]LogModuleManager: Shutting down and abandoning module MessagingRpc (440)
+[2019.11.25-17.58.19:628][971]LogModuleManager: Shutting down and abandoning module AIModule (438)
+[2019.11.25-17.58.19:628][971]LogModuleManager: Shutting down and abandoning module GameplayDebugger (437)
+[2019.11.25-17.58.19:628][971]LogModuleManager: Shutting down and abandoning module AITestSuite (435)
+[2019.11.25-17.58.19:628][971]LogModuleManager: Shutting down and abandoning module NavigationSystem (433)
+[2019.11.25-17.58.19:628][971]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (430)
+[2019.11.25-17.58.19:635][971]LogModuleManager: Shutting down and abandoning module ProfilerService (428)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module TaskGraph (426)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module ScreenshotTools (424)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module SteamVRController (422)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (420)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (418)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module OculusEditor (416)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module OculusInput (414)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (412)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module EditableMesh (410)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (408)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module CableComponent (406)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module AudioCapture (404)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (402)
+[2019.11.25-17.58.19:751][971]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (400)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module AppleImageUtils (398)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module AndroidPermission (396)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (394)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (392)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module MediaCompositing (390)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module ImgMedia (388)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (386)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (384)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (382)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module HTML5Networking (380)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (378)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (376)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module BackChannel (374)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module AutomationUtilsEditor (372)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module AutomationUtils (370)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module AlembicImporter (368)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module AlembicLibrary (367)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module GeometryCache (366)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (365)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module VariantManagerContent (360)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (358)
+[2019.11.25-17.58.19:752][971]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (356)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module PluginBrowser (354)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (352)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module MaterialAnalyzer (350)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module CurveEditorTools (348)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module CurveEditor (347)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (344)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module CryptoKeys (342)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (340)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (338)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module UObjectPlugin (336)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (334)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (332)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module GitSourceControl (330)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module SourceControl (329)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (326)
+[2019.11.25-17.58.19:753][971]LogModuleManager: Shutting down and abandoning module AnimationSharingEd (324)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (322)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (320)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (318)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (316)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (314)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module Paper2DEditor (312)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module MissleComnder (310)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module SignificanceManager (308)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (306)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (304)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (300)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module ActorSequence (298)
+[2019.11.25-17.58.19:754][971]LogModuleManager: Shutting down and abandoning module UdpMessaging (296)
+[2019.11.25-17.58.19:856][971]LogModuleManager: Shutting down and abandoning module TcpMessaging (294)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (292)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (290)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (288)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (286)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module MagicLeapController (284)
+[2019.11.25-17.58.19:957][971]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module MagicLeapAR (282)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module AugmentedReality (281)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (278)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (276)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module FacialAnimation (274)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module DataValidation (272)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (270)
+[2019.11.25-17.58.19:957][971]LogModuleManager: Shutting down and abandoning module LevelEditor (269)
+[2019.11.25-17.58.19:958][971]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (268)
+[2019.11.25-17.58.19:958][971]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (266)
+[2019.11.25-17.58.19:959][971]LogModuleManager: Shutting down and abandoning module MainFrame (264)
+[2019.11.25-17.58.19:959][971]LogModuleManager: Shutting down and abandoning module HotReload (263)
+[2019.11.25-17.58.19:959][971]LogModuleManager: Shutting down and abandoning module ContentBrowser (259)
+[2019.11.25-17.58.19:961][971]LogModuleManager: Shutting down and abandoning module TreeMap (257)
+[2019.11.25-17.58.19:961][971]LogModuleManager: Shutting down and abandoning module AnimationSharing (254)
+[2019.11.25-17.58.19:961][971]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (252)
+[2019.11.25-17.58.19:961][971]LogModuleManager: Shutting down and abandoning module Paper2D (250)
+[2019.11.25-17.58.19:961][971]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (248)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (246)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module NetworkReplayStreaming (244)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module PacketHandler (242)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (240)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (238)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module MediaAssets (236)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module Overlay (234)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module OverlayEditor (233)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module VREditor (230)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module StringTableEditor (228)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (226)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (224)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module FunctionalTesting (222)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (220)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (219)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module UMG (216)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module UMGEditor (215)
+[2019.11.25-17.58.19:964][971]LogModuleManager: Shutting down and abandoning module Sequencer (214)
+[2019.11.25-17.58.19:965][971]LogModuleManager: Shutting down and abandoning module MessageLog (211)
+[2019.11.25-17.58.19:965][971]LogModuleManager: Shutting down and abandoning module SlateReflector (206)
+[2019.11.25-17.58.19:965][971]LogModuleManager: Shutting down and abandoning module Slate (204)
+[2019.11.25-17.58.19:965][971]LogModuleManager: Shutting down and abandoning module LandscapeEditorUtilities (202)
+[2019.11.25-17.58.19:965][971]LogModuleManager: Shutting down and abandoning module EditorStyle (200)
+[2019.11.25-17.58.19:966][971]LogModuleManager: Shutting down and abandoning module UnrealEd (198)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module MRMesh (196)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (194)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (192)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module XAudio2 (190)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module Networking (188)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module Core (186)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module KismetCompiler (184)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module MeshUtilities (182)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (181)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (180)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module SkeletalMeshReduction (179)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (177)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (175)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module MaterialBaking (171)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module NullInstallBundleManager (166)
+[2019.11.25-17.58.19:967][971]LogModuleManager: Shutting down and abandoning module DerivedDataCache (164)
+[2019.11.25-17.58.20:060][971]LogDerivedDataCache: Shutdown
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module XGEController (162)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module TargetPlatform (160)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (159)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (157)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (155)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (153)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (151)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (149)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (147)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (145)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (143)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (141)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module ImageWrapper (140)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (137)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (135)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (133)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (131)
+[2019.11.25-17.58.20:060][971]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (129)
+[2019.11.25-17.58.20:062][971]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (127)
+[2019.11.25-17.58.20:062][971]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (125)
+[2019.11.25-17.58.20:062][971]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (123)
+[2019.11.25-17.58.20:062][971]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (121)
+[2019.11.25-17.58.20:062][971]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (119)
+[2019.11.25-17.58.20:064][971]LogModuleManager: Shutting down and abandoning module Messaging (117)
+[2019.11.25-17.58.20:064][971]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (115)
+[2019.11.25-17.58.20:066][971]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (113)
+[2019.11.25-17.58.20:066][971]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (111)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (109)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (107)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (105)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (103)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (101)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (99)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (97)
+[2019.11.25-17.58.20:077][971]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (95)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (93)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module InputCore (90)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module Settings (88)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (86)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module PhysXCooking (84)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module WindowsPlatformFeatures (82)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module GameplayMediaEncoder (81)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module SteamVR (78)
+[2019.11.25-17.58.20:078][971]LogHMD: Freeing OpenVRDLLHandle.
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module OculusHMD (76)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (74)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (72)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (70)
+[2019.11.25-17.58.20:078][971]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (66)
+[2019.11.25-17.58.20:079][971]LogModuleManager: Shutting down and abandoning module XMPP (61)
+[2019.11.25-17.58.20:080][971]LogModuleManager: Shutting down and abandoning module WebSockets (60)
+[2019.11.25-17.58.20:091][971]LogModuleManager: Shutting down and abandoning module HTTP (57)
+[2019.11.25-17.58.20:091][971]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2019.11.25-17.58.20:091][971]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6CAA9935-46C1-8069-E350-FAA330D9113B%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.1-9631420%2B%2B%2BUE4%2BRelease-4.23&UserID=31326b1a4ed173d96408b0bb190490ff%7C59a1e2cfd3764767bcd953727bfa6a9a%7Cfa7f85ae-c7de-4f15-8943-78ce0428f94f&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2019.11.25-17.58.20:095][971]LogModuleManager: Shutting down and abandoning module SSL (56)
+[2019.11.25-17.58.20:096][971]LogModuleManager: Shutting down and abandoning module WmfMedia (52)
+[2019.11.25-17.58.20:098][971]LogModuleManager: Shutting down and abandoning module Media (51)
+[2019.11.25-17.58.20:099][971]LogModuleManager: Shutting down and abandoning module MagicLeap (48)
+[2019.11.25-17.58.20:099][971]LogModuleManager: Shutting down and abandoning module DatasmithContent (46)
+[2019.11.25-17.58.20:100][971]LogModuleManager: Shutting down and abandoning module AISupportModule (44)
+[2019.11.25-17.58.20:100][971]LogModuleManager: Shutting down and abandoning module PlatformCryptoOpenSSL (42)
+[2019.11.25-17.58.20:100][971]LogModuleManager: Shutting down and abandoning module PlatformCrypto (40)
+[2019.11.25-17.58.20:100][971]LogModuleManager: Shutting down and abandoning module AnimationModifiers (38)
+[2019.11.25-17.58.20:100][971]LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
+[2019.11.25-17.58.20:100][971]LogModuleManager: Shutting down and abandoning module AudioEditor (34)
+[2019.11.25-17.58.20:101][971]LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
+[2019.11.25-17.58.20:101][971]LogModuleManager: Shutting down and abandoning module RenderCore (30)
+[2019.11.25-17.58.20:101][971]LogModuleManager: Shutting down and abandoning module Landscape (28)
+[2019.11.25-17.58.20:101][971]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module Renderer (18)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module Engine (16)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module CoreUObject (14)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module NetworkFile (12)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module StreamingFile (8)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module SandboxFile (6)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module PakFile (4)
+[2019.11.25-17.58.20:102][971]LogModuleManager: Shutting down and abandoning module RSA (3)
+[2019.11.25-17.58.20:103][971]LogD3D11RHI: Shutdown
+[2019.11.25-17.58.20:103][971]LogD3D11RHI: CleanupD3DDevice
+[2019.11.25-17.58.20:104][971]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.11.25-17.58.20:104][971]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.11.25-17.58.20:104][971]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.11.25-17.58.20:214][971]LogD3D11RHI: ~FD3D11DynamicRHI
+[2019.11.25-17.58.20:220][971]LogExit: Exiting.
+[2019.11.25-17.58.20:227][971]Log file closed, 11/25/19 12:58:20

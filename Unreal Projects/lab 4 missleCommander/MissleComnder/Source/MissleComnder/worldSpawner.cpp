@@ -57,7 +57,10 @@ void AworldSpawner::BeginPlay()
 				{
 					float turret_AngleInc = 360 / turret_Count;
 					transform.SetLocation(curPos + FVector(0, 0, base_heightOffset));
-					AActor* base = GetWorld()->SpawnActor(Base_SpawnType.Get(), &transform, spawnParams);			//Spawn Base
+					AActor* base = GetWorld()->SpawnActor(Base_SpawnType.Get(), &transform, spawnParams);				//Spawn Base
+
+					transform.SetLocation(curPos + FVector(0, 0, firePlane_heightOffset));
+					AActor* newFirePlane = GetWorld()->SpawnActor(FirePlane_SpawnType.Get(), &transform, spawnParams);	//Spawn FirePlane
 
 					for (int turNum = 0; turNum < turret_Count; turNum++)
 					{

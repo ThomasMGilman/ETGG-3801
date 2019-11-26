@@ -48,6 +48,9 @@ public:
 		float base_heightOffset = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		float firePlane_heightOffset = 1;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		float turret_heightOffset = 1;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
@@ -70,6 +73,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		TSubclassOf<class AActor> Base_SpawnType;
+
+	UPROPERTY(EditAnywhere, Category = "WorldVariables")
+		TSubclassOf<class AActor> FirePlane_SpawnType;
 
 	UPROPERTY(EditAnywhere, Category = "WorldVariables")
 		AActor* Player_SpawnType;
