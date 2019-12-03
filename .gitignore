@@ -2,10 +2,12 @@
 Flowers_and_Plants_Nature_Pack/
 KiteDemo/
 
-#ignore Visual Studio folders
+#ignore Visual Studio folders and other rather large folders
 .vs/
-
 Binaries/
+Build/
+Builds/
+StagedBuilds/
 
 #ignore this as its rather large
 SharedPCH.Engine.h.pch
