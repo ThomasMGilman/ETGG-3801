@@ -464,7 +464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -828,9 +828,11 @@ MonoBehaviour:
   WorldWidth: 20
   WorldDepth: 20
   WallHeight: 7.5
+  maxPaintings: 3
   paintingList: []
   wallPrefab: {fileID: 8736818177405082515, guid: c09beb6a7e894d34fa013e94ae25afae,
     type: 3}
-  PaintingPrefab: {fileID: 0}
+  PaintingPrefab: {fileID: 5217804549489578483, guid: d63c8dd4807c99945997b61ac89ece06,
+    type: 3}
   DoorPrefab: {fileID: 2633910221131847874, guid: ac614b5c70b99fa4c91a6a648d0cdf95,
     type: 3}
