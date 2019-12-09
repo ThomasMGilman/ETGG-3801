@@ -13,6 +13,8 @@ public class WorldGenScript : MonoBehaviour
     [RangeAttribute(7.5f, 10f)]
     public float WallHeight;
 
+    public float paintingHeight;
+
     public uint maxPaintings;
     
     public List<Texture> paintingList;
@@ -82,14 +84,14 @@ public class WorldGenScript : MonoBehaviour
             for(int i = 0; i < maxPaintings; i++)
             {
                 //places paintings at center of walls
-                Vector3 paintingPos = new Vector3(pos.x, pos.y - PaintingPrefab.transform.localScale.y / 2, pos.z) + dot(offsetPos, PaintingPrefab.transform.localScale * .5f);
+                Vector3 paintingPos = new Vector3(pos.x, paintingHeight + pos.y - PaintingPrefab.transform.localScale.y / 2, pos.z) + dot(offsetPos, PaintingPrefab.transform.localScale * .5f);
                 paintingPos.z = pos.z + offsetPos.z * wall.transform.localScale.z;
 
                 // move painting by num painting on wall
                 if (offsetPos.z != 0)
-                    paintingPos.x = (PaintingPrefab.transform.localScale.x + (-wall.transform.localScale.x + PaintingPrefab.transform.localScale.x) * .5f);
+                    paintingPos.x = 1.75f + ((-wall.transform.localScale.x + PaintingPrefab.transform.localScale.x) * .5f) + i * max_numPaintingsX;
                 else
-                    paintingPos.z = (PaintingPrefab.transform.localScale.x + (-wall.transform.localScale.x + PaintingPrefab.transform.localScale.x) * .5f);
+                    paintingPos.z = 1.75f + ((-wall.transform.localScale.x + PaintingPrefab.transform.localScale.x) * .5f) + i * max_numPaintingsX;
 
                 GameObject painting = Instantiate(PaintingPrefab, paintingPos, wall.transform.rotation);
             }
