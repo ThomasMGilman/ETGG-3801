@@ -14,6 +14,7 @@ public class WorldGenScript : MonoBehaviour
     public float WallHeight;
 
     public float paintingHeight;
+    public float paintingOffsetAlongWall;
 
     public uint maxPaintings;
     
@@ -27,7 +28,10 @@ public class WorldGenScript : MonoBehaviour
     /// Private variables used for world gen
     /// </summary>
     private List<GameObject> walls;
-    private uint max_numPaintingsX;
+    private float paintingWidth = 3;        //Size of the painting model made in Maya for the group project in Unity's scale with a scale factor of 40
+    private float paintingStartOffsetX;
+    private float paintingOffset;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -45,14 +49,15 @@ public class WorldGenScript : MonoBehaviour
             Vector3 scale0 = new Vector3(WorldWidth, WallHeight, 1);
             Vector3 scale1 = new Vector3(WorldDepth, WallHeight, 1);
 
-            max_numPaintingsX = (uint)((WorldWidth - PaintingPrefab.transform.localScale.x) / PaintingPrefab.transform.localScale.x);
+            paintingOffset = ((WorldWidth - paintingWidth) / paintingWidth) / maxPaintings + paintingWidth + paintingOffsetAlongWall;
+            paintingStartOffsetX = (-WorldWidth + paintingWidth) * .5f + paintingWidth;
 
             float rotationAngle = 0;
 
-            placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, -1), new Vector3(0, halfHeight, halfDepth), false);    //BackWall
-            placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(-1, 0, 0), new Vector3(halfWidth, halfHeight, 0), false);    //RightWall
-            placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, 1), new Vector3(0, halfHeight, -halfDepth), false);   //FrontWall
-            placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(1,0,0), new Vector3(-halfWidth, halfHeight, 0), true);       //LeftWall
+            placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, -1), new Vector3(0, halfHeight, halfDepth), false, -180);  //BackWall
+            placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(-1, 0, 0), new Vector3(halfWidth, halfHeight, 0), false, -90);   //RightWall
+            placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, 1), new Vector3(0, halfHeight, -halfDepth), false, 0);     //FrontWall
+            placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(1,0,0), new Vector3(-halfWidth, halfHeight, 0), true, 0);        //LeftWall
         //}
     }
 
@@ -65,7 +70,7 @@ public class WorldGenScript : MonoBehaviour
         return tmp;
     }
 
-    private void placeWall(ref float rotation, in GameObject prefab, in Vector3 scale, Vector3 offsetVec, Vector3 pos, bool DoorWall)
+    private void placeWall(ref float rotation, in GameObject prefab, in Vector3 scale, Vector3 offsetVec, Vector3 pos, bool DoorWall, float paintingRotAmount)
     {
         GameObject wall = Instantiate(prefab, pos, Quaternion.Euler(0, rotation, 0));
         wall.transform.localScale = scale;
@@ -84,16 +89,18 @@ public class WorldGenScript : MonoBehaviour
             for(int i = 0; i < maxPaintings; i++)
             {
                 //places paintings at center of walls
-                Vector3 paintingPos = new Vector3(pos.x, paintingHeight + pos.y - PaintingPrefab.transform.localScale.y / 2, pos.z) + dot(offsetPos, PaintingPrefab.transform.localScale * .5f);
+                Vector3 paintingPos = new Vector3(pos.x, paintingHeight + pos.y - PaintingPrefab.transform.localScale.y / 2, pos.z) + offsetPos;
                 paintingPos.z = pos.z + offsetPos.z * wall.transform.localScale.z;
 
                 // move painting by num painting on wall
                 if (offsetPos.z != 0)
-                    paintingPos.x = 1.75f + ((-wall.transform.localScale.x + PaintingPrefab.transform.localScale.x) * .5f) + i * max_numPaintingsX;
+                    paintingPos.x = paintingStartOffsetX + paintingOffset * i;
                 else
-                    paintingPos.z = 1.75f + ((-wall.transform.localScale.x + PaintingPrefab.transform.localScale.x) * .5f) + i * max_numPaintingsX;
+                    paintingPos.z = paintingStartOffsetX + paintingOffset * i;
 
-                GameObject painting = Instantiate(PaintingPrefab, paintingPos, wall.transform.rotation);
+                Quaternion paintingRot = Quaternion.Euler(0, paintingRotAmount, 0);
+                GameObject painting = Instantiate(PaintingPrefab, paintingPos, paintingRot);
+                painting.GetComponent<Material>().SetTexture("_MainTex", );
             }
         }
     }

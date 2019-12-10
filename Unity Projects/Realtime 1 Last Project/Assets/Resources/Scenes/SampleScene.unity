@@ -828,12 +828,13 @@ MonoBehaviour:
   WorldWidth: 20
   WorldDepth: 20
   WallHeight: 7.5
-  paintingHeight: 1
+  paintingHeight: 4.75
+  paintingOffsetAlongWall: 0.61111
   maxPaintings: 3
   paintingList: []
   wallPrefab: {fileID: 8736818177405082515, guid: c09beb6a7e894d34fa013e94ae25afae,
     type: 3}
-  PaintingPrefab: {fileID: 5217804549489578483, guid: d63c8dd4807c99945997b61ac89ece06,
+  PaintingPrefab: {fileID: -927199367670048503, guid: 20e9f452ec67001498a3ec9a427d1672,
     type: 3}
   DoorPrefab: {fileID: 2633910221131847874, guid: ac614b5c70b99fa4c91a6a648d0cdf95,
     type: 3}
