@@ -23,42 +23,45 @@ public class WorldGenScript : MonoBehaviour
     public GameObject wallPrefab;
     public GameObject PaintingPrefab;
     public GameObject DoorPrefab;
-    
+
     /// <summary>
     /// Private variables used for world gen
     /// </summary>
+    private Dictionary<string, GameObject> paintings;
     private List<GameObject> walls;
+
+    float halfWidth;
+    float halfHeight;
+    float halfDepth;
+
     private float paintingWidth = 3;        //Size of the painting model made in Maya for the group project in Unity's scale with a scale factor of 40
     private float paintingStartOffsetX;
     private float paintingOffset;
-    
+    private int gameSeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        //if (paintingList.Count < 9)
-            //throw new System.Exception("Need to provide 9 different textures for the paintings on the walls");
-        //else
-        //{
-            float halfWidth = WorldWidth / 2;
-            float halfHeight = WallHeight / 2;
-            float halfDepth = WorldDepth / 2;
-        
+        gameSeed = Mathf.Abs(System.DateTime.Now.GetHashCode());
+        paintings = new Dictionary<string, GameObject>();
+        halfWidth = WorldWidth / 2;
+        halfHeight = WallHeight / 2;
+        halfDepth = WorldDepth / 2;
 
-            walls = new List<GameObject>();
-            Vector3 scale0 = new Vector3(WorldWidth, WallHeight, 1);
-            Vector3 scale1 = new Vector3(WorldDepth, WallHeight, 1);
+        //Set scales for the walls along the x and z planes
+        walls = new List<GameObject>();
+        Vector3 scale0 = new Vector3(WorldWidth, WallHeight, 1);
+        Vector3 scale1 = new Vector3(WorldDepth, WallHeight, 1);
 
-            paintingOffset = ((WorldWidth - paintingWidth) / paintingWidth) / maxPaintings + paintingWidth + paintingOffsetAlongWall;
-            paintingStartOffsetX = (-WorldWidth + paintingWidth) * .5f + paintingWidth;
+        //Set Painting start and offset amount
+        paintingOffset = ((WorldWidth - paintingWidth) / paintingWidth) / maxPaintings + paintingWidth + paintingOffsetAlongWall;
+        paintingStartOffsetX = (-WorldWidth + paintingWidth) * .5f + paintingWidth;
 
-            float rotationAngle = 0;
-
-            placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, -1), new Vector3(0, halfHeight, halfDepth), false, -180);  //BackWall
-            placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(-1, 0, 0), new Vector3(halfWidth, halfHeight, 0), false, -90);   //RightWall
-            placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, 1), new Vector3(0, halfHeight, -halfDepth), false, 0);     //FrontWall
-            placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(1,0,0), new Vector3(-halfWidth, halfHeight, 0), true, 0);        //LeftWall
-        //}
+        float rotationAngle = 0;
+        placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, -1), new Vector3(0, halfHeight, halfDepth), false, -180);  //BackWall
+        placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(-1, 0, 0), new Vector3(halfWidth, halfHeight, 0), false, -90);   //RightWall
+        placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, 1), new Vector3(0, halfHeight, -halfDepth), false, 0);     //FrontWall
+        placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(1, 0, 0), new Vector3(-halfWidth, halfHeight, 0), true, 0);      //LeftWall
     }
 
     private Vector3 dot(Vector3 a, Vector3 b)
@@ -100,7 +103,10 @@ public class WorldGenScript : MonoBehaviour
 
                 Quaternion paintingRot = Quaternion.Euler(0, paintingRotAmount, 0);
                 GameObject painting = Instantiate(PaintingPrefab, paintingPos, paintingRot);
-                painting.GetComponent<Material>().SetTexture("_MainTex", );
+                //Fix here
+                int texIndex = Random.Range(0, paintingList.Count - 1);
+                painting.GetComponent<Material>().SetTexture("_MainTex", paintingList[texIndex]);
+                paintingList.RemoveAt(texIndex);
             }
         }
     }
