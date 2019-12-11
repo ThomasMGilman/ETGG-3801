@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6110365315625737496}
   - component: {fileID: 4598557831306686671}
   - component: {fileID: -5968469192160507585}
+  - component: {fileID: 3008402058103924161}
   m_Layer: 0
   m_Name: PaintingPrefab
   m_TagString: Code
@@ -106,3 +107,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30f7c62e8e0f204d8901904b286de25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &3008402058103924161
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544132273809353156}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
