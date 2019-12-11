@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class WorldGenScript : MonoBehaviour
 {
     /// <summary>
@@ -32,13 +34,14 @@ public class WorldGenScript : MonoBehaviour
     private List<int> keys;
     private List<GameObject> walls;
     private GameObject door;
-    private Text timer, codeText;
+    private Text timer;
 
     float halfWidth;
     float halfHeight;
     float halfDepth;
 
-    private float timeLeft = 1000 * 60 * 5; //thousand milliseconds * 60 seconds = 1 minute * 5 = 5 minutes
+    private float maxTime = 60 * 5;         //60 seconds = 1 minute * 5 = 5 minutes
+    private float timeLeft;
     private float paintingWidth = 3;        //Size of the painting model made in Maya for the group project in Unity's scale with a scale factor of 40
     private float paintingStartOffsetX;
     private float paintingOffset;
@@ -47,10 +50,8 @@ public class WorldGenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Get UI Elements
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Text>();
-        codeText = GameObject.FindGameObjectWithTag("Code").GetComponent<Text>();
-
+        timeLeft = maxTime;
         gameSeed = Mathf.Abs(System.DateTime.Now.GetHashCode());        //Generate Seed
         //Init variables and dictionary of paintings
         paintings = new Dictionary<int, GameObject>();
@@ -82,7 +83,7 @@ public class WorldGenScript : MonoBehaviour
             keyPair.Value.SendMessage("SetCode", keyPair.Key);
         }
         //Send Door the code to match inorder to win
-        door.SendMessage("SetCode", keys[Random.Range(0, keys.Count - 1)]);
+        door.SendMessage("SetCode", keys[UnityEngine.Random.Range(0, keys.Count - 1)]);
     }
 
     private Vector3 dot(Vector3 a, Vector3 b)
@@ -126,7 +127,7 @@ public class WorldGenScript : MonoBehaviour
                 GameObject painting = Instantiate(PaintingPrefab, paintingPos, paintingRot);
 
                 //Apply Texture to Painting
-                int texIndex = Random.Range(0, paintingList.Count - 1);
+                int texIndex = UnityEngine.Random.Range(0, paintingList.Count - 1);
                 painting.GetComponent<Renderer>().material.SetTexture("_MainTex", paintingList[texIndex]);
                 paintingList.RemoveAt(texIndex);
 
@@ -134,13 +135,13 @@ public class WorldGenScript : MonoBehaviour
                 painting.name = side + " Painting " + i.ToString();
 
                 //Generate random code for painting
-                int code = Random.Range(0, maxCodeRange);
+                int code = UnityEngine.Random.Range(0, maxCodeRange);
                 int infCheck = 0;
                 while(paintings.ContainsKey(code))
                 {
                     if (infCheck == 10)
                         break;
-                    code = Random.Range(0, maxCodeRange);
+                    code = UnityEngine.Random.Range(0, maxCodeRange);
                     infCheck++;
                 }
                 if (infCheck >= 10)
@@ -152,22 +153,11 @@ public class WorldGenScript : MonoBehaviour
         }
     }
 
-    void updateCodeDisplayed(int val)
-    {
-        codeText.text = val.ToString();
-        codeText.enabled = true;
-    }
-
-    void hideCode()
-    {
-        codeText.enabled = false;
-    }
-
     // Update is called once per frame
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        timer.text = ((int)timeLeft).ToString();
+        timer.text = Math.Round(timeLeft / 60, 2).ToString();
         if (timeLeft <= 0)
             lose();
     }
