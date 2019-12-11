@@ -219,26 +219,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &245402537 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6258545199520387402, guid: 1db5a890a65742549a13278556b26c47,
-    type: 3}
-  m_PrefabInstance: {fileID: 502682085}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &245402538
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245402537}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.229514
-  m_Height: 5.9879866
-  m_Direction: 1
-  m_Center: {x: 0.07527292, y: 2.4939933, z: -0.12861538}
 --- !u!1 &262091754
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +331,11 @@ PrefabInstance:
     - target: {fileID: 3768480381088725651, guid: 1db5a890a65742549a13278556b26c47,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189982659688228908, guid: 1db5a890a65742549a13278556b26c47,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6094162598688028773, guid: 1db5a890a65742549a13278556b26c47,

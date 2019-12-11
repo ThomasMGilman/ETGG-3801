@@ -799,9 +799,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6953989296197296985}
   - component: {fileID: 1012056105240612387}
+  - component: {fileID: 5189982659688228908}
   - component: {fileID: -8629684202907596442}
   - component: {fileID: 215247640300438966}
-  - component: {fileID: -5946352523920088657}
   m_Layer: 0
   m_Name: person
   m_TagString: Untagged
@@ -846,6 +846,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &5189982659688228908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258545199520387402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.644875, y: 5.4987884, z: 2.1370373}
+  m_Center: {x: 0.24090576, y: 2.7121246, z: -0.40503812}
 --- !u!54 &-8629684202907596442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -878,20 +891,6 @@ MonoBehaviour:
   rotationSpeed: 2
   maxPiv: 35
   minPiv: 290
---- !u!136 &-5946352523920088657
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258545199520387402}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.1384034
-  m_Height: 5.9473314
-  m_Direction: 1
-  m_Center: {x: 0.10444212, y: 2.4736657, z: -0.0009508133}
 --- !u!1 &6645793252795728586
 GameObject:
   m_ObjectHideFlags: 0
