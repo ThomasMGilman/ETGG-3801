@@ -1,25 +1,51 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
-    public float moveSpeed, rotationSpeed, maxPiv, minPiv;
+    public float moveSpeed, rotationSpeed, maxPiv, minPiv, maxInputSize, timeReductionAmount;
 
     private Animator PlayerAnimation;
     private Rigidbody rigidBody;
     private Camera PlayerCam;
-
-    private GameObject camPivot;
+    private GameObject camPivot, codeInput;
+    private InputField codeInputField;
 
     private CursorLockMode wantMode;
+
+    private Text codeText, timer;
+
+    //Timing
+    private float maxTime = 60 * 5;         //60 seconds = 1 minute * 5 = 5 minutes
+    private float timeLeft;
+
+    private int codeToMatch;
+    private bool collidingWithDoor = false;
+    private string codeStartString = "Code: ";
+    private string inputCode = "";
     // Start is called before the first frame update
     void Start()
     {
+        timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Text>();
+        timeLeft = maxTime;
+
+        //Get UI Elements for editing later
+        codeText = GameObject.FindGameObjectWithTag("Code").GetComponent<Text>();
+        codeInput = GameObject.FindGameObjectWithTag("InputField");
+        codeInputField = codeInput.GetComponent<InputField>();
+        codeInput.SetActive(false);
+
+        //Get and set player variables to interact with later
         rigidBody = this.transform.GetComponent<Rigidbody>();
         PlayerAnimation = GetComponent<Animator>();
         camPivot = this.transform.GetChild(3).gameObject;                                   //Pivot Point for the camera
         PlayerCam = camPivot.transform.GetChild(0).GetComponent<Camera>();                  //Camera is the child of camPivot
+
+        //Lock the mouse cursor to the screen
         SetCursorState(CursorLockMode.Locked);
     }
 
@@ -69,10 +95,35 @@ public class PlayerScript : MonoBehaviour
 
     private void checkInput()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //    SetCursorState(wantMode == CursorLockMode.None ? CursorLockMode.Locked : CursorLockMode.None);
+        if (Input.GetAxis("Fire1") != 0 || Input.GetKeyDown(KeyCode.KeypadEnter))
+            handleInputField(true);
+    }
+
+    private void handleInputField(bool spacePressed = false)
+    {
+        if(codeInputField.text.Length >= maxInputSize || (spacePressed && codeInputField.text.Length > 0))
         {
-            SetCursorState(wantMode == CursorLockMode.None ? CursorLockMode.Locked : CursorLockMode.None);
+            string inCode = codeInputField.text;
+            if(inCode == codeToMatch.ToString())
+            {
+                win();
+            }
+            else
+            {
+                timeLeft -= timeReductionAmount;
+            }
+            codeInputField.text = "";
         }
+    }
+
+    private void updateTimer()
+    {
+        timeLeft -= Time.deltaTime;
+        timer.text = Math.Round(timeLeft / 60, 2).ToString();
+        if (timeLeft <= 0)
+            lose();
     }
 
     // Update is called once per frame
@@ -81,22 +132,34 @@ public class PlayerScript : MonoBehaviour
         move();
         checkInput();
         updateCamera();
+        if(collidingWithDoor)   //Display Code Input
+        {
+            handleInputField();
+            codeText.text = codeStartString + inputCode;
+        }
+        updateTimer();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Colliding with: " + other.gameObject.name);
-        if(other.tag == "Door")
+        if(other.tag == "Door")                             //If Colliding with Door, show UI elements
         {
             SetCursorState(CursorLockMode.None);
+            collidingWithDoor = true;
+            codeInput.SetActive(true);
+            codeText.enabled = true;
+            codeText.text = codeStartString + inputCode;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Door")
+        if (other.tag == "Door")                            //If Exit collision with Door, Hide UI elements
         {
             SetCursorState(CursorLockMode.Locked);
+            collidingWithDoor = false;
+            codeInput.SetActive(false);
+            codeText.enabled = false;
         }
     }
 
@@ -104,5 +167,20 @@ public class PlayerScript : MonoBehaviour
     {
         Cursor.lockState = wantMode = state;
         Cursor.visible = (CursorLockMode.Locked != wantMode);
+    }
+
+    private void win()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    void lose()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    private void setCode(int code)
+    {
+        codeToMatch = code;
     }
 }

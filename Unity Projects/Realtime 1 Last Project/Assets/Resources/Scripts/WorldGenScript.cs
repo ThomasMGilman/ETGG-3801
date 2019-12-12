@@ -17,6 +17,7 @@ public class WorldGenScript : MonoBehaviour
 
     public float paintingHeight;
     public float paintingOffsetAlongWall;
+    public float playerHeightOffset;
 
     public uint maxPaintings;
     public int maxCodeRange;
@@ -26,6 +27,7 @@ public class WorldGenScript : MonoBehaviour
     public GameObject wallPrefab;
     public GameObject PaintingPrefab;
     public GameObject DoorPrefab;
+    public GameObject playerPrefab;
 
     /// <summary>
     /// Private variables used for world gen
@@ -33,15 +35,12 @@ public class WorldGenScript : MonoBehaviour
     private Dictionary<int, GameObject> paintings;
     private List<int> keys;
     private List<GameObject> walls;
-    private GameObject door;
-    private Text timer;
+    private GameObject door, player;
 
     float halfWidth;
     float halfHeight;
     float halfDepth;
 
-    private float maxTime = 60 * 5;         //60 seconds = 1 minute * 5 = 5 minutes
-    private float timeLeft;
     private float paintingWidth = 3;        //Size of the painting model made in Maya for the group project in Unity's scale with a scale factor of 40
     private float paintingStartOffsetX;
     private float paintingOffset;
@@ -50,9 +49,9 @@ public class WorldGenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Text>();
-        timeLeft = maxTime;
         gameSeed = Mathf.Abs(System.DateTime.Now.GetHashCode());        //Generate Seed
+        GameObject.FindGameObjectWithTag("Seed").GetComponent<Text>().text = gameSeed.ToString();
+        UnityEngine.Random.InitState(gameSeed);
         //Init variables and dictionary of paintings
         paintings = new Dictionary<int, GameObject>();
         keys = new List<int>();
@@ -75,6 +74,10 @@ public class WorldGenScript : MonoBehaviour
         placeWall(ref rotationAngle, in wallPrefab, in scale0, new Vector3(0, 0, 1), new Vector3(0, halfHeight, -halfDepth), false, 0, "Front");        //FrontWall
         placeWall(ref rotationAngle, in wallPrefab, in scale1, new Vector3(1, 0, 0), new Vector3(-halfWidth, halfHeight, 0), true, 0, "Left");          //LeftWall
 
+        Vector3 playerPos = Vector3.zero;
+        playerPos.y += playerHeightOffset;
+        player = Instantiate(playerPrefab, playerPos, playerPrefab.transform.rotation);         //place the player in the scene
+
         //Send Each Painting their code to display
         foreach(KeyValuePair<int, GameObject> keyPair in paintings)
         {
@@ -83,7 +86,8 @@ public class WorldGenScript : MonoBehaviour
             keyPair.Value.SendMessage("SetCode", keyPair.Key);
         }
         //Send Door the code to match inorder to win
-        door.SendMessage("SetCode", keys[UnityEngine.Random.Range(0, keys.Count - 1)]);
+        int i = UnityEngine.Random.Range(0, keys.Count - 1);
+        player.SendMessage("setCode", keys[i]);
     }
 
     private Vector3 dot(Vector3 a, Vector3 b)
@@ -155,14 +159,6 @@ public class WorldGenScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        timeLeft -= Time.deltaTime;
-        timer.text = Math.Round(timeLeft / 60, 2).ToString();
-        if (timeLeft <= 0)
-            lose();
-    }
-
-    void lose()
     {
         
     }
